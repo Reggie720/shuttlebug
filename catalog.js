@@ -183,5 +183,156 @@ window.SHUTTLEBUG_CATALOG = [
     "description": "A young rapper moves from New York to Memphis and begins his musical journey. Episode 1: The Move. Planned runtime: 35 minutes. Episode 2: The First Track.",
     "credit": "Shuttlebug Original \u00b7 In production",
     "sources": []
+  },
+  {
+    "id": "valkaama",
+    "title": "Valkaama",
+    "type": "Movies",
+    "genre": "Drama",
+    "year": 2010,
+    "episode": null,
+    "series": null,
+    "description": "A restless poet and an unlikely traveling companion journey toward northern Finland, where their hidden pasts begin to surface.",
+    "credit": "Valkaama \u00b7 Directed by Tim Baumann \u00b7 Valkaama Open Source Movie Project",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "rights": "https://www.valkaama.com/index.php?page=movie",
+    "language": "Swedish \u00b7 English subtitles",
+    "advisory": "Unrated \u00b7 Mature themes, including suicide",
+    "duration": 5585.96,
+    "source": "https://archive.org/details/valkaama",
+    "rightsRecord": "https://archive.org/metadata/valkaama",
+    "checked": "2026-11-16",
+    "changes": "Complete film with original credits. Internet Archive streaming encode; thumbnail is a cropped frame. No editorial cuts.",
+    "sources": [
+      {
+        "label": "480p",
+        "url": "https://archive.org/download/valkaama/Valkaama_720p.mp4"
+      }
+    ],
+    "cors": false,
+    "captions": [
+      {
+        "lang": "en",
+        "label": "English",
+        "url": "/media/library/valkaama.en.vtt"
+      }
+    ],
+    "image": "/media/library/valkaama.jpg",
+    "defaultCaptions": "en"
+  },
+  {
+    "id": "pepper3",
+    "title": "Pepper & Carrot: The Secret Ingredients",
+    "type": "TV",
+    "genre": "Fantasy",
+    "year": 2022,
+    "episode": 3,
+    "series": "Pepper & Carrot",
+    "description": "Pepper visits the market, learns about the Potion Contest, and searches for ingredients with a little help from Carrot.",
+    "credit": "Pepper & Carrot \u00b7 Morevna Project \u00b7 Based on the webcomic by David Revoy",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "rights": "https://morevnaproject.itch.io/peppercarrot-motion-comic",
+    "language": "English",
+    "duration": 205.056,
+    "source": "https://archive.org/details/pepper-carrot-episode-3-the-secret-ingredients-english",
+    "rightsRecord": "https://archive.org/metadata/pepper-carrot-episode-3-the-secret-ingredients-english",
+    "checked": "2026-11-16",
+    "changes": "Complete film with original credits. Internet Archive streaming encode; thumbnail is a cropped frame. No editorial cuts.",
+    "sources": [
+      {
+        "label": "1080p",
+        "url": "https://archive.org/download/pepper-carrot-episode-3-the-secret-ingredients-english/79780d2c-419b-42a3-adb5-85ae2aea4d1e-1080.mp4"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "image": "/media/library/pepper3.jpg"
+  },
+  {
+    "id": "pepper4",
+    "title": "Pepper & Carrot: Stroke of Genius",
+    "type": "TV",
+    "genre": "Fantasy",
+    "year": 2022,
+    "episode": 4,
+    "series": "Pepper & Carrot",
+    "description": "Pepper tests a bright idea in this animated adventure based on David Revoy\u2019s webcomic.",
+    "credit": "Pepper & Carrot \u00b7 Morevna Project \u00b7 Based on the webcomic by David Revoy",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "rights": "https://morevnaproject.itch.io/peppercarrot-motion-comic",
+    "language": "English",
+    "duration": 215.042,
+    "source": "https://archive.org/details/pepper-carrot-episode-4-stroke-of-genius-1080p",
+    "rightsRecord": "https://archive.org/metadata/pepper-carrot-episode-4-stroke-of-genius-1080p",
+    "checked": "2026-11-16",
+    "changes": "Complete film with original credits. Internet Archive streaming encode; thumbnail is a cropped frame. No editorial cuts.",
+    "sources": [
+      {
+        "label": "1080p",
+        "url": "https://archive.org/download/pepper-carrot-episode-4-stroke-of-genius-1080p/Pepper%20%26%20Carrot%20Episode%204%3A%20Stroke%20of%20Genius%201080p.mp4"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "image": "/media/library/pepper4.jpg"
+  },
+  {
+    "id": "pepper6",
+    "title": "Pepper & Carrot: The Potion Contest",
+    "type": "TV",
+    "genre": "Fantasy",
+    "year": 2017,
+    "episode": 6,
+    "series": "Pepper & Carrot",
+    "description": "Pepper and her fellow witches compete in the Potion Contest, where surprising creations take center stage.",
+    "credit": "Pepper & Carrot \u00b7 Morevna Project \u00b7 Based on the webcomic by David Revoy",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "rights": "https://morevnaproject.itch.io/peppercarrot-motion-comic",
+    "language": "English",
+    "duration": 454.938,
+    "source": "https://archive.org/details/pepper-and-carrot-ep6-v1",
+    "rightsRecord": "https://archive.org/metadata/pepper-and-carrot-ep6-v1",
+    "checked": "2026-11-16",
+    "changes": "Complete film with original credits. Internet Archive streaming encode; thumbnail is a cropped frame. No editorial cuts.",
+    "sources": [
+      {
+        "label": "1080p",
+        "url": "https://archive.org/download/pepper-and-carrot-ep6-v1/pepper-and-carrot-ep6-en-v1.mp4"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "image": "/media/library/pepper6.jpg"
+  },
+  {
+    "id": "block-scene-1",
+    "title": "The Move \u2014 Opening Scene Preview",
+    "type": "Originals",
+    "genre": "Drama \u00b7 Music",
+    "year": 2026,
+    "description": "Marcus and Denise prepare to leave New York. A 44-second animated draft for From the Block to the Beach, Episode 1.",
+    "credit": "Shuttlebug Original \u00b7 Opening scene preview",
+    "duration": 44,
+    "preview": true,
+    "productionNotice": "Work in progress: new provisional dialogue, cutout animation and temporary synthetic voices. This is a scene preview; the full 35-minute episode is still in production.",
+    "image": "/media/originals/the-move-scene-1-poster.jpg",
+    "sources": [
+      {
+        "label": "540p",
+        "url": "/media/originals/the-move-scene-1-preview.mp4"
+      }
+    ],
+    "captions": [
+      {
+        "lang": "en",
+        "label": "English",
+        "url": "/media/originals/the-move-scene-1.en.vtt"
+      }
+    ],
+    "download": "/media/originals/the-move-scene-1-preview.mp4"
   }
 ];
