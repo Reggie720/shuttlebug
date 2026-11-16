@@ -1,5 +1,65 @@
 window.SHUTTLEBUG_CATALOG = [
   {
+    "id": "nasa-neowise",
+    "title": "NASA Science Live: How to Spot Comet NEOWISE",
+    "year": 2020,
+    "duration": 1734,
+    "description": "NASA scientists explain how to observe the comet.",
+    "type": "TV",
+    "genre": "Documentary",
+    "series": "NASA Science Live",
+    "episode": null,
+    "image": null,
+    "sources": [
+      {
+        "label": "Original WebM",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/NASA_Science_Live%3B_How_to_Spot_Comet_NEOWISE.webm"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "credit": "NASA",
+    "license": "US public domain",
+    "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "rights": "https://commons.wikimedia.org/wiki/File:NASA_Science_Live%3B_How_to_Spot_Comet_NEOWISE.webm",
+    "source": "https://commons.wikimedia.org/wiki/File:NASA_Science_Live%3B_How_to_Spot_Comet_NEOWISE.webm",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:NASA_Science_Live%3B_How_to_Spot_Comet_NEOWISE.webm",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "language": "English",
+    "changes": "Original broadcast; no editorial changes. No NASA endorsement implied."
+  },
+  {
+    "id": "nasa-ezie",
+    "title": "NASA Science Live: Aurora Glow, Electric Flow",
+    "year": 2025,
+    "duration": 3387,
+    "description": "NASA experts explain the EZIE mission and the electric currents behind auroras.",
+    "type": "TV",
+    "genre": "Documentary",
+    "series": "NASA Science Live",
+    "episode": null,
+    "image": null,
+    "sources": [
+      {
+        "label": "Original WebM",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/NASA_Science_Live-_Aurora_Glow%2C_Electric_Flow_%26_the_EZIE_Mission_(Episode_-63)_(20250324_NSL_EZIE).webm"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "credit": "NASA",
+    "license": "US public domain",
+    "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "rights": "https://commons.wikimedia.org/wiki/File:NASA_Science_Live-_Aurora_Glow%2C_Electric_Flow_%26_the_EZIE_Mission_(Episode_-63)_(20250324_NSL_EZIE).webm",
+    "source": "https://commons.wikimedia.org/wiki/File:NASA_Science_Live-_Aurora_Glow%2C_Electric_Flow_%26_the_EZIE_Mission_(Episode_-63)_(20250324_NSL_EZIE).webm",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:NASA_Science_Live-_Aurora_Glow%2C_Electric_Flow_%26_the_EZIE_Mission_(Episode_-63)_(20250324_NSL_EZIE).webm",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "language": "English",
+    "changes": "Original broadcast; no editorial changes. No NASA endorsement implied."
+  },
+  {
     "id": "coffeerun",
     "title": "Coffee Run",
     "year": 2020,
