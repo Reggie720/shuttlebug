@@ -1,5 +1,63 @@
 window.SHUTTLEBUG_CATALOG = [
   {
+    "id": "kente",
+    "title": "Kente Weaving at Bonwire",
+    "year": 2024,
+    "duration": 4509,
+    "type": "Movies",
+    "genre": "Documentary",
+    "description": "Explore the history and cultural significance of traditional Kente weaving in Ghana.",
+    "series": null,
+    "episode": null,
+    "image": null,
+    "sources": [
+      {
+        "label": "Original WebM",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kente_Weaving_at_Bonwire.webm"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "credit": "Global Open Initiative Foundation / Sunkanmi12",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "rights": "https://commons.wikimedia.org/wiki/File:Kente_Weaving_at_Bonwire.webm",
+    "source": "https://commons.wikimedia.org/wiki/File:Kente_Weaving_at_Bonwire.webm",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:Kente_Weaving_at_Bonwire.webm",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "changes": "Complete original film; no editorial changes."
+  },
+  {
+    "id": "sita",
+    "title": "Sita Sings the Blues",
+    "year": 2008,
+    "duration": 4891,
+    "type": "Movies",
+    "genre": "Animation",
+    "description": "An animated retelling of the Ramayana interwoven with a modern story of heartbreak.",
+    "series": null,
+    "episode": null,
+    "image": null,
+    "sources": [
+      {
+        "label": "Original WebM",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sita_Sings_the_Blues.webm"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "credit": "Nina Paley",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "rights": "https://commons.wikimedia.org/wiki/File:Sita_Sings_the_Blues.webm",
+    "source": "https://commons.wikimedia.org/wiki/File:Sita_Sings_the_Blues.webm",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:Sita_Sings_the_Blues.webm",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "changes": "Complete original film; no editorial changes."
+  },
+  {
     "id": "creatures",
     "title": "All Creatures Welcome",
     "year": 2018,
