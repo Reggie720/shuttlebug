@@ -27,7 +27,7 @@ const base=process.env.TEST_URL||'http://127.0.0.1:8765';
  await page.locator('[data-action="tv"]').click();
  await page.locator('[data-page="Originals"]').click();await page.locator('.tile').click();assert.equal(await page.locator('#player').count(),0);await page.keyboard.press('Escape');
  await page.locator('[data-page="Home"]').click();await page.locator('[data-page="Home"]').focus();await page.keyboard.press('ArrowRight');assert.equal(await page.evaluate(()=>document.activeElement.dataset.page),'TV');
- const manifest=await page.evaluate(async()=>await(await fetch('/manifest.webmanifest')).json());assert.equal(manifest.display,'standalone');for(const icon of manifest.icons)assert((await context.request.get(base+icon.src)).ok());
+ const manifest=await page.evaluate(async()=>await(await fetch('/manifest.json')).json());assert.equal(manifest.display,'standalone');for(const icon of manifest.icons)assert((await context.request.get(base+icon.src)).ok());
  await page.evaluate(async()=>await navigator.serviceWorker.ready);await page.reload();await page.waitForFunction(()=>!!navigator.serviceWorker.controller);await context.setOffline(true);await page.reload();await page.locator('.hero').waitFor();assert(await page.locator('#connection').isVisible());await context.setOffline(false);
  assert.equal(await page.locator('#advertisement').isVisible(),false);
  await page.screenshot({path:'/tmp/shuttlebug-desktop.png',fullPage:true});
