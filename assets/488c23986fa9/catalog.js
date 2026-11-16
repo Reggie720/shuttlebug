@@ -1,5 +1,92 @@
 window.SHUTTLEBUG_CATALOG = [
   {
+    "id": "coffeerun",
+    "title": "Coffee Run",
+    "year": 2020,
+    "genre": "Animation",
+    "duration": 185,
+    "description": "A fast-paced animated journey through memories and emotions.",
+    "type": "Movies",
+    "series": null,
+    "episode": null,
+    "image": null,
+    "sources": [
+      {
+        "label": "Original WebM",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coffee_Run_-_Blender_Open_Movie-full_movie.webm"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "credit": "Blender Studio / Blender Foundation",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "https://commons.wikimedia.org/wiki/File:Coffee_Run_-_Blender_Open_Movie-full_movie.webm",
+    "source": "https://commons.wikimedia.org/wiki/File:Coffee_Run_-_Blender_Open_Movie-full_movie.webm",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:Coffee_Run_-_Blender_Open_Movie-full_movie.webm",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "changes": "Complete original short film with credits; no editorial changes."
+  },
+  {
+    "id": "wingit",
+    "title": "WING IT!",
+    "year": 2023,
+    "genre": "Animation",
+    "duration": 238,
+    "description": "An unlikely pair embark on a chaotic adventure.",
+    "type": "Movies",
+    "series": null,
+    "episode": null,
+    "image": null,
+    "sources": [
+      {
+        "label": "Original WebM",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/WING_IT!_-_Blender_Open_Movie-full_movie.webm"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "credit": "Blender Studio / Blender Foundation",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "https://commons.wikimedia.org/wiki/File:WING_IT!_-_Blender_Open_Movie-full_movie.webm",
+    "source": "https://commons.wikimedia.org/wiki/File:WING_IT!_-_Blender_Open_Movie-full_movie.webm",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:WING_IT!_-_Blender_Open_Movie-full_movie.webm",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "changes": "Complete original short film with credits; no editorial changes."
+  },
+  {
+    "id": "charge",
+    "title": "Charge",
+    "year": 2022,
+    "genre": "Sci-fi",
+    "duration": 263,
+    "description": "In a dystopian world, a desperate man searches for power.",
+    "type": "Movies",
+    "series": null,
+    "episode": null,
+    "image": null,
+    "sources": [
+      {
+        "label": "Original WebM",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Charge_-_Blender_Open_Movie-full_movie.webm"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "credit": "Blender Studio / Blender Foundation",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "https://commons.wikimedia.org/wiki/File:Charge_-_Blender_Open_Movie-full_movie.webm",
+    "source": "https://commons.wikimedia.org/wiki/File:Charge_-_Blender_Open_Movie-full_movie.webm",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:Charge_-_Blender_Open_Movie-full_movie.webm",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "changes": "Complete original short film with credits; no editorial changes."
+  },
+  {
     "id": "sprite",
     "title": "Sprite Fright",
     "year": 2021,
