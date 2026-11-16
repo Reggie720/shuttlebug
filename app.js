@@ -47,7 +47,7 @@ function openTitle(id) {
  m.captions.forEach(c=>{const t=document.createElement('track');t.kind='subtitles';t.srclang=c.lang;t.label=c.label;t.src=c.url;v.append(t);});
  let resume=progress[id]?.completed?0:position(id); let tried=new Set();
  function setSource(index,time,autoplay=false) {
-  sourceIndex=index; tried.add(index); $('quality').value=index; v.src=m.sources[index].url;
+  sourceIndex=index; tried.add(index); $('quality').value=index; $('playStatus').textContent='Loading · '+m.sources[index].label; v.src=m.sources[index].url;
   v.onloadedmetadata=()=>{v.currentTime=Math.min(Math.max(0,time),Math.max(0,v.duration-1));if(autoplay)play();};v.load();
  }
  v.onerror=()=>{const next=m.sources.findIndex((_,i)=>!tried.has(i)); if(next>=0){$('playStatus').textContent='Trying another video quality…';setSource(next,position(id));}else{$('playStatus').textContent='This stream could not load. Check your connection or try the official film link below.';}};

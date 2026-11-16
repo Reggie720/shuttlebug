@@ -32,7 +32,7 @@ Install development tools with `npm install`, then run `npm test`. No build step
 
 For a full browser check, serve this folder with `npm run serve`, then run `npm run test:browser` in a second terminal. `tests/smoke.cjs` uses Chromium at `/usr/bin/chromium` by default; override `CHROMIUM_PATH` for a different installation. `TEST_URL` can target the live site. It checks real playback, desktop/phone layout, remote focus, saved data, install assets and offline navigation. Real TV receivers and physical phone installation require device testing.
 
-Pre-release verification on 2026-11-15: JS syntax and DOM test suite passed; all five official 360p files downloaded, ffprobe confirmed H.264 video plus AAC audio and full durations, and sample frames/audio decoded with ffmpeg. Full local Chromium execution was unavailable in the agent test environment; live UI testing follows deployment. These checks do not certify all smart TVs or ad-network approval.
+Pre-release verification on 2026-11-15: JS syntax and DOM test suite passed; all five official 360p files downloaded, ffprobe confirmed H.264 video plus AAC audio and full durations, and sample frames/audio decoded with ffmpeg. Full local Chromium execution was unavailable in the agent test environment. Post-deploy browser checks confirmed series and movie playback at 480p, quality switching, seeking, persisted watchlist/progress, navigation, genre filters, search, TV layout and installation instructions. Physical phone installation, TV receivers, offline browser simulation and ad delivery remain unverified. These checks do not certify all smart TVs or ad-network approval.
 
 ## Deployment and cost
 

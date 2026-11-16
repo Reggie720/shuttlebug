@@ -8,7 +8,7 @@ window.SHUTTLEBUG_CATALOG = [
     "series": null,
     "episode": null,
     "duration": 596,
-    "description": "Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.",
+    "description": "A gentle giant rabbit takes on three mischievous woodland creatures.",
     "image": "https://video.blender.org/lazy-static/thumbnails/bf1f3fb5-b119-4f9f-9930-8e20e892b898.jpg",
     "sources": [
       {
@@ -43,7 +43,7 @@ window.SHUTTLEBUG_CATALOG = [
     "series": null,
     "episode": null,
     "duration": 654,
-    "description": "The first Blender Open Movie from 2006",
+    "description": "Two travelers explore a strange mechanical world and clash over what they see.",
     "image": "https://video.blender.org/lazy-static/thumbnails/cccc3e60-0291-4ecc-aa56-39b2e2c7d0d5.jpg",
     "sources": [
       {
@@ -78,7 +78,7 @@ window.SHUTTLEBUG_CATALOG = [
     "series": null,
     "episode": null,
     "duration": 888,
-    "description": "Help us making Free/Open Movies: https://cloud.blender.org/join",
+    "description": "A young warrior searches for the dragon she once rescued.",
     "image": "https://video.blender.org/lazy-static/thumbnails/0eb052d0-fd51-43e6-aa33-ecdbf77a5d40.jpg",
     "sources": [
       {
@@ -113,7 +113,7 @@ window.SHUTTLEBUG_CATALOG = [
     "series": "Caminandes",
     "episode": 2,
     "duration": 146,
-    "description": "Caminandes: Episode 2 is an Open Movie produced by Blender Institute in Amsterdam, the Netherlands. You can support the makers and open source projects by purchasing the 8 GB USB card with all the movie data and tutorials.",
+    "description": "Koro the llama faces an electric fence in pursuit of greener grass in Patagonia.",
     "image": "https://video.blender.org/lazy-static/thumbnails/fb70d459-48d2-4db5-adba-813c84f9200a.jpg",
     "sources": [
       {
@@ -148,7 +148,7 @@ window.SHUTTLEBUG_CATALOG = [
     "series": "Caminandes",
     "episode": 3,
     "duration": 150,
-    "description": "In this episode of the Caminandes cartoon series we get to know our hero Koro even better! It's winter in Patagonia, food is getting scarce. Koro the Llama engages with Oti the pesky penguin in an epic fight over that last tasty berry.",
+    "description": "Winter in Patagonia brings a battle between Koro the llama and Oti the penguin over the last tasty berry.",
     "image": "https://video.blender.org/lazy-static/thumbnails/23f3ef79-15dc-44c5-aa45-cf92e78a4509.jpg",
     "sources": [
       {

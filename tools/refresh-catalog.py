@@ -14,7 +14,9 @@ def load(item):
 with concurrent.futures.ThreadPoolExecutor(max_workers=5) as ex: catalog=list(ex.map(load,ITEMS))
 # Version-specific permission records checked against publisher pages and closing film cards.
 licenses={'bbb':('3.0','https://peach.blender.org/about/'),'ed':('2.5','https://orange.blender.org/press/'),'sintel':('3.0','https://durian.blender.org/sharing/'),'caminandes2':('3.0','https://video.blender.org/w/fb70d459-48d2-4db5-adba-813c84f9200a'),'caminandes3':('4.0','https://video.blender.org/w/23f3ef79-15dc-44c5-aa45-cf92e78a4509')}
+synopses={'bbb': 'A gentle giant rabbit takes on three mischievous woodland creatures.', 'ed': 'Two travelers explore a strange mechanical world and clash over what they see.', 'sintel': 'A young warrior searches for the dragon she once rescued.', 'caminandes2': 'Koro the llama faces an electric fence in pursuit of greener grass in Patagonia.', 'caminandes3': 'Winter in Patagonia brings a battle between Koro the llama and Oti the penguin over the last tasty berry.'}
 for m in catalog:
+ m['description']=synopses[m['id']]
  version,rights=licenses[m['id']]
  m.update(license='CC BY '+version,licenseUrl='https://creativecommons.org/licenses/by/'+version+'/',rights=rights)
  if m['id']=='ed':m['credit']='© 2006 Blender Foundation / Netherlands Media Art Institute | www.elephantsdream.org'
