@@ -36,7 +36,7 @@ Pre-release verification on 2026-11-15: JS syntax and DOM test suite passed; all
 
 ## Deployment and cost
 
-Keep the existing Render static site's GitHub auto-deploy settings. Serve the repository root; no runtime service or build is needed. All production files are committed together. Keep config.js network-only so withdrawn ads aren't retained offline; the service worker caches only the app shell, never films or ads. Update the cache version in sw.js when changing shell assets. Publisher media is streamed directly, avoiding video storage on the existing host. No usage-limit or third-party availability guarantees are made.
+Keep the existing Render static site's GitHub auto-deploy settings. Serve the repository root; no runtime service or build is needed. All production files are committed together. Keep config.js network-only so withdrawn ads aren't retained offline; the service worker caches only the app shell, never films or ads. Run `python3 tools/prepare-release.py` before committing changed app assets. Publisher media is streamed directly, avoiding video storage on the existing host. No usage-limit or third-party availability guarantees are made.
 
 Native Roku, Fire TV, Android TV and Apple TV store packages, full-length licensed television/live channels, finished Shuttlebug Originals, ad account approval and revenue are not included in this web release.
 
@@ -61,3 +61,7 @@ See `CURATION.md` for the owner's standing audio and content requirements. No ge
 The second batch adds Spring (no dialogue), Cosmos Laundromat (original recorded actors), and the eight complete episodes of BBS: The Documentary (original interviews). `tools/add-curated-batch-two.py` imports only these reviewed IDs and file names after codec/range checks. Exact film closing credits, creator licensing statements and audio provenance are recorded with the titles. New documentary streams are archival 480p; no HD restoration is claimed.
 
 `config.js` now sets the featured film, Start Here selection and series order. The red-and-black layout is retained. New on Shuttlebug and Longer Episodes give visitors a clear place to start. Favorites and viewing progress keep their existing IDs and storage keys. No paid services or ad accounts are activated.
+
+## Release cache consistency
+
+Run `python3 tools/prepare-release.py` after changing the catalog, app, configuration or styles and before committing a release. It assigns one content-derived version to the linked assets and service-worker cache. The worker refreshes shell requests through HTTP revalidation and activates only after its full new shell is cached. It never caches publisher config, media or ads. This prevents an older cached catalog from being mixed with a newly published homepage.
