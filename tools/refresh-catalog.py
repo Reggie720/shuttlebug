@@ -22,11 +22,10 @@ for m in catalog:
  if m['id']=='ed':m['credit']='© 2006 Blender Foundation / Netherlands Media Art Institute | www.elephantsdream.org'
  if m['id'].startswith('caminandes'):m['credit']='© Blender Foundation | www.caminandes.com'
 
-catalog.append(dict(id='block',title='From the Block to the Beach',type='Originals',genre='Drama · Music',year=2026,description='A young rapper moves from New York to Memphis and begins his musical journey. Episode 1: The Move. Planned runtime: 35 minutes. Episode 2: The First Track.',credit='Shuttlebug Original · In production',sources=[]))
 existing_path=pathlib.Path('catalog.js')
 if existing_path.exists():
  existing=json.loads(existing_path.read_text().split('=',1)[1].rstrip(';\n'))
  curated_ids={m['id'] for m in catalog}
- catalog.extend(m for m in existing if m['id'] not in curated_ids)
+ catalog.extend(m for m in existing if m['id'] not in curated_ids and m['id'] not in ['block','block-scene-1'])
 pathlib.Path('catalog.js').write_text('window.SHUTTLEBUG_CATALOG = '+json.dumps(catalog,indent=2)+';\n')
 print('Saved',len(catalog),'curated entries')

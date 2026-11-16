@@ -1,3 +1,7 @@
+# CANCELED — original scene preview
+
+The owner rejected the robotic voices on 2026-11-16. This version is withdrawn and production is stopped. Do not publish or regenerate it. The following notes are an archive only.
+
 # From the Block to the Beach — The Move
 
 ## Opening scene preview, revision 1

@@ -33,7 +33,7 @@ function render() {
   out+=row('Full-length Movies',catalog.filter(m=>m.type==='Movies'&&m.duration>=3600))+row('Free Movies',catalog.filter(m=>m.type==='Movies'))+seriesRows()+row('Shuttlebug Originals',catalog.filter(m=>m.type==='Originals'))+row('My List',catalog.filter(m=>list.includes(m.id)));
  } else if(page==='Settings') out=settings();
  else if(page==='TV') out='<section><h1>TV Shows & Short Series</h1><p class="page-intro">Browse animated series by show and episode. Numbering follows each creator’s releases; available episodes are listed below.</p></section>'+seriesRows();
- else out=grid(page,catalog.filter(m=>page==='My List'?list.includes(m.id):m.type===page&&(page!=='Movies'||genre==='All'||m.genre===genre)),page==='My List'?'Save a movie or episode to find it here.':'No titles in this genre.');
+ else out=grid(page,catalog.filter(m=>page==='My List'?list.includes(m.id):m.type===page&&(page!=='Movies'||genre==='All'||m.genre===genre)),page==='My List'?'Save a movie or episode to find it here.':page==='Originals'?'No originals available right now.':'No titles in this genre.');
  $('content').innerHTML=out;
  document.querySelectorAll('nav button').forEach(b=>{ b.classList.toggle('active',b.dataset.page===page); if(b.dataset.page===page)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current'); });
  document.title=`Shuttlebug — ${page==='TV'?'TV Shows':page}`;

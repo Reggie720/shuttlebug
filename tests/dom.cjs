@@ -17,9 +17,9 @@ $('#search').value='no-such-title';$('#search').dispatchEvent(new w.Event('input
 route('TV');assert.equal(all('.tile').length,5);click('[data-title="caminandes3"]');assert($('#modal').open);assert.equal(all('#quality option').length,3);assert.match($('#player').src,/video.blender.org.*480.mp4/);assert.match($('#details').textContent,/Blender Foundation/);
 click('#saveMovie');assert.equal(JSON.parse(w.localStorage.getItem('shuttle-list'))[0],'caminandes3');click('[data-action="close"]');assert.equal($('#player'),null);
 route('My List');assert.equal(all('.tile').length,1);click('.tile');click('#saveMovie');click('[data-action="close"]');route('My List');assert.equal(all('.tile').length,0);
-route('Originals');click('.tile');assert.equal($('#player'),null);assert.match($('#details').textContent,/In production/);click('[data-action="close"]');
+route('Originals');assert.equal(all('.tile').length,0);assert.equal($('#player'),null);assert.match($('#content').textContent,/No originals available/);
 route('Settings');click('[data-action="tv"]');assert(w.document.body.classList.contains('tv-mode'));assert.equal(w.localStorage.getItem('shuttle-tv'),'true');click('[data-action="tv"]');assert(!w.document.body.classList.contains('tv-mode'));
-click('[data-action="licenses"]');assert.equal(all('.license-entry').length,10);click('[data-action="close"]');
+click('[data-action="licenses"]');assert.equal(all('.license-entry').length,9);click('[data-action="close"]');
 run('licenses();privacy()');assert.match($('#details').textContent,/Privacy & advertising/);click('[data-action="allow-ads"]');assert.equal(w.localStorage.getItem('shuttle-ads'),'"allowed"');assert.equal($('#adsense-script'),null);assert($('#advertisement').hidden);
 run("progress={bbb:{time:42,duration:596}};render()");route('Home');assert.match($('#content').textContent,/Continue Watching/);route('Settings');click('[data-action="clear"]');assert.equal(w.localStorage.getItem('shuttle-progress'),'{}');
 run(`window.SHUTTLEBUG_CONFIG.sponsor={name:'Test sponsor',message:'Test creative',url:'https://example.com'};renderAds()`);assert(!$('#advertisement').hidden);assert.equal($('#advertisement a').rel,'sponsored noopener');assert.match($('#advertisement').textContent,/ADVERTISEMENT/);
@@ -27,8 +27,8 @@ run(`window.SHUTTLEBUG_CONFIG.sponsor={name:'Bad',message:'',url:'javascript:ale
 run(`window.SHUTTLEBUG_CONFIG.sponsor=null;window.SHUTTLEBUG_CONFIG.adsense={enabled:true,publisher:'ca-pub-1234567890123456',slot:'12345678',consentReady:false};renderAds()`);assert.equal($('#adsense-script'),null);
 run(`window.SHUTTLEBUG_CONFIG.adsense.consentReady=true;localStorage.setItem('shuttle-ads','"declined"');renderAds()`);assert.equal($('#adsense-script'),null);
 run(`localStorage.setItem('shuttle-ads','"allowed"');renderAds()`);assert.match($('#adsense-script').src,/pagead2.googlesyndication.com/);assert.equal($('.adsbygoogle').dataset.adSlot,'12345678');
-// New original preview is watchable and stays distinct from the unfinished full episode.
-run("openTitle('block-scene-1')");assert($('#player'));assert.match($('#details').textContent,/44-second/);assert.match($('#details').textContent,/temporary synthetic voices/);assert.match($('#details a[download]').href,/scene-1-preview.mp4/);assert.equal(all('#player track').length,1);assert.match(w.location.search,/watch=block-scene-1/);click('[data-action="close"]');assert.equal(w.location.search,'');
+// Canceled original cannot be opened or exposed through search.
+run("openTitle('block-scene-1')");assert.equal($('#player'),null);assert.equal($('#modal').open,false);assert(!w.SHUTTLEBUG_CATALOG.some(m=>['block','block-scene-1'].includes(m.id)));
 run("openTitle('valkaama')");assert($('#player'));assert.equal($('#player').hasAttribute('crossorigin'),false);assert.equal($('#player track').default,true);assert.match($('#details').textContent,/English subtitles/);click('[data-action="close"]');
 route('TV');assert.equal(all('#content h2').length,2);assert.match($('#content').textContent,/Pepper & Carrot/);
 // Catalog/manifest/service-worker contracts are checked without mocking their production code.

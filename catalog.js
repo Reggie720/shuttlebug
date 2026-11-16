@@ -175,16 +175,6 @@ window.SHUTTLEBUG_CATALOG = [
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
   },
   {
-    "id": "block",
-    "title": "From the Block to the Beach",
-    "type": "Originals",
-    "genre": "Drama \u00b7 Music",
-    "year": 2026,
-    "description": "A young rapper moves from New York to Memphis and begins his musical journey. Episode 1: The Move. Planned runtime: 35 minutes. Episode 2: The First Track.",
-    "credit": "Shuttlebug Original \u00b7 In production",
-    "sources": []
-  },
-  {
     "id": "valkaama",
     "title": "Valkaama",
     "type": "Movies",
@@ -307,32 +297,5 @@ window.SHUTTLEBUG_CATALOG = [
     "cors": false,
     "captions": [],
     "image": "/media/library/pepper6.jpg"
-  },
-  {
-    "id": "block-scene-1",
-    "title": "The Move \u2014 Opening Scene Preview",
-    "type": "Originals",
-    "genre": "Drama \u00b7 Music",
-    "year": 2026,
-    "description": "Marcus and Denise prepare to leave New York. A 44-second animated draft for From the Block to the Beach, Episode 1.",
-    "credit": "Shuttlebug Original \u00b7 Opening scene preview",
-    "duration": 44,
-    "preview": true,
-    "productionNotice": "Work in progress: new provisional dialogue, cutout animation and temporary synthetic voices. This is a scene preview; the full 35-minute episode is still in production.",
-    "image": "/media/originals/the-move-scene-1-poster.jpg",
-    "sources": [
-      {
-        "label": "540p",
-        "url": "/media/originals/the-move-scene-1-preview.mp4"
-      }
-    ],
-    "captions": [
-      {
-        "lang": "en",
-        "label": "English",
-        "url": "/media/originals/the-move-scene-1.en.vtt"
-      }
-    ],
-    "download": "/media/originals/the-move-scene-1-preview.mp4"
   }
 ];

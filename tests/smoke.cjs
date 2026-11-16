@@ -21,11 +21,11 @@ const base=process.env.TEST_URL||'http://127.0.0.1:8765';
  await page.locator('[data-action="play"]').click();await page.locator('#player').evaluate(v=>{v.currentTime=25;v.dispatchEvent(new Event('timeupdate'));});await page.keyboard.press('Escape');
  await page.locator('[data-page="Home"]').click();assert.match(await page.locator('#content').innerText(),/Continue Watching/);
  await page.locator('[data-page="Settings"]').click();await page.locator('[data-action="tv"]').click();assert(await page.locator('body').evaluate(el=>el.classList.contains('tv-mode')));await page.reload();assert(await page.locator('body').evaluate(el=>el.classList.contains('tv-mode')));
- await page.locator('[data-action="licenses"]').first().click();assert.equal(await page.locator('.license-entry').count(),10);
+ await page.locator('[data-action="licenses"]').first().click();assert.equal(await page.locator('.license-entry').count(),9);
  // Replacing one dialog with another must not erase its new contents.
  await page.evaluate(()=>{licenses();privacy();});await page.waitForTimeout(100);assert.match(await page.locator('#details').innerText(),/Privacy & advertising/);await page.keyboard.press('Escape');
  await page.locator('[data-action="tv"]').click();
- await page.locator('[data-page="Originals"]').click();await page.locator('[data-title="block"]').click();assert.equal(await page.locator('#player').count(),0);await page.keyboard.press('Escape');
+ await page.locator('[data-page="Originals"]').click();await page.getByText('No originals available right now.',{exact:true}).waitFor();assert.equal(await page.locator('[data-title="block"]').count(),0);assert.equal(await page.locator('#player').count(),0);
  await page.locator('[data-page="Home"]').click();await page.locator('[data-page="Home"]').focus();await page.keyboard.press('ArrowRight');assert.equal(await page.evaluate(()=>document.activeElement.dataset.page),'TV');
  const manifest=await page.evaluate(async()=>await(await fetch('/manifest.json')).json());assert.equal(manifest.display,'standalone');for(const icon of manifest.icons)assert((await context.request.get(base+icon.src)).ok());
  await page.evaluate(async()=>await navigator.serviceWorker.ready);await page.reload();await page.waitForFunction(()=>!!navigator.serviceWorker.controller);await context.setOffline(true);await page.reload();await page.locator('.hero').waitFor();assert(await page.locator('#connection').isVisible());await context.setOffline(false);

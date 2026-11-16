@@ -17,7 +17,7 @@ for m in reviewed:
  # Extract a still through range-aware HTTP seeking. The entire film isn't stored on our server.
  subprocess.run(['ffmpeg','-v','error','-y','-ss','30','-i',url,'-frames:v','1','-vf','scale=640:-1','-q:v','3',str(MEDIA/(m['id']+'.jpg'))],check=True,timeout=120)
  cat=[x for x in cat if x['id']!=m['id']];cat.append(m);print('Added',m['id'],flush=True)
-preview=dict(id='block-scene-1',title='The Move — Opening Scene Preview',type='Originals',genre='Drama · Music',year=2026,description='Marcus and Denise prepare to leave New York. A 44-second animated draft for From the Block to the Beach, Episode 1.',credit='Shuttlebug Original · Opening scene preview',duration=44,preview=True,productionNotice='Work in progress: new provisional dialogue, cutout animation and temporary synthetic voices. This is a scene preview; the full 35-minute episode is still in production.',image='/media/originals/the-move-scene-1-poster.jpg',sources=[{'label':'540p','url':'/media/originals/the-move-scene-1-preview.mp4'}],captions=[{'lang':'en','label':'English','url':'/media/originals/the-move-scene-1.en.vtt'}],download='/media/originals/the-move-scene-1-preview.mp4')
-cat=[x for x in cat if x['id']!=preview['id']];cat.append(preview)
+# The original scene was canceled by its owner. Do not recreate or republish it.
+cat=[m for m in cat if m['id'] not in ['block','block-scene-1']]
 p.write_text('window.SHUTTLEBUG_CATALOG = '+json.dumps(cat,indent=2)+';\n')
 print('Catalog now',len(cat),'entries',flush=True)
