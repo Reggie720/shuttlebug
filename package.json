@@ -1,0 +1,8 @@
+{
+  "name": "shuttlebug",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Shuttlebug static streaming web app",
+  "scripts": {"test": "node tests/dom.cjs", "test:browser": "node tests/smoke.cjs", "serve": "python3 -m http.server 8765 --bind 127.0.0.1"},
+  "devDependencies": {"jsdom": "31.0.1", "playwright": "1.61.1"}
+}
