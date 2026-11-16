@@ -1,5 +1,93 @@
 window.SHUTTLEBUG_CATALOG = [
   {
+    "id": "creatures",
+    "title": "All Creatures Welcome",
+    "year": 2018,
+    "type": "Movies",
+    "genre": "Documentary",
+    "duration": 5211,
+    "description": "A documentary journey into hacker culture and digital communities.",
+    "series": null,
+    "episode": null,
+    "image": null,
+    "sources": [
+      {
+        "label": "Original",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/All_Creatures_Welcome_-_official_version_(SUBs-DE-EN).webm"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "credit": "Sandra Trostel",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "rights": "https://commons.wikimedia.org/wiki/File:All_Creatures_Welcome_-_official_version_(SUBs-DE-EN).webm",
+    "source": "https://commons.wikimedia.org/wiki/File:All_Creatures_Welcome_-_official_version_(SUBs-DE-EN).webm",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:All_Creatures_Welcome_-_official_version_(SUBs-DE-EN).webm",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "changes": "Complete original documentary; no editorial changes."
+  },
+  {
+    "id": "paywall",
+    "title": "Paywall: The Business of Scholarship",
+    "year": 2018,
+    "type": "Movies",
+    "genre": "Documentary",
+    "duration": 3888,
+    "description": "An investigation of the academic publishing industry and open access.",
+    "series": null,
+    "episode": null,
+    "image": null,
+    "sources": [
+      {
+        "label": "Original",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018_documentary_'Paywall_%E2%80%93_The_Business_of_Scholarship'.ogg"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "credit": "Jason Schmitt",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "https://commons.wikimedia.org/wiki/File:2018_documentary_'Paywall_%E2%80%93_The_Business_of_Scholarship'.ogg",
+    "source": "https://commons.wikimedia.org/wiki/File:2018_documentary_'Paywall_%E2%80%93_The_Business_of_Scholarship'.ogg",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:2018_documentary_'Paywall_%E2%80%93_The_Business_of_Scholarship'.ogg",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "changes": "Complete original documentary; no editorial changes."
+  },
+  {
+    "id": "dominion",
+    "title": "Dominion",
+    "year": 2018,
+    "type": "Movies",
+    "genre": "Documentary",
+    "duration": 7200,
+    "description": "An investigation into modern animal agriculture, narrated by Joaquin Phoenix and others.",
+    "series": null,
+    "episode": null,
+    "image": null,
+    "sources": [
+      {
+        "label": "Original",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dominion_(2018)_%E2%80%93_full_documentary.webm"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "credit": "Farm Transparency Project",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "https://commons.wikimedia.org/wiki/File:Dominion_(2018)_%E2%80%93_full_documentary.webm",
+    "source": "https://commons.wikimedia.org/wiki/File:Dominion_(2018)_%E2%80%93_full_documentary.webm",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:Dominion_(2018)_%E2%80%93_full_documentary.webm",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "changes": "Complete original documentary; no editorial changes.",
+    "advisory": "Graphic animal cruelty"
+  },
+  {
     "id": "nasa-neowise",
     "title": "NASA Science Live: How to Spot Comet NEOWISE",
     "year": 2020,
