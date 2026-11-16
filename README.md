@@ -68,3 +68,5 @@ Run `python3 tools/prepare-release.py` after changing the catalog, app, configur
 
 ### Reviewed live-action additions
 Three short SideWays documentary episodes (1, 2, 4) use original filmed interviews and the creator's CC BY-SA 3.0 permission. Episode 1 is English; 2 and 4 have the publisher's English subtitles enabled by default. No new animation or feature film was added in this batch. See CURATION.md for held candidates and permission evidence.
+
+Release preparation now writes content-fingerprinted paths under assets/ and a matching review entry under releases/. This avoids stale catalog responses from CDNs that ignore query strings. Keep previous fingerprinted releases available for cached pages. Source files remain at the root for development; run tools/prepare-release.py after app, catalog, config or style edits.

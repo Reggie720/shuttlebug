@@ -1,6 +1,7 @@
 const RELEASE = 'a8d8094f8d98';
 const CACHE = 'shuttlebug-' + RELEASE;
-const SHELL = ['/', '/index.html', `/styles.css?v=${RELEASE}`, `/app.js?v=${RELEASE}`, `/catalog.js?v=${RELEASE}`, '/manifest.json', '/icons/icon-192.png', '/icons/icon-512.png', '/icons/maskable-512.png', '/icons/apple-touch-icon.png', '/icons/icon.svg'];
+const ENTRY = `/releases/${RELEASE}/index.html`;
+const SHELL = ['/', '/index.html', ENTRY, `/assets/${RELEASE}/styles.css`, `/assets/${RELEASE}/app.js`, `/assets/${RELEASE}/catalog.js`, '/manifest.json', '/icons/icon-192.png', '/icons/icon-512.png', '/icons/maskable-512.png', '/icons/apple-touch-icon.png', '/icons/icon.svg'];
 const SHELL_PATHS = new Set(SHELL.map(path => new URL(path, self.location.origin).pathname));
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL.map(path => new Request(path, {cache:'reload'})))).then(() => self.skipWaiting())));
 self.addEventListener('activate', event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key.startsWith('shuttlebug-') && key !== CACHE).map(key => caches.delete(key)))).then(() => self.clients.claim())));
@@ -11,5 +12,5 @@ self.addEventListener('fetch', event => {
   event.respondWith(fetch(event.request, {cache:'no-cache'}).then(response => {
     if (response.ok) { const copy = response.clone(); event.waitUntil(caches.open(CACHE).then(cache => cache.put(event.request, copy))); }
     return response;
-  }).catch(async () => (await caches.match(event.request)) || (event.request.mode === 'navigate' ? caches.match('/') : Response.error())));
+  }).catch(async () => event.request.mode === 'navigate' ? caches.match(ENTRY) : ((await caches.match(event.request)) || Response.error())));
 });
