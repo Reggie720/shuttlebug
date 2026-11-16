@@ -1,5 +1,65 @@
 window.SHUTTLEBUG_CATALOG = [
   {
+    "id": "sprite",
+    "title": "Sprite Fright",
+    "year": 2021,
+    "genre": "Horror",
+    "type": "Movies",
+    "duration": 630,
+    "description": "Teenagers encounter a dangerous colony of mushroom creatures in a remote forest.",
+    "series": null,
+    "episode": null,
+    "sources": [
+      {
+        "label": "Original WebM",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sprite_Fright_-_Blender_Open_Movie-full_movie.webm"
+      }
+    ],
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sprite_Fright-movie_poster.jpg?width=400",
+    "cors": false,
+    "captions": [],
+    "credit": "Blender Foundation / Blender Studio",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "https://commons.wikimedia.org/wiki/File:Sprite_Fright_-_Blender_Open_Movie-full_movie.webm",
+    "source": "https://commons.wikimedia.org/wiki/File:Sprite_Fright_-_Blender_Open_Movie-full_movie.webm",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:Sprite_Fright_-_Blender_Open_Movie-full_movie.webm",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "language": "English",
+    "changes": "Complete original short film with credits, no editorial changes."
+  },
+  {
+    "id": "tears",
+    "title": "Tears of Steel",
+    "year": 2012,
+    "genre": "Sci-fi",
+    "type": "Movies",
+    "duration": 734,
+    "description": "A team of scientists and fighters attempts to save Amsterdam from destructive robots.",
+    "series": null,
+    "episode": null,
+    "sources": [
+      {
+        "label": "Original WebM",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tears_of_Steel_in_4k_-_Official_Blender_Foundation_release.webm"
+      }
+    ],
+    "image": null,
+    "cors": false,
+    "captions": [],
+    "credit": "Blender Foundation / Blender Studio",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "rights": "https://mango.blender.org/about/",
+    "source": "https://commons.wikimedia.org/wiki/File:Tears_of_Steel_in_4k_-_Official_Blender_Foundation_release.webm",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:Tears_of_Steel_in_4k_-_Official_Blender_Foundation_release.webm",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "language": "English",
+    "changes": "Complete original short film with credits, no editorial changes."
+  },
+  {
     "id": "pendatang",
     "title": "Pendatang",
     "type": "Movies",
