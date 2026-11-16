@@ -29,3 +29,7 @@ The owner's original is on hold. New content must also avoid stiff artificial mo
 No new animated content is in this batch. No feature-film addition is claimed.
 
 Live subtitle review: episode 2 already has English subtitles burned into the publisher's video. Do not attach a second English subtitle track. Episode 4 uses the publisher's separate English subtitle file, enabled by default. Browser review caught and corrected duplicate text before final delivery.
+
+## Current acquisition direction — November 16, 2026
+
+Interpret the owner's cutoff as 1995 and newer, inclusive. Seek recognizable, professionally produced movies and episodic television, including titles carried by Tubi or similar services. A public distributor catalog or another service's free stream is only a lead; it is not Shuttlebug's license. Stop expanding with unrelated shorts or technical documentaries as substitutes for this request. Preserve original recorded audio and natural performances. The owner's original remains on hold. See CONTENT_ACQUISITION.md for researched candidates and unsent inquiries. No licensing fees, guarantees, subscriptions, purchases or contracts without the owner's approval.
