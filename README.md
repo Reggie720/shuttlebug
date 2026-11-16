@@ -53,3 +53,11 @@ Direct title links use `?watch=TITLE_ID`. Opening does not autoplay or bypass th
 ## Original preview canceled — 2026-11-16
 
 The owner rejected the robotic voice quality and canceled this version. Remove the preview and original listing from the public catalog, withdraw its media files, and retire its generator. Do not recreate it, resume production or use these synthetic voices again unless the owner explicitly requests a new direction. Existing movie and TV library entries remain available. Story notes are retained only as an archive, not as an active production.
+
+## Natural-audio library expansion and homepage curation — 2026-11-16
+
+See `CURATION.md` for the owner's standing audio and content requirements. No generated voices, artificial narration, or dubs have been added. The canceled original remains absent.
+
+The second batch adds Spring (no dialogue), Cosmos Laundromat (original recorded actors), and the eight complete episodes of BBS: The Documentary (original interviews). `tools/add-curated-batch-two.py` imports only these reviewed IDs and file names after codec/range checks. Exact film closing credits, creator licensing statements and audio provenance are recorded with the titles. New documentary streams are archival 480p; no HD restoration is claimed.
+
+`config.js` now sets the featured film, Start Here selection and series order. The red-and-black layout is retained. New on Shuttlebug and Longer Episodes give visitors a clear place to start. Favorites and viewing progress keep their existing IDs and storage keys. No paid services or ad accounts are activated.
