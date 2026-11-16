@@ -27,3 +27,5 @@ The owner's original is on hold. New content must also avoid stiff artificial mo
 - **Held:** U.S.-only public-domain findings do not establish worldwide distribution permission. No new classic feature was cleared in this review.
 
 No new animated content is in this batch. No feature-film addition is claimed.
+
+Live subtitle review: episode 2 already has English subtitles burned into the publisher's video. Do not attach a second English subtitle track. Episode 4 uses the publisher's separate English subtitle file, enabled by default. Browser review caught and corrected duplicate text before final delivery.

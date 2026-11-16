@@ -38,7 +38,7 @@ for number, uuid, title, description, language in EPISODES:
     poster = ROOT / f'media/library/sideways{number}.jpg'
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', '45', '-i', str(local), '-frames:v', '1', '-vf', 'scale=640:-1', str(poster)], check=True, capture_output=True)
     captions = []
-    if number != 1:
+    if number == 4:
         records = json.loads(get(api + '/captions'))['data']
         record = next(c for c in records if c['language']['id'] == 'en' and not c['automaticallyGenerated'])
         body = get(record['fileUrl'])
@@ -49,13 +49,13 @@ for number, uuid, title, description, language in EPISODES:
     new.append(dict(id=f'sideways{number}', title='SideWays — ' + title, type='TV', genre='Documentary', year=2018,
         series='SideWays', episode=number, duration=duration, description=description, image=f'/media/library/sideways{number}.jpg',
         sources=[dict(label=f['resolution']['label'], url=f['fileUrl']) for f in files], captions=captions,
-        defaultCaptions='en' if captions else None, language=language,
+        defaultCaptions='en' if captions else None, language=language, embeddedCaptions='English subtitles are included in the video.' if number == 2 else None,
         qualityNote='Publisher upload: 2018 · Short documentary episode',
         credit='Sideways, Roving WebSeries · Hélène Legay and Benoît Cassegrain · Original participants and music credited in each episode',
         license='CC BY-SA 3.0', licenseUrl='https://creativecommons.org/licenses/by-sa/3.0/', rights=RIGHTS,
         source='https://side-ways.net/en/episode' + str(number), rightsRecord=api, checked='2026-11-16', added='2026-11-16',
         collection='live-action-2026-11-16', audioType='recorded-human', audioEvidence=RIGHTS,
-        changes='Complete publisher streaming encode with original interviews, soundtrack and credits. No synthetic narration or dub. Thumbnail is a resized film frame. Publisher English subtitle file copied unchanged where available.'))
+        changes='Complete publisher streaming encode with original interviews, soundtrack and credits. No synthetic narration or dub. Thumbnail is a resized film frame. Episode 2 retains subtitles already in the publisher video; episode 4 uses the unchanged publisher English subtitle file.'))
     print('Verified', title, round(duration, 2), flush=True)
 
 catalog_path = ROOT / 'catalog.js'

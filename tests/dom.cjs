@@ -38,7 +38,8 @@ assert.equal(w.SHUTTLEBUG_CATALOG.filter(m=>m.series==='BBS: The Documentary').l
 run("openTitle('bbs1')");assert.equal($('#player').hasAttribute('crossorigin'),false);assert.equal(all('#quality option').length,2);assert.match($('#details').textContent,/Archival standard-definition/);click('[data-action="close"]');
 // New live-action series keeps original speech and publisher subtitles.
 const sideTitles=w.SHUTTLEBUG_CATALOG.filter(m=>m.series==='SideWays');assert.equal(sideTitles.length,3);assert.deepEqual(Array.from(sideTitles,m=>m.episode),[1,2,4]);assert(sideTitles.every(m=>m.audioType==='recorded-human'&&m.license==='CC BY-SA 3.0'));
-run("openTitle('sideways2')");assert.equal($('#player track').default,true);assert.match($('#player track').src,/sideways2-en.vtt/);assert.equal(all('#quality option').length,3);click('[data-action="close"]');
+run("openTitle('sideways2')");assert.equal($('#player track'),null);assert.match($('#details').textContent,/English subtitles are included in the video/);click('[data-action="close"]');
+run("openTitle('sideways4')");assert.equal($('#player track').default,true);assert.match($('#player track').src,/sideways4-en.vtt/);assert.equal(all('#quality option').length,3);click('[data-action="close"]');
 for(const m of sideTitles){assert(fs.existsSync('.'+m.image));for(const c of m.captions)assert(fs.readFileSync('.'+c.url,'utf8').startsWith('WEBVTT'));}
 // Catalog/manifest/service-worker contracts are checked without mocking their production code.
 const cat=w.SHUTTLEBUG_CATALOG;for(const m of cat.filter(m=>m.sources.length)){assert(m.credit);if(!m.preview)assert(m.rights&&m.source&&m.license);for(const s of m.sources)assert(s.url.startsWith('/media/')||['video.blender.org','archive.org','videos.side-ways.net'].includes(new URL(s.url).hostname));}

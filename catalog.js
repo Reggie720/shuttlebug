@@ -750,14 +750,8 @@ window.SHUTTLEBUG_CATALOG = [
         "url": "https://videos.side-ways.net/static/streaming-playlists/hls/76212048-1204-48ef-924d-f3cabeec15b1/8ededd63-a5ef-4b59-85c2-1f3ae14f7cc7-720-fragmented.mp4"
       }
     ],
-    "captions": [
-      {
-        "lang": "en",
-        "label": "English",
-        "url": "/captions/sideways2-en.vtt"
-      }
-    ],
-    "defaultCaptions": "en",
+    "captions": [],
+    "defaultCaptions": null,
     "language": "French with English subtitles",
     "qualityNote": "Publisher upload: 2018 \u00b7 Short documentary episode",
     "credit": "Sideways, Roving WebSeries \u00b7 H\u00e9l\u00e8ne Legay and Beno\u00eet Cassegrain \u00b7 Original participants and music credited in each episode",
@@ -771,7 +765,8 @@ window.SHUTTLEBUG_CATALOG = [
     "collection": "live-action-2026-11-16",
     "audioType": "recorded-human",
     "audioEvidence": "https://side-ways.net/en/webseries/",
-    "changes": "Complete publisher streaming encode with original interviews, soundtrack and credits. No synthetic narration or dub. Thumbnail is a resized film frame. Publisher English subtitle file copied unchanged where available."
+    "changes": "Complete publisher streaming encode with original interviews, soundtrack, English subtitles and credits. No synthetic narration or dub. Thumbnail is a resized film frame.",
+    "embeddedCaptions": "English subtitles are included in the video."
   },
   {
     "id": "sideways4",
