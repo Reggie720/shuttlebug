@@ -1,4 +1,4 @@
-const RELEASE = '49d0a83142d0';
+const RELEASE = 'a8d8094f8d98';
 const CACHE = 'shuttlebug-' + RELEASE;
 const SHELL = ['/', '/index.html', `/styles.css?v=${RELEASE}`, `/app.js?v=${RELEASE}`, `/catalog.js?v=${RELEASE}`, '/manifest.json', '/icons/icon-192.png', '/icons/icon-512.png', '/icons/maskable-512.png', '/icons/apple-touch-icon.png', '/icons/icon.svg'];
 const SHELL_PATHS = new Set(SHELL.map(path => new URL(path, self.location.origin).pathname));

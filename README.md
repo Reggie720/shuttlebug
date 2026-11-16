@@ -65,3 +65,6 @@ The second batch adds Spring (no dialogue), Cosmos Laundromat (original recorded
 ## Release cache consistency
 
 Run `python3 tools/prepare-release.py` after changing the catalog, app, configuration or styles and before committing a release. It assigns one content-derived version to the linked assets and service-worker cache. The worker refreshes shell requests through HTTP revalidation and activates only after its full new shell is cached. It never caches publisher config, media or ads. This prevents an older cached catalog from being mixed with a newly published homepage.
+
+### Reviewed live-action additions
+Three short SideWays documentary episodes (1, 2, 4) use original filmed interviews and the creator's CC BY-SA 3.0 permission. Episode 1 is English; 2 and 4 have the publisher's English subtitles enabled by default. No new animation or feature film was added in this batch. See CURATION.md for held candidates and permission evidence.

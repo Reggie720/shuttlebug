@@ -682,5 +682,143 @@ window.SHUTTLEBUG_CATALOG = [
     "audioEvidence": "https://ascii.textfiles.com/archives/865",
     "qualityNote": "Archival standard-definition footage",
     "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub."
+  },
+  {
+    "id": "sideways1",
+    "title": "SideWays \u2014 Strictly Moneyless",
+    "type": "TV",
+    "genre": "Documentary",
+    "year": 2018,
+    "series": "SideWays",
+    "episode": 1,
+    "duration": 324.703991,
+    "description": "Meet Elf Pavlik, a traveler who has chosen to live without money and help the communities he visits.",
+    "image": "/media/library/sideways1.jpg",
+    "sources": [
+      {
+        "label": "360p",
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/e49d8227-8565-4f54-86c7-78e40e1cc451/9fb833ad-782c-4e78-a4db-1e3343565ef7-360-fragmented.mp4"
+      },
+      {
+        "label": "480p",
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/e49d8227-8565-4f54-86c7-78e40e1cc451/1952aab3-5890-45ef-ba0c-ace988269be5-480-fragmented.mp4"
+      },
+      {
+        "label": "720p",
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/e49d8227-8565-4f54-86c7-78e40e1cc451/c4c7314c-96fe-48e3-8c71-535e7db7d71c-720-fragmented.mp4"
+      }
+    ],
+    "captions": [],
+    "defaultCaptions": null,
+    "language": "English",
+    "qualityNote": "Publisher upload: 2018 \u00b7 Short documentary episode",
+    "credit": "Sideways, Roving WebSeries \u00b7 H\u00e9l\u00e8ne Legay and Beno\u00eet Cassegrain \u00b7 Original participants and music credited in each episode",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "rights": "https://side-ways.net/en/webseries/",
+    "source": "https://side-ways.net/en/episode1",
+    "rightsRecord": "https://videos.side-ways.net/api/v1/videos/e49d8227-8565-4f54-86c7-78e40e1cc451",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "collection": "live-action-2026-11-16",
+    "audioType": "recorded-human",
+    "audioEvidence": "https://side-ways.net/en/webseries/",
+    "changes": "Complete publisher streaming encode with original interviews, soundtrack and credits. No synthetic narration or dub. Thumbnail is a resized film frame. Publisher English subtitle file copied unchanged where available."
+  },
+  {
+    "id": "sideways2",
+    "title": "SideWays \u2014 Buy Housing Together",
+    "type": "TV",
+    "genre": "Documentary",
+    "year": 2018,
+    "series": "SideWays",
+    "episode": 2,
+    "duration": 361.622,
+    "description": "In Nantes, a group pools small monthly contributions to buy homes for people experiencing homelessness.",
+    "image": "/media/library/sideways2.jpg",
+    "sources": [
+      {
+        "label": "360p",
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/76212048-1204-48ef-924d-f3cabeec15b1/20ec194b-f379-47b9-8671-7b6207cd9226-360-fragmented.mp4"
+      },
+      {
+        "label": "480p",
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/76212048-1204-48ef-924d-f3cabeec15b1/a5353ce0-24d2-4cc4-9deb-b68266633dc6-480-fragmented.mp4"
+      },
+      {
+        "label": "720p",
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/76212048-1204-48ef-924d-f3cabeec15b1/8ededd63-a5ef-4b59-85c2-1f3ae14f7cc7-720-fragmented.mp4"
+      }
+    ],
+    "captions": [
+      {
+        "lang": "en",
+        "label": "English",
+        "url": "/captions/sideways2-en.vtt"
+      }
+    ],
+    "defaultCaptions": "en",
+    "language": "French with English subtitles",
+    "qualityNote": "Publisher upload: 2018 \u00b7 Short documentary episode",
+    "credit": "Sideways, Roving WebSeries \u00b7 H\u00e9l\u00e8ne Legay and Beno\u00eet Cassegrain \u00b7 Original participants and music credited in each episode",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "rights": "https://side-ways.net/en/webseries/",
+    "source": "https://side-ways.net/en/episode2",
+    "rightsRecord": "https://videos.side-ways.net/api/v1/videos/76212048-1204-48ef-924d-f3cabeec15b1",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "collection": "live-action-2026-11-16",
+    "audioType": "recorded-human",
+    "audioEvidence": "https://side-ways.net/en/webseries/",
+    "changes": "Complete publisher streaming encode with original interviews, soundtrack and credits. No synthetic narration or dub. Thumbnail is a resized film frame. Publisher English subtitle file copied unchanged where available."
+  },
+  {
+    "id": "sideways4",
+    "title": "SideWays \u2014 Let Us Build Together",
+    "type": "TV",
+    "genre": "Documentary",
+    "year": 2018,
+    "series": "SideWays",
+    "episode": 4,
+    "duration": 333.76,
+    "description": "Neighbors in Belgium build a wind turbine together and share what they learn along the way.",
+    "image": "/media/library/sideways4.jpg",
+    "sources": [
+      {
+        "label": "360p",
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/5150622b-2281-4366-8d90-3634b336f048/9a7244c3-1908-4f5a-9e02-6c4e58a5be80-360-fragmented.mp4"
+      },
+      {
+        "label": "480p",
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/5150622b-2281-4366-8d90-3634b336f048/e6787835-5f35-4d79-8108-9f70f01428e8-480-fragmented.mp4"
+      },
+      {
+        "label": "720p",
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/5150622b-2281-4366-8d90-3634b336f048/3ae5ca35-1885-4c7e-8f87-5a38f3329d8c-720-fragmented.mp4"
+      }
+    ],
+    "captions": [
+      {
+        "lang": "en",
+        "label": "English",
+        "url": "/captions/sideways4-en.vtt"
+      }
+    ],
+    "defaultCaptions": "en",
+    "language": "French with English subtitles",
+    "qualityNote": "Publisher upload: 2018 \u00b7 Short documentary episode",
+    "credit": "Sideways, Roving WebSeries \u00b7 H\u00e9l\u00e8ne Legay and Beno\u00eet Cassegrain \u00b7 Original participants and music credited in each episode",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "rights": "https://side-ways.net/en/webseries/",
+    "source": "https://side-ways.net/en/episode4",
+    "rightsRecord": "https://videos.side-ways.net/api/v1/videos/5150622b-2281-4366-8d90-3634b336f048",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "collection": "live-action-2026-11-16",
+    "audioType": "recorded-human",
+    "audioEvidence": "https://side-ways.net/en/webseries/",
+    "changes": "Complete publisher streaming encode with original interviews, soundtrack and credits. No synthetic narration or dub. Thumbnail is a resized film frame. Publisher English subtitle file copied unchanged where available."
   }
 ];

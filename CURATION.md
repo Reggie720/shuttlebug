@@ -15,3 +15,15 @@ No subscriptions, purchases, ad-network enrollments, new hosting resources or ch
 - **BBS: The Documentary:** eight complete 2005 episodes with original human interviews. Jason Scott's own June 2, 2005 licensing statement permits commercial redistribution under CC BY-SA 2.0. The selected Archive encode has 480p H.264/AAC video and audio; it remains archival standard-definition footage, not newly restored HD. Do not replace the interview audio with narration.
 
 Homepage curation places Spring first, offers a Start Here selection, and makes the longer documentary episodes easy to find. Ordering can change without affecting favorites or viewing progress.
+
+## Live-action review, November 16, 2026
+
+The owner's original is on hold. New content must also avoid stiff artificial movement and unwanted cartoon styles. Do not make another original or add synthetic performances to fill the catalog.
+
+- **SideWays episodes 1, 2 and 4:** original filmed participants and recorded speech. Publisher explicitly licenses the episodes under CC BY-SA 3.0, including commercial screenings: https://side-ways.net/en/webseries/. Exact episode API records also identify Attribution-ShareAlike. Use original English in episode 1; original French plus publisher-provided English subtitles in 2 and 4. Never dub them. Preserve nonconsecutive creator numbering (episode 3 is an article without a video). The year shown is the publisher's 2018 upload, identified in details, rather than an inferred production date. H.264/AAC streaming encodes tested in 480p; 360p and 720p available. Thumbnails are resized original frames. English subtitle files are copied unchanged and retain the episode's share-alike terms.
+- **Held:** The Cosmonaut and The Dabbler have conflicting or insufficiently precise license evidence. Do not publish based on a third-party CC label.
+- **Held:** Steal This Film has conflicting license descriptions and incorporated third-party material. No publication in this batch.
+- **Held:** Patent Absurdity has publisher permission, but the broadly compatible MP4 source found is only 240p. Do not add it as catalog filler; seek a better compatible encode.
+- **Held:** U.S.-only public-domain findings do not establish worldwide distribution permission. No new classic feature was cleared in this review.
+
+No new animated content is in this batch. No feature-film addition is claimed.
