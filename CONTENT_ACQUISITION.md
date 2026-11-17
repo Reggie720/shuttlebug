@@ -1,6 +1,17 @@
 # Shuttlebug: movies and television from 1995 onward
 
-Prepared November 16, 2026. Research and unsent inquiries only. No distributor has approved Shuttlebug, quoted prices or granted these rights. None of the candidates below has been added to the public player.
+Prepared November 16, 2026; submission status updated November 17, 2026. The commercial titles below remain licensing candidates, not approved streaming assets. Submission confirmation is not a license.
+
+## Latest submission status — November 17, 2026
+
+- **Radial Entertainment: submission confirmed.** The official contact form at https://www.radialentertainment.com/contact displayed “THANK YOU FOR CONTACTING US” after submission. Priority movie: **Homefront (2013)**. The inquiry also included Honest Thief, Limitless, Cheaters, Kitchen Nightmares and original Forensic Files episodes from 1996 onward.
+- Requested terms: **no upfront fee, advertising-revenue sharing and no minimum guarantee**. The inquiry explicitly made no purchase, fee or contractual commitment. No offer or screening permission has been received.
+- Owner-confirmed reply address was used. Keep private contact details out of this public record.
+- **Vision Films, Multicom, Mill Creek and ITN Distribution:** separate outgoing inquiries were verified in the connected mailbox. Do not send duplicates. The mailbox search did not show distributor permission or terms in response.
+- **Filmhub:** another conversation reported a submission. This turn did not independently verify its confirmation, so check that workflow before resubmitting.
+- No new commercial movie was downloaded, added to the public player or announced as coming soon in this review.
+
+The drafts below are historical preparation notes. Use this status section to determine whether outreach is still pending.
 
 ## Owner's direction
 
@@ -35,9 +46,9 @@ Public contact routes: https://filmhub.com/contact/buyer and https://www.radiale
 - Current monetization: no paid ads running; no active video pre-roll/VAST system, ad-network enrollment or verified ad revenue.
 - Audience: early-stage service; no verified audience or watch-time metrics supplied. Do not invent numbers.
 - Proposed initial quote scope: United States AVOD; ask about any additional included territories. No territory restriction has been implemented yet. Final territory must match the signed permission and actual delivery controls.
-- Legal contracting entity, authorized business contact and contact email: owner must supply/confirm before submission. Do not assume one of the owner's unrelated businesses is the contracting party.
+- Inquiry identity: Shuttlebug as platform and the owner's personal name as contact, with the owner-confirmed reply address. Confirm the actual legal contracting entity before signing a deal; do not assume an unrelated business is the contracting party.
 
-## Unsent Filmhub inquiry
+## Original Filmhub inquiry draft
 
 Subject: Shuttlebug — buyer eligibility and 1995+ AVOD film licensing
 
@@ -51,7 +62,7 @@ Our site is live, but advertising is not yet running and video ad delivery has n
 
 This is an availability and information inquiry, not acceptance of a license or payment obligation.
 
-## Unsent Radial inquiry
+## Original Radial inquiry draft
 
 Subject: Shuttlebug — film and television AVOD licensing inquiry
 
@@ -69,4 +80,4 @@ This is an information inquiry, not acceptance of a contract or payment obligati
 
 Before publication, obtain owner approval for the actual deal, retain the granted rights and exact permitted media, and meet the licensor's territory, time-window, security, reporting and advertising requirements. Test delivery, audio, captions, playback, mobile layout and TV controls against the licensed assets. Do not advertise a title as available or coming soon until permission supports that claim.
 
-No inquiries have been sent. Sending them in the owner's name requires an explicit instruction and a confirmed business contact/entity. No licenses or paid services have been acquired.
+The owner authorized distributor inquiries and confirmed the reply address. See the latest submission status above before contacting anyone again. No licenses or paid services have been acquired.
