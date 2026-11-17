@@ -33,3 +33,11 @@ Live subtitle review: episode 2 already has English subtitles burned into the pu
 ## Current acquisition direction — November 16, 2026
 
 Interpret the owner's cutoff as 1995 and newer, inclusive. Seek recognizable, professionally produced movies and episodic television, including titles carried by Tubi or similar services. A public distributor catalog or another service's free stream is only a lead; it is not Shuttlebug's license. Stop expanding with unrelated shorts or technical documentaries as substitutes for this request. Preserve original recorded audio and natural performances. The owner's original remains on hold. See CONTENT_ACQUISITION.md for researched candidates and unsent inquiries. No licensing fees, guarantees, subscriptions, purchases or contracts without the owner's approval.
+
+## Pendatang playback completion — November 17, 2026
+
+User authorized adding the verified 2023 live-action film. It had previously been inserted into the deployed fingerprinted catalog only, with a single 4K source and no captions. Preserve the existing published catalog/player changes in the root sources before preparing a fresh release. Keep its stable `pendatang` ID and do not duplicate the listing.
+
+The exact Commons movie has a reviewed CC BY 3.0 release from Kuman Pictures' official YouTube upload, documented at https://commons.wikimedia.org/wiki/File:PENDATANG_(2023)_full_movie.webm . Original film: https://www.youtube.com/watch?v=yI50AwTDpiU . Publisher/cast provenance: https://www.kumanpictures.com/pendatang . Preserve all recorded performances, music and credits. Provide tested Commons 240p, 480p and 1080p VP9/Opus streaming files rather than requiring the 4.65 GB original. Codec support varies; do not claim certification for every TV or phone. English TimedText captions are converted to WebVTT without wording or timing changes; source and CC BY-SA 4.0 text attribution remain in the listing. Use a film-frame poster under the film's license.
+
+Only Pendatang is completed/promoted in this change. The other pre-existing published entries are retained, not newly selected or certified in this review. No synthetic dub, new cartoon or purchased title is added.

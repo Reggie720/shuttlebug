@@ -8,7 +8,7 @@ const base=process.env.TEST_URL||'http://127.0.0.1:8765';
  const page=await context.newPage();let errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(base);await page.locator('.hero').waitFor();assert.match(await page.title(),/Home/);
  for(const nav of ['TV','Movies','Originals','My List','Settings','Home']){await page.locator(`[data-page="${nav}"]`).click();await page.waitForURL('**/#'+encodeURIComponent(nav));assert(await page.locator(`[data-page="${nav}"]`).getAttribute('aria-current')==='page');}
- await page.locator('[data-page="Movies"]').click();assert.equal(await page.locator('.browse-grid .tile').count(),6);
+ await page.locator('[data-page="Movies"]').click();assert.equal(await page.locator('.browse-grid .tile').count(),17);
  await page.locator('[data-genre="Fantasy"]').click();assert.equal(await page.locator('.browse-grid .tile').count(),2);
  await page.locator('#search').fill('no-such-title');assert.match(await page.locator('#content').innerText(),/No matches/);
  await page.locator('#search').fill('caminandes');assert.equal(await page.locator('.browse-grid .tile').count(),2);

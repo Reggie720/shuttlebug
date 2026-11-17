@@ -1,4 +1,4 @@
-const RELEASE = '488c23986fa9';
+const RELEASE = '8e3b904a3833';
 const CACHE = 'shuttlebug-' + RELEASE;
 const ENTRY = `/releases/${RELEASE}/index.html`;
 const SHELL = ['/', '/index.html', ENTRY, `/assets/${RELEASE}/styles.css`, `/assets/${RELEASE}/app.js`, `/assets/${RELEASE}/catalog.js`, '/manifest.json', '/icons/icon-192.png', '/icons/icon-512.png', '/icons/maskable-512.png', '/icons/apple-touch-icon.png', '/icons/icon.svg'];

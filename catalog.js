@@ -1,5 +1,415 @@
 window.SHUTTLEBUG_CATALOG = [
   {
+    "id": "kente",
+    "title": "Kente Weaving at Bonwire",
+    "year": 2024,
+    "duration": 4509,
+    "type": "Movies",
+    "genre": "Documentary",
+    "description": "Explore the history and cultural significance of traditional Kente weaving in Ghana.",
+    "series": null,
+    "episode": null,
+    "image": null,
+    "sources": [
+      {
+        "label": "Original WebM",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kente_Weaving_at_Bonwire.webm"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "credit": "Global Open Initiative Foundation / Sunkanmi12",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "rights": "https://commons.wikimedia.org/wiki/File:Kente_Weaving_at_Bonwire.webm",
+    "source": "https://commons.wikimedia.org/wiki/File:Kente_Weaving_at_Bonwire.webm",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:Kente_Weaving_at_Bonwire.webm",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "changes": "Complete original film; no editorial changes."
+  },
+  {
+    "id": "sita",
+    "title": "Sita Sings the Blues",
+    "year": 2008,
+    "duration": 4891,
+    "type": "Movies",
+    "genre": "Animation",
+    "description": "An animated retelling of the Ramayana interwoven with a modern story of heartbreak.",
+    "series": null,
+    "episode": null,
+    "image": null,
+    "sources": [
+      {
+        "label": "Original WebM",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sita_Sings_the_Blues.webm"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "credit": "Nina Paley",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "rights": "https://commons.wikimedia.org/wiki/File:Sita_Sings_the_Blues.webm",
+    "source": "https://commons.wikimedia.org/wiki/File:Sita_Sings_the_Blues.webm",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:Sita_Sings_the_Blues.webm",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "changes": "Complete original film; no editorial changes."
+  },
+  {
+    "id": "creatures",
+    "title": "All Creatures Welcome",
+    "year": 2018,
+    "type": "Movies",
+    "genre": "Documentary",
+    "duration": 5211,
+    "description": "A documentary journey into hacker culture and digital communities.",
+    "series": null,
+    "episode": null,
+    "image": null,
+    "sources": [
+      {
+        "label": "Original",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/All_Creatures_Welcome_-_official_version_(SUBs-DE-EN).webm"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "credit": "Sandra Trostel",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "rights": "https://commons.wikimedia.org/wiki/File:All_Creatures_Welcome_-_official_version_(SUBs-DE-EN).webm",
+    "source": "https://commons.wikimedia.org/wiki/File:All_Creatures_Welcome_-_official_version_(SUBs-DE-EN).webm",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:All_Creatures_Welcome_-_official_version_(SUBs-DE-EN).webm",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "changes": "Complete original documentary; no editorial changes."
+  },
+  {
+    "id": "paywall",
+    "title": "Paywall: The Business of Scholarship",
+    "year": 2018,
+    "type": "Movies",
+    "genre": "Documentary",
+    "duration": 3888,
+    "description": "An investigation of the academic publishing industry and open access.",
+    "series": null,
+    "episode": null,
+    "image": null,
+    "sources": [
+      {
+        "label": "Original",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018_documentary_'Paywall_%E2%80%93_The_Business_of_Scholarship'.ogg"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "credit": "Jason Schmitt",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "https://commons.wikimedia.org/wiki/File:2018_documentary_'Paywall_%E2%80%93_The_Business_of_Scholarship'.ogg",
+    "source": "https://commons.wikimedia.org/wiki/File:2018_documentary_'Paywall_%E2%80%93_The_Business_of_Scholarship'.ogg",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:2018_documentary_'Paywall_%E2%80%93_The_Business_of_Scholarship'.ogg",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "changes": "Complete original documentary; no editorial changes."
+  },
+  {
+    "id": "dominion",
+    "title": "Dominion",
+    "year": 2018,
+    "type": "Movies",
+    "genre": "Documentary",
+    "duration": 7200,
+    "description": "An investigation into modern animal agriculture, narrated by Joaquin Phoenix and others.",
+    "series": null,
+    "episode": null,
+    "image": null,
+    "sources": [
+      {
+        "label": "Original",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dominion_(2018)_%E2%80%93_full_documentary.webm"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "credit": "Farm Transparency Project",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "https://commons.wikimedia.org/wiki/File:Dominion_(2018)_%E2%80%93_full_documentary.webm",
+    "source": "https://commons.wikimedia.org/wiki/File:Dominion_(2018)_%E2%80%93_full_documentary.webm",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:Dominion_(2018)_%E2%80%93_full_documentary.webm",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "changes": "Complete original documentary; no editorial changes.",
+    "advisory": "Graphic animal cruelty"
+  },
+  {
+    "id": "nasa-neowise",
+    "title": "NASA Science Live: How to Spot Comet NEOWISE",
+    "year": 2020,
+    "duration": 1734,
+    "description": "NASA scientists explain how to observe the comet.",
+    "type": "TV",
+    "genre": "Documentary",
+    "series": "NASA Science Live",
+    "episode": null,
+    "image": null,
+    "sources": [
+      {
+        "label": "Original WebM",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/NASA_Science_Live%3B_How_to_Spot_Comet_NEOWISE.webm"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "credit": "NASA",
+    "license": "US public domain",
+    "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "rights": "https://commons.wikimedia.org/wiki/File:NASA_Science_Live%3B_How_to_Spot_Comet_NEOWISE.webm",
+    "source": "https://commons.wikimedia.org/wiki/File:NASA_Science_Live%3B_How_to_Spot_Comet_NEOWISE.webm",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:NASA_Science_Live%3B_How_to_Spot_Comet_NEOWISE.webm",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "language": "English",
+    "changes": "Original broadcast; no editorial changes. No NASA endorsement implied."
+  },
+  {
+    "id": "nasa-ezie",
+    "title": "NASA Science Live: Aurora Glow, Electric Flow",
+    "year": 2025,
+    "duration": 3387,
+    "description": "NASA experts explain the EZIE mission and the electric currents behind auroras.",
+    "type": "TV",
+    "genre": "Documentary",
+    "series": "NASA Science Live",
+    "episode": null,
+    "image": null,
+    "sources": [
+      {
+        "label": "Original WebM",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/NASA_Science_Live-_Aurora_Glow%2C_Electric_Flow_%26_the_EZIE_Mission_(Episode_-63)_(20250324_NSL_EZIE).webm"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "credit": "NASA",
+    "license": "US public domain",
+    "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "rights": "https://commons.wikimedia.org/wiki/File:NASA_Science_Live-_Aurora_Glow%2C_Electric_Flow_%26_the_EZIE_Mission_(Episode_-63)_(20250324_NSL_EZIE).webm",
+    "source": "https://commons.wikimedia.org/wiki/File:NASA_Science_Live-_Aurora_Glow%2C_Electric_Flow_%26_the_EZIE_Mission_(Episode_-63)_(20250324_NSL_EZIE).webm",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:NASA_Science_Live-_Aurora_Glow%2C_Electric_Flow_%26_the_EZIE_Mission_(Episode_-63)_(20250324_NSL_EZIE).webm",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "language": "English",
+    "changes": "Original broadcast; no editorial changes. No NASA endorsement implied."
+  },
+  {
+    "id": "coffeerun",
+    "title": "Coffee Run",
+    "year": 2020,
+    "genre": "Animation",
+    "duration": 185,
+    "description": "A fast-paced animated journey through memories and emotions.",
+    "type": "Movies",
+    "series": null,
+    "episode": null,
+    "image": null,
+    "sources": [
+      {
+        "label": "Original WebM",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coffee_Run_-_Blender_Open_Movie-full_movie.webm"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "credit": "Blender Studio / Blender Foundation",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "https://commons.wikimedia.org/wiki/File:Coffee_Run_-_Blender_Open_Movie-full_movie.webm",
+    "source": "https://commons.wikimedia.org/wiki/File:Coffee_Run_-_Blender_Open_Movie-full_movie.webm",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:Coffee_Run_-_Blender_Open_Movie-full_movie.webm",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "changes": "Complete original short film with credits; no editorial changes."
+  },
+  {
+    "id": "wingit",
+    "title": "WING IT!",
+    "year": 2023,
+    "genre": "Animation",
+    "duration": 238,
+    "description": "An unlikely pair embark on a chaotic adventure.",
+    "type": "Movies",
+    "series": null,
+    "episode": null,
+    "image": null,
+    "sources": [
+      {
+        "label": "Original WebM",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/WING_IT!_-_Blender_Open_Movie-full_movie.webm"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "credit": "Blender Studio / Blender Foundation",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "https://commons.wikimedia.org/wiki/File:WING_IT!_-_Blender_Open_Movie-full_movie.webm",
+    "source": "https://commons.wikimedia.org/wiki/File:WING_IT!_-_Blender_Open_Movie-full_movie.webm",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:WING_IT!_-_Blender_Open_Movie-full_movie.webm",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "changes": "Complete original short film with credits; no editorial changes."
+  },
+  {
+    "id": "charge",
+    "title": "Charge",
+    "year": 2022,
+    "genre": "Sci-fi",
+    "duration": 263,
+    "description": "In a dystopian world, a desperate man searches for power.",
+    "type": "Movies",
+    "series": null,
+    "episode": null,
+    "image": null,
+    "sources": [
+      {
+        "label": "Original WebM",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Charge_-_Blender_Open_Movie-full_movie.webm"
+      }
+    ],
+    "cors": false,
+    "captions": [],
+    "credit": "Blender Studio / Blender Foundation",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "https://commons.wikimedia.org/wiki/File:Charge_-_Blender_Open_Movie-full_movie.webm",
+    "source": "https://commons.wikimedia.org/wiki/File:Charge_-_Blender_Open_Movie-full_movie.webm",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:Charge_-_Blender_Open_Movie-full_movie.webm",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "changes": "Complete original short film with credits; no editorial changes."
+  },
+  {
+    "id": "sprite",
+    "title": "Sprite Fright",
+    "year": 2021,
+    "genre": "Horror",
+    "type": "Movies",
+    "duration": 630,
+    "description": "Teenagers encounter a dangerous colony of mushroom creatures in a remote forest.",
+    "series": null,
+    "episode": null,
+    "sources": [
+      {
+        "label": "Original WebM",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sprite_Fright_-_Blender_Open_Movie-full_movie.webm"
+      }
+    ],
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sprite_Fright-movie_poster.jpg?width=400",
+    "cors": false,
+    "captions": [],
+    "credit": "Blender Foundation / Blender Studio",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "https://commons.wikimedia.org/wiki/File:Sprite_Fright_-_Blender_Open_Movie-full_movie.webm",
+    "source": "https://commons.wikimedia.org/wiki/File:Sprite_Fright_-_Blender_Open_Movie-full_movie.webm",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:Sprite_Fright_-_Blender_Open_Movie-full_movie.webm",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "language": "English",
+    "changes": "Complete original short film with credits, no editorial changes."
+  },
+  {
+    "id": "tears",
+    "title": "Tears of Steel",
+    "year": 2012,
+    "genre": "Sci-fi",
+    "type": "Movies",
+    "duration": 734,
+    "description": "A team of scientists and fighters attempts to save Amsterdam from destructive robots.",
+    "series": null,
+    "episode": null,
+    "sources": [
+      {
+        "label": "Original WebM",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tears_of_Steel_in_4k_-_Official_Blender_Foundation_release.webm"
+      }
+    ],
+    "image": null,
+    "cors": false,
+    "captions": [],
+    "credit": "Blender Foundation / Blender Studio",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "rights": "https://mango.blender.org/about/",
+    "source": "https://commons.wikimedia.org/wiki/File:Tears_of_Steel_in_4k_-_Official_Blender_Foundation_release.webm",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:Tears_of_Steel_in_4k_-_Official_Blender_Foundation_release.webm",
+    "checked": "2026-11-16",
+    "added": "2026-11-16",
+    "language": "English",
+    "changes": "Complete original short film with credits, no editorial changes."
+  },
+  {
+    "id": "pendatang",
+    "title": "Pendatang",
+    "type": "Movies",
+    "genre": "Thriller",
+    "year": 2023,
+    "series": null,
+    "episode": null,
+    "duration": 5902.066,
+    "description": "In a segregated future Malaysia, a family discovers a young girl hiding in their new home and faces a dangerous choice.",
+    "image": "/media/library/pendatang.jpg",
+    "sources": [
+      {
+        "label": "240p",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/62/PENDATANG_%282023%29_full_movie.webm/PENDATANG_%282023%29_full_movie.webm.240p.vp9.webm"
+      },
+      {
+        "label": "480p",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/62/PENDATANG_%282023%29_full_movie.webm/PENDATANG_%282023%29_full_movie.webm.480p.vp9.webm"
+      },
+      {
+        "label": "1080p",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/62/PENDATANG_%282023%29_full_movie.webm/PENDATANG_%282023%29_full_movie.webm.1080p.vp9.webm"
+      }
+    ],
+    "cors": true,
+    "captions": [
+      {
+        "lang": "en",
+        "label": "English",
+        "url": "/captions/pendatang-en.vtt"
+      }
+    ],
+    "credit": "Kuman Pictures \u00b7 A Kuman Pictures production in association with Sunstrong Entertainment and Tapir Films \u00b7 Director: Ng Ken Kin \u00b7 Screenwriter: Lim Boon Siang \u00b7 Original cast and crew credited in the film",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "rights": "https://commons.wikimedia.org/wiki/File:PENDATANG_(2023)_full_movie.webm",
+    "source": "https://www.youtube.com/watch?v=yI50AwTDpiU",
+    "rightsRecord": "https://commons.wikimedia.org/wiki/File:PENDATANG_(2023)_full_movie.webm",
+    "checked": "2026-11-17",
+    "added": "2026-11-17",
+    "language": "Cantonese and Malay \u00b7 English subtitles",
+    "changes": "Complete film with original recorded performances, soundtrack and credits. Wikimedia Commons VP9/Opus streaming encodes; resized film-frame thumbnail. No new narration or dub.",
+    "defaultCaptions": "en",
+    "collection": "new-2026-11-17",
+    "audioType": "recorded-human",
+    "audioEvidence": "https://www.kumanpictures.com/pendatang",
+    "advisory": "Unrated \u00b7 Mature themes",
+    "qualityNote": "If playback is unavailable, try a current Chrome, Edge or Firefox browser, or the official film link below.",
+    "captionCredit": {
+      "credit": "English subtitles: Wikimedia Commons contributors; see source history",
+      "source": "https://commons.wikimedia.org/wiki/TimedText:PENDATANG_(2023)_full_movie.webm.en.srt",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "Converted from SRT to WebVTT without changing cue wording or timings."
+    }
+  },
+  {
     "id": "bbb",
     "title": "Big Buck Bunny",
     "type": "Movies",
