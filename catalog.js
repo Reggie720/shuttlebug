@@ -26,7 +26,8 @@ window.SHUTTLEBUG_CATALOG = [
     "rightsRecord": "https://commons.wikimedia.org/wiki/File:Kente_Weaving_at_Bonwire.webm",
     "checked": "2026-11-16",
     "added": "2026-11-16",
-    "changes": "Complete original film; no editorial changes."
+    "changes": "Complete original film; no editorial changes.",
+    "format": "feature"
   },
   {
     "id": "sita",
@@ -55,7 +56,8 @@ window.SHUTTLEBUG_CATALOG = [
     "rightsRecord": "https://commons.wikimedia.org/wiki/File:Sita_Sings_the_Blues.webm",
     "checked": "2026-11-16",
     "added": "2026-11-16",
-    "changes": "Complete original film; no editorial changes."
+    "changes": "Complete original film; no editorial changes.",
+    "format": "feature"
   },
   {
     "id": "creatures",
@@ -84,7 +86,8 @@ window.SHUTTLEBUG_CATALOG = [
     "rightsRecord": "https://commons.wikimedia.org/wiki/File:All_Creatures_Welcome_-_official_version_(SUBs-DE-EN).webm",
     "checked": "2026-11-16",
     "added": "2026-11-16",
-    "changes": "Complete original documentary; no editorial changes."
+    "changes": "Complete original documentary; no editorial changes.",
+    "format": "feature"
   },
   {
     "id": "paywall",
@@ -113,7 +116,8 @@ window.SHUTTLEBUG_CATALOG = [
     "rightsRecord": "https://commons.wikimedia.org/wiki/File:2018_documentary_'Paywall_%E2%80%93_The_Business_of_Scholarship'.ogg",
     "checked": "2026-11-16",
     "added": "2026-11-16",
-    "changes": "Complete original documentary; no editorial changes."
+    "changes": "Complete original documentary; no editorial changes.",
+    "format": "feature"
   },
   {
     "id": "dominion",
@@ -143,7 +147,8 @@ window.SHUTTLEBUG_CATALOG = [
     "checked": "2026-11-16",
     "added": "2026-11-16",
     "changes": "Complete original documentary; no editorial changes.",
-    "advisory": "Graphic animal cruelty"
+    "advisory": "Graphic animal cruelty",
+    "format": "feature"
   },
   {
     "id": "nasa-neowise",
@@ -173,7 +178,8 @@ window.SHUTTLEBUG_CATALOG = [
     "checked": "2026-11-16",
     "added": "2026-11-16",
     "language": "English",
-    "changes": "Original broadcast; no editorial changes. No NASA endorsement implied."
+    "changes": "Original broadcast; no editorial changes. No NASA endorsement implied.",
+    "format": "episode"
   },
   {
     "id": "nasa-ezie",
@@ -203,7 +209,8 @@ window.SHUTTLEBUG_CATALOG = [
     "checked": "2026-11-16",
     "added": "2026-11-16",
     "language": "English",
-    "changes": "Original broadcast; no editorial changes. No NASA endorsement implied."
+    "changes": "Original broadcast; no editorial changes. No NASA endorsement implied.",
+    "format": "episode"
   },
   {
     "id": "coffeerun",
@@ -232,7 +239,8 @@ window.SHUTTLEBUG_CATALOG = [
     "rightsRecord": "https://commons.wikimedia.org/wiki/File:Coffee_Run_-_Blender_Open_Movie-full_movie.webm",
     "checked": "2026-11-16",
     "added": "2026-11-16",
-    "changes": "Complete original short film with credits; no editorial changes."
+    "changes": "Complete original short film with credits; no editorial changes.",
+    "format": "short"
   },
   {
     "id": "wingit",
@@ -261,7 +269,8 @@ window.SHUTTLEBUG_CATALOG = [
     "rightsRecord": "https://commons.wikimedia.org/wiki/File:WING_IT!_-_Blender_Open_Movie-full_movie.webm",
     "checked": "2026-11-16",
     "added": "2026-11-16",
-    "changes": "Complete original short film with credits; no editorial changes."
+    "changes": "Complete original short film with credits; no editorial changes.",
+    "format": "short"
   },
   {
     "id": "charge",
@@ -290,7 +299,8 @@ window.SHUTTLEBUG_CATALOG = [
     "rightsRecord": "https://commons.wikimedia.org/wiki/File:Charge_-_Blender_Open_Movie-full_movie.webm",
     "checked": "2026-11-16",
     "added": "2026-11-16",
-    "changes": "Complete original short film with credits; no editorial changes."
+    "changes": "Complete original short film with credits; no editorial changes.",
+    "format": "short"
   },
   {
     "id": "sprite",
@@ -320,7 +330,8 @@ window.SHUTTLEBUG_CATALOG = [
     "checked": "2026-11-16",
     "added": "2026-11-16",
     "language": "English",
-    "changes": "Complete original short film with credits, no editorial changes."
+    "changes": "Complete original short film with credits, no editorial changes.",
+    "format": "short"
   },
   {
     "id": "tears",
@@ -350,7 +361,8 @@ window.SHUTTLEBUG_CATALOG = [
     "checked": "2026-11-16",
     "added": "2026-11-16",
     "language": "English",
-    "changes": "Complete original short film with credits, no editorial changes."
+    "changes": "Complete original short film with credits, no editorial changes.",
+    "format": "short"
   },
   {
     "id": "pendatang",
@@ -407,7 +419,8 @@ window.SHUTTLEBUG_CATALOG = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "changes": "Converted from SRT to WebVTT without changing cue wording or timings."
-    }
+    },
+    "format": "feature"
   },
   {
     "id": "bbb",
@@ -442,7 +455,8 @@ window.SHUTTLEBUG_CATALOG = [
     "rightsRecord": "https://video.blender.org/api/v1/videos/bf1f3fb5-b119-4f9f-9930-8e20e892b898",
     "checked": "2026-11-15",
     "changes": "Complete film with original credits; no editorial changes. Publisher streaming encode.",
-    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "format": "short"
   },
   {
     "id": "ed",
@@ -477,7 +491,8 @@ window.SHUTTLEBUG_CATALOG = [
     "rightsRecord": "https://video.blender.org/api/v1/videos/cccc3e60-0291-4ecc-aa56-39b2e2c7d0d5",
     "checked": "2026-11-15",
     "changes": "Complete film with original credits; no editorial changes. Publisher streaming encode.",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.5/"
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5/",
+    "format": "short"
   },
   {
     "id": "sintel",
@@ -512,7 +527,8 @@ window.SHUTTLEBUG_CATALOG = [
     "rightsRecord": "https://video.blender.org/api/v1/videos/0eb052d0-fd51-43e6-aa33-ecdbf77a5d40",
     "checked": "2026-11-15",
     "changes": "Complete film with original credits; no editorial changes. Publisher streaming encode.",
-    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "format": "short"
   },
   {
     "id": "caminandes2",
@@ -547,7 +563,8 @@ window.SHUTTLEBUG_CATALOG = [
     "rightsRecord": "https://video.blender.org/api/v1/videos/fb70d459-48d2-4db5-adba-813c84f9200a",
     "checked": "2026-11-15",
     "changes": "Complete film with original credits; no editorial changes. Publisher streaming encode.",
-    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "format": "episode"
   },
   {
     "id": "caminandes3",
@@ -582,7 +599,8 @@ window.SHUTTLEBUG_CATALOG = [
     "rightsRecord": "https://video.blender.org/api/v1/videos/23f3ef79-15dc-44c5-aa45-cf92e78a4509",
     "checked": "2026-11-15",
     "changes": "Complete film with original credits; no editorial changes. Publisher streaming encode.",
-    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "format": "episode"
   },
   {
     "id": "valkaama",
@@ -619,7 +637,8 @@ window.SHUTTLEBUG_CATALOG = [
       }
     ],
     "image": "/media/library/valkaama.jpg",
-    "defaultCaptions": "en"
+    "defaultCaptions": "en",
+    "format": "feature"
   },
   {
     "id": "pepper3",
@@ -648,7 +667,8 @@ window.SHUTTLEBUG_CATALOG = [
     ],
     "cors": false,
     "captions": [],
-    "image": "/media/library/pepper3.jpg"
+    "image": "/media/library/pepper3.jpg",
+    "format": "episode"
   },
   {
     "id": "pepper4",
@@ -677,7 +697,8 @@ window.SHUTTLEBUG_CATALOG = [
     ],
     "cors": false,
     "captions": [],
-    "image": "/media/library/pepper4.jpg"
+    "image": "/media/library/pepper4.jpg",
+    "format": "episode"
   },
   {
     "id": "pepper6",
@@ -706,7 +727,8 @@ window.SHUTTLEBUG_CATALOG = [
     ],
     "cors": false,
     "captions": [],
-    "image": "/media/library/pepper6.jpg"
+    "image": "/media/library/pepper6.jpg",
+    "format": "episode"
   },
   {
     "id": "spring",
@@ -746,7 +768,8 @@ window.SHUTTLEBUG_CATALOG = [
     "language": "No dialogue",
     "audioType": "no-dialogue",
     "audioEvidence": "https://studio.blender.org/projects/spring/pages/about/",
-    "changes": "Complete original film and recorded soundtrack with closing credits. Streaming encode; thumbnail is a cropped film frame. No new narration or dub."
+    "changes": "Complete original film and recorded soundtrack with closing credits. Streaming encode; thumbnail is a cropped film frame. No new narration or dub.",
+    "format": "short"
   },
   {
     "id": "cosmos",
@@ -787,7 +810,8 @@ window.SHUTTLEBUG_CATALOG = [
     "audioType": "recorded-human",
     "audioEvidence": "https://gooseberry.blender.org/about/",
     "changes": "Complete original film and recorded soundtrack with closing credits. Streaming encode; thumbnail is a cropped film frame. No new narration or dub.",
-    "advisory": "Unrated \u00b7 Mature themes, including a suicide attempt"
+    "advisory": "Unrated \u00b7 Mature themes, including a suicide attempt",
+    "format": "short"
   },
   {
     "id": "bbs1",
@@ -825,7 +849,8 @@ window.SHUTTLEBUG_CATALOG = [
     "audioType": "recorded-human",
     "audioEvidence": "https://ascii.textfiles.com/archives/865",
     "qualityNote": "Archival standard-definition footage",
-    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub."
+    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub.",
+    "format": "episode"
   },
   {
     "id": "bbs2",
@@ -863,7 +888,8 @@ window.SHUTTLEBUG_CATALOG = [
     "audioType": "recorded-human",
     "audioEvidence": "https://ascii.textfiles.com/archives/865",
     "qualityNote": "Archival standard-definition footage",
-    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub."
+    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub.",
+    "format": "episode"
   },
   {
     "id": "bbs3",
@@ -901,7 +927,8 @@ window.SHUTTLEBUG_CATALOG = [
     "audioType": "recorded-human",
     "audioEvidence": "https://ascii.textfiles.com/archives/865",
     "qualityNote": "Archival standard-definition footage",
-    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub."
+    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub.",
+    "format": "episode"
   },
   {
     "id": "bbs4",
@@ -939,7 +966,8 @@ window.SHUTTLEBUG_CATALOG = [
     "audioType": "recorded-human",
     "audioEvidence": "https://ascii.textfiles.com/archives/865",
     "qualityNote": "Archival standard-definition footage",
-    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub."
+    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub.",
+    "format": "episode"
   },
   {
     "id": "bbs5",
@@ -977,7 +1005,8 @@ window.SHUTTLEBUG_CATALOG = [
     "audioType": "recorded-human",
     "audioEvidence": "https://ascii.textfiles.com/archives/865",
     "qualityNote": "Archival standard-definition footage",
-    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub."
+    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub.",
+    "format": "episode"
   },
   {
     "id": "bbs6",
@@ -1015,7 +1044,8 @@ window.SHUTTLEBUG_CATALOG = [
     "audioType": "recorded-human",
     "audioEvidence": "https://ascii.textfiles.com/archives/865",
     "qualityNote": "Archival standard-definition footage",
-    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub."
+    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub.",
+    "format": "episode"
   },
   {
     "id": "bbs7",
@@ -1053,7 +1083,8 @@ window.SHUTTLEBUG_CATALOG = [
     "audioType": "recorded-human",
     "audioEvidence": "https://ascii.textfiles.com/archives/865",
     "qualityNote": "Archival standard-definition footage",
-    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub."
+    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub.",
+    "format": "episode"
   },
   {
     "id": "bbs8",
@@ -1091,7 +1122,8 @@ window.SHUTTLEBUG_CATALOG = [
     "audioType": "recorded-human",
     "audioEvidence": "https://ascii.textfiles.com/archives/865",
     "qualityNote": "Archival standard-definition footage",
-    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub."
+    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub.",
+    "format": "episode"
   },
   {
     "id": "sideways1",
@@ -1133,7 +1165,8 @@ window.SHUTTLEBUG_CATALOG = [
     "collection": "live-action-2026-11-16",
     "audioType": "recorded-human",
     "audioEvidence": "https://side-ways.net/en/webseries/",
-    "changes": "Complete publisher streaming encode with original interviews, soundtrack and credits. No synthetic narration or dub. Thumbnail is a resized film frame. Publisher English subtitle file copied unchanged where available."
+    "changes": "Complete publisher streaming encode with original interviews, soundtrack and credits. No synthetic narration or dub. Thumbnail is a resized film frame. Publisher English subtitle file copied unchanged where available.",
+    "format": "episode"
   },
   {
     "id": "sideways2",
@@ -1176,7 +1209,8 @@ window.SHUTTLEBUG_CATALOG = [
     "audioType": "recorded-human",
     "audioEvidence": "https://side-ways.net/en/webseries/",
     "changes": "Complete publisher streaming encode with original interviews, soundtrack, English subtitles and credits. No synthetic narration or dub. Thumbnail is a resized film frame.",
-    "embeddedCaptions": "English subtitles are included in the video."
+    "embeddedCaptions": "English subtitles are included in the video.",
+    "format": "episode"
   },
   {
     "id": "sideways4",
@@ -1224,6 +1258,7 @@ window.SHUTTLEBUG_CATALOG = [
     "collection": "live-action-2026-11-16",
     "audioType": "recorded-human",
     "audioEvidence": "https://side-ways.net/en/webseries/",
-    "changes": "Complete publisher streaming encode with original interviews, soundtrack and credits. No synthetic narration or dub. Thumbnail is a resized film frame. Publisher English subtitle file copied unchanged where available."
+    "changes": "Complete publisher streaming encode with original interviews, soundtrack and credits. No synthetic narration or dub. Thumbnail is a resized film frame. Publisher English subtitle file copied unchanged where available.",
+    "format": "episode"
   }
 ];

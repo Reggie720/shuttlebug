@@ -1,7 +1,8 @@
 """Version app assets together so a cached catalog cannot hide a newly published library."""
 from pathlib import Path
-import hashlib,re,shutil
+import hashlib,re,shutil,runpy
 root=Path(__file__).resolve().parents[1]
+runpy.run_path(str(root/'tools/validate-catalog.py'),run_name='__main__')
 version=hashlib.sha256(b''.join((root/p).read_bytes() for p in ['app.js','catalog.js','config.js','styles.css'])).hexdigest()[:12]
 asset_dir=root/'assets'/version
 asset_dir.mkdir(parents=True,exist_ok=True)

@@ -11,6 +11,10 @@ function click(s){assert($(s),'Missing '+s);$(s).click()}
 function run(s){return vm.runInContext(s,context)}
 function route(page){run(`page=${JSON.stringify(page)};genre='All';render()`)}
 route('Movies');assert.equal(all('.browse-grid .tile').length,17);
+assert.equal(all('[data-category="feature"] .tile').length,3);assert.equal(all('[data-category="documentary"] .tile').length,4);assert.equal(all('[data-category="short"] .tile').length,10);
+assert.equal(all('[data-category="feature"] [data-title="spring"]').length,0);assert.equal(all('[data-category="short"] [data-title="spring"]').length,1);assert.equal(all('[data-category="documentary"] [data-title="dominion"]').length,1);
+assert.equal(new Set(all('.browse-grid .tile').map(t=>t.dataset.title)).size,17);
+route('TV');const nasaTile=$('[data-title="nasa-neowise"]');assert.match(nasaTile.textContent,/Series episode/);assert(!/Open film|Feature film|Short film/.test(nasaTile.textContent));route('Movies');
 click('[data-genre="Fantasy"]');assert.equal(all('.browse-grid .tile').length,2);
 $('#search').value='Caminandes';$('#search').dispatchEvent(new w.Event('input'));assert.equal(all('.tile').length,2);
 $('#search').value='no-such-title';$('#search').dispatchEvent(new w.Event('input'));assert.match($('#content').textContent,/No matches/);$('#search').value='';
@@ -32,7 +36,7 @@ run("openTitle('block-scene-1')");assert.equal($('#player'),null);assert.equal($
 run("openTitle('valkaama')");assert($('#player'));assert.equal($('#player').hasAttribute('crossorigin'),false);assert.equal($('#player track').default,true);assert.match($('#details').textContent,/English subtitles/);click('[data-action="close"]');
 route('TV');assert.equal(all('#content h2').length,5);assert.match($('#content').textContent,/Pepper & Carrot/);
 // Homepage curation and natural-audio provenance for the new release.
-route('Home');assert.equal($('.hero h1').textContent,'Pendatang');assert.equal($('.hero [data-title]').dataset.title,'pendatang');assert.match($('#content').textContent,/Start Here/);assert.match($('#content').textContent,/Longer Episodes/);
+route('Home');assert.equal($('.hero h1').textContent,'Pendatang');assert.equal($('.hero [data-title]').dataset.title,'pendatang');assert.match($('#content').textContent,/Start Here/);assert.match($('#content').textContent,/Longer Episodes/);assert.match($('#content').textContent,/Short Films/);assert.match($('#content').textContent,/Documentary Films/);
 const newTitles=w.SHUTTLEBUG_CATALOG.filter(m=>m.collection==='new-2026-11-16');assert.equal(newTitles.length,10);assert(newTitles.every(m=>['recorded-human','no-dialogue'].includes(m.audioType)&&m.audioEvidence));
 assert.equal(w.SHUTTLEBUG_CATALOG.filter(m=>m.series==='BBS: The Documentary').length,8);assert(w.SHUTTLEBUG_CATALOG.filter(m=>m.series==='BBS: The Documentary').every(m=>m.duration>1200));
 run("openTitle('bbs1')");assert.equal($('#player').hasAttribute('crossorigin'),false);assert.equal(all('#quality option').length,2);assert.match($('#details').textContent,/Archival standard-definition/);click('[data-action="close"]');
