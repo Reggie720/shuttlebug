@@ -1,0 +1,48 @@
+# Shuttlebug for Roku
+
+A Hog Entertainment · Developer build 0.2.0 · Not published or monetized.
+
+Continues the supplied Shuttlebug_Roku_Developer_Starter.zip. The original launcher assets and app identity are retained, with the existing Shuttlebug ladybug added to the SceneGraph header. No website files were changed.
+
+## Included
+- Native SceneGraph catalog browsing and title details.
+- D-pad navigation, OK selection, Play/Pause, native fullscreen Video and Back.
+- Onscreen search by title, genre and synopsis.
+- Device-local favorites and progress in the Roku registry; resume/start-over controls.
+- Source fallbacks and unavailable-stream messages.
+- Original creator credits, change notices and license/source links on each title.
+- Startup and pre-playback live rights checks. Missing, held, changed or unverified records cannot play. The packaged feed contains only the 17 records marked reviewed in the existing register. No new films were added or rights upgraded.
+- Optional unpaid pre-roll/mid-roll test via Roku Advertising Framework (RAF). Tests start OFF and are not persisted. Turn ON in the left menu. The local five-second Shuttlebug house creative has no impression/tracking URLs, uses no ad-server calls and does not request default or paid demand. The 30-second mid-roll is accelerated developer testing only, not a production ad policy.
+- Cold/warm contentId input handling for developer deep-link testing, subject to the same rights check.
+
+## Package
+`packages/Shuttlebug_Roku_Developer.zip` is a sideloadable development ZIP with `manifest` at its root. It is not a signed store package or a public app. `packages/SHA256SUMS` identifies the exact build. Sources, dependencies, tests and documentation remain outside the install ZIP.
+
+Build locally or in GitHub Actions:
+```
+cd roku
+npm ci --ignore-scripts
+npm run build
+npm test
+```
+Tools: Node.js 22, Python 3, pinned BrighterScript compiler and off-device BRS interpreter. Dependency versions are locked. All are free development tools. No paid service or purchase was used.
+
+The build generator reads the existing repository catalog and rights register; disagreements in required license/attribution fields fail the build. It writes Roku-only JSON, validates BrightScript/SceneGraph syntax and creates the ZIP. The workflow repeats this on relevant commits and uploads the package as a build artifact.
+
+## Developer device testing
+A Roku device with Developer Mode enabled and an authorized tester on its network is required for local sideloading. An eligible Roku Cloud Emulator account may be an alternative; account availability must be checked. The remote development workspace cannot access your home's private Roku IP.
+
+From your Android phone on the same Wi-Fi as the Roku, the device's Development Application Installer can accept this ZIP after Developer Mode setup. The owner must complete Roku account terms, developer-key creation and any password entry. See DEVICE_TESTS.md for the exact checklist. Keep developer credentials and signing keys out of GitHub.
+
+## Honest validation limits
+Compiler and unit/controller tests do not run Roku OS or SceneGraph graphics, and do not decode video through Roku hardware or execute its downloaded RAF library. HTTP/MP4 header checks establish source availability at check time only. The app has not been installed on a Roku, signed, certified or published. The complete device test matrix remains pending.
+
+Production monetization requires partner acceptance, approved demand configuration, current Roku ad policy review and hardware validation. The developer app deliberately contains no production ad URL, paid ad credentials or default-demand fallback.
+
+Sources:
+- https://developer.roku.com/dev/docs/playing-videos
+- https://developer.roku.com/dev/docs/integrating-roku-advertising-framework
+- https://developer.roku.com/dev/docs/raf-api
+- https://developer.roku.com/dev/docs/implementing-deep-linking
+- https://developer.roku.com/dev/docs/channel-publishing-guide
+- https://developer.roku.com/dev/docs/rce

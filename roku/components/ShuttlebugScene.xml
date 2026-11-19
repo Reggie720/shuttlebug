@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="ShuttlebugScene" extends="Scene">
+ <interface><field id="exitRequested" type="boolean" value="false" /><field id="launchId" type="string" alwaysNotify="true" /></interface>
+ <script type="text/brightscript" uri="pkg:/source/Logic.brs" />
+ <script type="text/brightscript" uri="pkg:/components/ShuttlebugScene.brs" />
+ <children>
+  <Rectangle width="1920" height="1080" color="0x101010FF" />
+  <Rectangle width="1920" height="10" color="0xED1821FF" />
+  <Poster id="logo" translation="[70,40]" width="95" height="95" uri="pkg:/images/ladybug.png" loadDisplayMode="scaleToFit" />
+  <Label id="brand" translation="[185,60]" width="1300" height="70" text="SHUTTLEBUG" color="0xF32129FF" />
+  <Label id="status" translation="[70,155]" width="1770" height="65" text="Checking cleared content rights..." />
+  <LabelList id="navigation" translation="[70,255]" itemSize="[340,80]" itemSpacing="[0,12]" numRows="6" color="0xFFFFFFFF" focusedColor="0xFFFFFFFF" focusBitmapBlendColor="0xED1821FF" />
+  <LabelList id="movies" translation="[455,255]" itemSize="[715,72]" itemSpacing="[0,8]" numRows="8" color="0xFFFFFFFF" focusedColor="0xFFFFFFFF" focusBitmapBlendColor="0xED1821FF" />
+  <Group id="preview" translation="[1220,255]">
+   <Poster id="poster" width="600" height="330" loadDisplayMode="scaleToFit" />
+   <Label id="movieTitle" translation="[0,350]" width="600" height="90" numLines="2" />
+   <Label id="description" translation="[0,450]" width="600" height="230" numLines="6" />
+  </Group>
+  <Group id="details" visible="false">
+   <Rectangle width="1920" height="1080" color="0x101010FF" />
+   <Label id="detailTitle" translation="[90,80]" width="1740" height="120" numLines="2" />
+   <Label id="detailDescription" translation="[90,230]" width="1650" height="180" numLines="5" />
+   <ButtonGroup id="detailButtons" translation="[90,460]" buttonHeight="75" minWidth="650" maxWidth="1000" />
+   <Label id="detailCredit" translation="[90,850]" width="1700" height="150" numLines="4" />
+  </Group>
+  <Group id="searchPanel" visible="false">
+   <Rectangle width="1920" height="1080" color="0x101010FF" />
+   <Label translation="[100,65]" width="1600" height="70" text="Search cleared movies and episodes" />
+   <Keyboard id="keyboard" translation="[100,180]" />
+   <ButtonGroup id="searchButtons" translation="[100,760]" buttons="[Search,Cancel]" buttonHeight="75" minWidth="650" />
+  </Group>
+  <Label id="footer" translation="[70,1000]" width="1780" height="55" text="A Hog Entertainment | Developer preview | * Favorites | Back: return" />
+  <Video id="video" width="1920" height="1080" visible="false" notificationInterval="1" />
+  <Rectangle id="adView" width="1920" height="1080" color="0x101010FF" visible="false" />
+  <Label id="adLabel" translation="[70,30]" width="1700" height="70" text="TEST ADVERTISEMENT - NO PAID REVENUE" color="0xFFFFFFFF" visible="false" />
+  <Timer id="adWatchdog" duration="30" repeat="false" />
+ </children>
+</component>

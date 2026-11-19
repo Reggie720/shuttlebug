@@ -1,0 +1,12 @@
+title=Shuttlebug
+subtitle=A Hog Entertainment - Developer Preview
+major_version=0
+minor_version=2
+build_version=0
+ui_resolutions=fhd
+splash_screen_fhd=pkg:/images/splash.jpg
+splash_color=#101010
+splash_min_time=0
+mm_icon_focus_fhd=pkg:/images/icon.png
+bs_libs_required=roku_ads_lib
+supports_input_launch=1

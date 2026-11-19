@@ -1,0 +1,513 @@
+[
+  {
+    "id": "bbb",
+    "title": "Big Buck Bunny",
+    "description": "A gentle giant rabbit takes on three mischievous woodland creatures.",
+    "genre": "Animation",
+    "kind": "Movies",
+    "year": 2008,
+    "duration": 596,
+    "sources": [
+      {
+        "url": "https://video.blender.org/object-storage/web_videos/bf1f3fb5-b119-4f9f-9930-8e20e892b898-480.mp4",
+        "format": "mp4",
+        "label": "480p"
+      },
+      {
+        "url": "https://video.blender.org/object-storage/web_videos/bf1f3fb5-b119-4f9f-9930-8e20e892b898-360.mp4",
+        "format": "mp4",
+        "label": "360p"
+      },
+      {
+        "url": "https://video.blender.org/object-storage/web_videos/bf1f3fb5-b119-4f9f-9930-8e20e892b898-720.mp4",
+        "format": "mp4",
+        "label": "720p"
+      }
+    ],
+    "image": "https://video.blender.org/lazy-static/thumbnails/bf1f3fb5-b119-4f9f-9930-8e20e892b898.jpg",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "rights": "https://peach.blender.org/about/",
+    "source": "https://video.blender.org/videos/watch/bf1f3fb5-b119-4f9f-9930-8e20e892b898",
+    "credit": "\u00a9 2008 Blender Foundation / www.bigbuckbunny.org",
+    "changes": "Complete film with original credits; no editorial changes. Publisher streaming encode."
+  },
+  {
+    "id": "ed",
+    "title": "Elephants Dream",
+    "description": "Two travelers explore a strange mechanical world and clash over what they see.",
+    "genre": "Sci-fi",
+    "kind": "Movies",
+    "year": 2006,
+    "duration": 654,
+    "sources": [
+      {
+        "url": "https://video.blender.org/object-storage/web_videos/cccc3e60-0291-4ecc-aa56-39b2e2c7d0d5-480.mp4",
+        "format": "mp4",
+        "label": "480p"
+      },
+      {
+        "url": "https://video.blender.org/object-storage/web_videos/cccc3e60-0291-4ecc-aa56-39b2e2c7d0d5-360.mp4",
+        "format": "mp4",
+        "label": "360p"
+      },
+      {
+        "url": "https://video.blender.org/object-storage/web_videos/cccc3e60-0291-4ecc-aa56-39b2e2c7d0d5-720.mp4",
+        "format": "mp4",
+        "label": "720p"
+      }
+    ],
+    "image": "https://video.blender.org/lazy-static/thumbnails/cccc3e60-0291-4ecc-aa56-39b2e2c7d0d5.jpg",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5/",
+    "rights": "https://orange.blender.org/press/",
+    "source": "https://video.blender.org/videos/watch/cccc3e60-0291-4ecc-aa56-39b2e2c7d0d5",
+    "credit": "\u00a9 2006 Blender Foundation / Netherlands Media Art Institute | www.elephantsdream.org",
+    "changes": "Complete film with original credits; no editorial changes. Publisher streaming encode."
+  },
+  {
+    "id": "sintel",
+    "title": "Sintel",
+    "description": "A young warrior searches for the dragon she once rescued.",
+    "genre": "Fantasy",
+    "kind": "Movies",
+    "year": 2010,
+    "duration": 888,
+    "sources": [
+      {
+        "url": "https://video.blender.org/object-storage/web_videos/0eb052d0-fd51-43e6-aa33-ecdbf77a5d40-480.mp4",
+        "format": "mp4",
+        "label": "480p"
+      },
+      {
+        "url": "https://video.blender.org/object-storage/web_videos/0eb052d0-fd51-43e6-aa33-ecdbf77a5d40-360.mp4",
+        "format": "mp4",
+        "label": "360p"
+      },
+      {
+        "url": "https://video.blender.org/object-storage/web_videos/0eb052d0-fd51-43e6-aa33-ecdbf77a5d40-720.mp4",
+        "format": "mp4",
+        "label": "720p"
+      }
+    ],
+    "image": "https://video.blender.org/lazy-static/thumbnails/0eb052d0-fd51-43e6-aa33-ecdbf77a5d40.jpg",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "rights": "https://durian.blender.org/sharing/",
+    "source": "https://video.blender.org/videos/watch/0eb052d0-fd51-43e6-aa33-ecdbf77a5d40",
+    "credit": "\u00a9 2010 Blender Foundation / www.sintel.org",
+    "changes": "Complete film with original credits; no editorial changes. Publisher streaming encode."
+  },
+  {
+    "id": "valkaama",
+    "title": "Valkaama",
+    "description": "A restless poet and an unlikely traveling companion journey toward northern Finland, where their hidden pasts begin to surface.",
+    "genre": "Drama",
+    "kind": "Movies",
+    "year": 2010,
+    "duration": 5585.96,
+    "sources": [
+      {
+        "url": "https://archive.org/download/valkaama/Valkaama_720p.mp4",
+        "format": "mp4",
+        "label": "480p"
+      }
+    ],
+    "image": "/media/library/valkaama.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "rights": "https://www.valkaama.com/index.php?page=movie",
+    "source": "https://archive.org/details/valkaama",
+    "credit": "Valkaama \u00b7 Directed by Tim Baumann \u00b7 Valkaama Open Source Movie Project",
+    "changes": "Complete film with original credits. Internet Archive streaming encode; thumbnail is a cropped frame. No editorial cuts."
+  },
+  {
+    "id": "spring",
+    "title": "Spring",
+    "description": "A shepherd girl and her dog awaken ancient spirits and bring a frozen valley back to life.",
+    "genre": "Adventure",
+    "kind": "Movies",
+    "year": 2019,
+    "duration": 464.168005,
+    "sources": [
+      {
+        "url": "https://video.blender.org/object-storage/web_videos/3d95fb3d-c866-42c8-9db1-fe82f48ccb95-480.mp4",
+        "format": "mp4",
+        "label": "480p"
+      },
+      {
+        "url": "https://video.blender.org/object-storage/web_videos/3d95fb3d-c866-42c8-9db1-fe82f48ccb95-360.mp4",
+        "format": "mp4",
+        "label": "360p"
+      },
+      {
+        "url": "https://video.blender.org/object-storage/web_videos/3d95fb3d-c866-42c8-9db1-fe82f48ccb95-720.mp4",
+        "format": "mp4",
+        "label": "720p"
+      }
+    ],
+    "image": "/media/library/spring.jpg",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "rights": "https://studio.blender.org/projects/spring/pages/about/",
+    "source": "https://video.blender.org/videos/watch/3d95fb3d-c866-42c8-9db1-fe82f48ccb95",
+    "credit": "\u00a9 Blender Foundation | cloud.blender.org/spring",
+    "changes": "Complete original film and recorded soundtrack with closing credits. Streaming encode; thumbnail is a cropped film frame. No new narration or dub."
+  },
+  {
+    "id": "cosmos",
+    "title": "Cosmos Laundromat: First Cycle",
+    "description": "A mysterious visitor offers a lonely sheep a chance to experience a completely different life.",
+    "genre": "Fantasy",
+    "kind": "Movies",
+    "year": 2015,
+    "duration": 730.617007,
+    "sources": [
+      {
+        "url": "https://video.blender.org/object-storage/web_videos/f507dfdc-e73e-45a4-9778-d758cbe1ce96-480.mp4",
+        "format": "mp4",
+        "label": "480p"
+      },
+      {
+        "url": "https://video.blender.org/object-storage/web_videos/f507dfdc-e73e-45a4-9778-d758cbe1ce96-360.mp4",
+        "format": "mp4",
+        "label": "360p"
+      },
+      {
+        "url": "https://video.blender.org/object-storage/web_videos/f507dfdc-e73e-45a4-9778-d758cbe1ce96-720.mp4",
+        "format": "mp4",
+        "label": "720p"
+      }
+    ],
+    "image": "/media/library/cosmos.jpg",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "rights": "https://gooseberry.blender.org/license/",
+    "source": "https://video.blender.org/videos/watch/f507dfdc-e73e-45a4-9778-d758cbe1ce96",
+    "credit": "(CC) Blender Foundation | gooseberry.blender.org",
+    "changes": "Complete original film and recorded soundtrack with closing credits. Streaming encode; thumbnail is a cropped film frame. No new narration or dub."
+  },
+  {
+    "id": "bbs1",
+    "title": "BBS: The Documentary \u2014 Baud",
+    "description": "Meet the pioneers who connected computers over telephone lines and started the earliest online communities.",
+    "genre": "Documentary",
+    "kind": "TV",
+    "year": 2005,
+    "duration": 2362.018005,
+    "sources": [
+      {
+        "url": "https://archive.org/download/ddff-bbs-the-documentary/BBS%201.01%20Baud.mp4",
+        "format": "mp4",
+        "label": "480p"
+      },
+      {
+        "url": "https://archive.org/download/BBS.The.Documentary/BBS.The.Documentary.ep1_512kb.mp4",
+        "format": "mp4",
+        "label": "240p"
+      }
+    ],
+    "image": "/media/library/bbs1.jpg",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "rights": "https://ascii.textfiles.com/archives/865",
+    "source": "https://archive.org/details/ddff-bbs-the-documentary",
+    "credit": "BBS: The Documentary \u00b7 Jason Scott / TEXTFILES.COM \u00b7 Original interview participants credited in the film",
+    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub."
+  },
+  {
+    "id": "bbs2",
+    "title": "BBS: The Documentary \u2014 Sysops and Users",
+    "description": "Operators and callers share their memories of building friendships, handling problems, and running a bulletin board.",
+    "genre": "Documentary",
+    "kind": "TV",
+    "year": 2005,
+    "duration": 2690.325011,
+    "sources": [
+      {
+        "url": "https://archive.org/download/ddff-bbs-the-documentary/BBS%201.02%20Sysops%20and%20Users.mp4",
+        "format": "mp4",
+        "label": "480p"
+      },
+      {
+        "url": "https://archive.org/download/BBS.The.Documentary/BBS.The.Documentary.ep2_512kb.mp4",
+        "format": "mp4",
+        "label": "240p"
+      }
+    ],
+    "image": "/media/library/bbs2.jpg",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "rights": "https://ascii.textfiles.com/archives/865",
+    "source": "https://archive.org/details/ddff-bbs-the-documentary",
+    "credit": "BBS: The Documentary \u00b7 Jason Scott / TEXTFILES.COM \u00b7 Original interview participants credited in the film",
+    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub."
+  },
+  {
+    "id": "bbs3",
+    "title": "BBS: The Documentary \u2014 Make It Pay",
+    "description": "The rise of commercial bulletin boards, told by the people who tried to turn online communities into businesses.",
+    "genre": "Documentary",
+    "kind": "TV",
+    "year": 2005,
+    "duration": 2817.150484,
+    "sources": [
+      {
+        "url": "https://archive.org/download/ddff-bbs-the-documentary/BBS%202.01%20Make%20It%20Pay.mp4",
+        "format": "mp4",
+        "label": "480p"
+      },
+      {
+        "url": "https://archive.org/download/BBS.The.Documentary/BBS.The.Documentary.ep3_512kb.mp4",
+        "format": "mp4",
+        "label": "240p"
+      }
+    ],
+    "image": "/media/library/bbs3.jpg",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "rights": "https://ascii.textfiles.com/archives/865",
+    "source": "https://archive.org/details/ddff-bbs-the-documentary",
+    "credit": "BBS: The Documentary \u00b7 Jason Scott / TEXTFILES.COM \u00b7 Original interview participants credited in the film",
+    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub."
+  },
+  {
+    "id": "bbs4",
+    "title": "BBS: The Documentary \u2014 Fidonet",
+    "description": "A look at the volunteer network that carried messages between bulletin boards around the world.",
+    "genre": "Documentary",
+    "kind": "TV",
+    "year": 2005,
+    "duration": 2642.416009,
+    "sources": [
+      {
+        "url": "https://archive.org/download/ddff-bbs-the-documentary/BBS%202.02%20Fidonet.mp4",
+        "format": "mp4",
+        "label": "480p"
+      },
+      {
+        "url": "https://archive.org/download/BBS.The.Documentary/BBS.The.Documentary.ep4_512kb.mp4",
+        "format": "mp4",
+        "label": "240p"
+      }
+    ],
+    "image": "/media/library/bbs4.jpg",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "rights": "https://ascii.textfiles.com/archives/865",
+    "source": "https://archive.org/details/ddff-bbs-the-documentary",
+    "credit": "BBS: The Documentary \u00b7 Jason Scott / TEXTFILES.COM \u00b7 Original interview participants credited in the film",
+    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub."
+  },
+  {
+    "id": "bbs5",
+    "title": "BBS: The Documentary \u2014 Artscene",
+    "description": "Meet the artists who used text characters and color to create a distinctive online art movement.",
+    "genre": "Documentary",
+    "kind": "TV",
+    "year": 2005,
+    "duration": 2568.541995,
+    "sources": [
+      {
+        "url": "https://archive.org/download/ddff-bbs-the-documentary/BBS%202.03%20Artscene.mp4",
+        "format": "mp4",
+        "label": "480p"
+      },
+      {
+        "url": "https://archive.org/download/BBS.The.Documentary/BBS.The.Documentary.ep5_512kb.mp4",
+        "format": "mp4",
+        "label": "240p"
+      }
+    ],
+    "image": "/media/library/bbs5.jpg",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "rights": "https://ascii.textfiles.com/archives/865",
+    "source": "https://archive.org/details/ddff-bbs-the-documentary",
+    "credit": "BBS: The Documentary \u00b7 Jason Scott / TEXTFILES.COM \u00b7 Original interview participants credited in the film",
+    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub."
+  },
+  {
+    "id": "bbs6",
+    "title": "BBS: The Documentary \u2014 HPAC",
+    "description": "People from the hacking, phreaking, anarchist and cracking communities recall the dial-up underground.",
+    "genre": "Documentary",
+    "kind": "TV",
+    "year": 2005,
+    "duration": 2309.25,
+    "sources": [
+      {
+        "url": "https://archive.org/download/ddff-bbs-the-documentary/BBS%203.01%20HPAC.mp4",
+        "format": "mp4",
+        "label": "480p"
+      },
+      {
+        "url": "https://archive.org/download/BBS.The.Documentary/BBS.The.Documentary.ep6_512kb.mp4",
+        "format": "mp4",
+        "label": "240p"
+      }
+    ],
+    "image": "/media/library/bbs6.jpg",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "rights": "https://ascii.textfiles.com/archives/865",
+    "source": "https://archive.org/details/ddff-bbs-the-documentary",
+    "credit": "BBS: The Documentary \u00b7 Jason Scott / TEXTFILES.COM \u00b7 Original interview participants credited in the film",
+    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub."
+  },
+  {
+    "id": "bbs7",
+    "title": "BBS: The Documentary \u2014 No Carrier",
+    "description": "Participants reflect on the changing role of dial-up communities as the Internet grew.",
+    "genre": "Documentary",
+    "kind": "TV",
+    "year": 2005,
+    "duration": 1296.64,
+    "sources": [
+      {
+        "url": "https://archive.org/download/ddff-bbs-the-documentary/BBS%203.02%20No%20Carrier.mp4",
+        "format": "mp4",
+        "label": "480p"
+      },
+      {
+        "url": "https://archive.org/download/BBS.The.Documentary/BBS.The.Documentary.ep7_512kb.mp4",
+        "format": "mp4",
+        "label": "240p"
+      }
+    ],
+    "image": "/media/library/bbs7.jpg",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "rights": "https://ascii.textfiles.com/archives/865",
+    "source": "https://archive.org/details/ddff-bbs-the-documentary",
+    "credit": "BBS: The Documentary \u00b7 Jason Scott / TEXTFILES.COM \u00b7 Original interview participants credited in the film",
+    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub."
+  },
+  {
+    "id": "bbs8",
+    "title": "BBS: The Documentary \u2014 Compression",
+    "description": "The people behind early file-compression tools revisit a dispute that changed the software industry.",
+    "genre": "Documentary",
+    "kind": "TV",
+    "year": 2005,
+    "duration": 1247.948005,
+    "sources": [
+      {
+        "url": "https://archive.org/download/ddff-bbs-the-documentary/BBS%203.03%20Compression.mp4",
+        "format": "mp4",
+        "label": "480p"
+      },
+      {
+        "url": "https://archive.org/download/BBS.The.Documentary/BBS.The.Documentary.ep8_512kb.mp4",
+        "format": "mp4",
+        "label": "240p"
+      }
+    ],
+    "image": "/media/library/bbs8.jpg",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "rights": "https://ascii.textfiles.com/archives/865",
+    "source": "https://archive.org/details/ddff-bbs-the-documentary",
+    "credit": "BBS: The Documentary \u00b7 Jason Scott / TEXTFILES.COM \u00b7 Original interview participants credited in the film",
+    "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub."
+  },
+  {
+    "id": "sideways1",
+    "title": "SideWays \u2014 Strictly Moneyless",
+    "description": "Meet Elf Pavlik, a traveler who has chosen to live without money and help the communities he visits.",
+    "genre": "Documentary",
+    "kind": "TV",
+    "year": 2018,
+    "duration": 324.703991,
+    "sources": [
+      {
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/e49d8227-8565-4f54-86c7-78e40e1cc451/1952aab3-5890-45ef-ba0c-ace988269be5-480-fragmented.mp4",
+        "format": "mp4",
+        "label": "480p"
+      },
+      {
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/e49d8227-8565-4f54-86c7-78e40e1cc451/9fb833ad-782c-4e78-a4db-1e3343565ef7-360-fragmented.mp4",
+        "format": "mp4",
+        "label": "360p"
+      },
+      {
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/e49d8227-8565-4f54-86c7-78e40e1cc451/c4c7314c-96fe-48e3-8c71-535e7db7d71c-720-fragmented.mp4",
+        "format": "mp4",
+        "label": "720p"
+      }
+    ],
+    "image": "/media/library/sideways1.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "rights": "https://side-ways.net/en/webseries/",
+    "source": "https://side-ways.net/en/episode1",
+    "credit": "Sideways, Roving WebSeries \u2014 H\u00e9l\u00e8ne Bressoles & Beno\u00eet Cassegrain",
+    "changes": "Complete publisher streaming encode with original interviews, soundtrack and credits. No synthetic narration or dub. Thumbnail is a resized film frame. Publisher English subtitle file copied unchanged where available."
+  },
+  {
+    "id": "sideways2",
+    "title": "SideWays \u2014 Buy Housing Together",
+    "description": "In Nantes, a group pools small monthly contributions to buy homes for people experiencing homelessness.",
+    "genre": "Documentary",
+    "kind": "TV",
+    "year": 2018,
+    "duration": 361.622,
+    "sources": [
+      {
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/76212048-1204-48ef-924d-f3cabeec15b1/a5353ce0-24d2-4cc4-9deb-b68266633dc6-480-fragmented.mp4",
+        "format": "mp4",
+        "label": "480p"
+      },
+      {
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/76212048-1204-48ef-924d-f3cabeec15b1/20ec194b-f379-47b9-8671-7b6207cd9226-360-fragmented.mp4",
+        "format": "mp4",
+        "label": "360p"
+      },
+      {
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/76212048-1204-48ef-924d-f3cabeec15b1/8ededd63-a5ef-4b59-85c2-1f3ae14f7cc7-720-fragmented.mp4",
+        "format": "mp4",
+        "label": "720p"
+      }
+    ],
+    "image": "/media/library/sideways2.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "rights": "https://side-ways.net/en/webseries/",
+    "source": "https://side-ways.net/en/episode2",
+    "credit": "Sideways, Roving WebSeries \u2014 H\u00e9l\u00e8ne Bressoles & Beno\u00eet Cassegrain",
+    "changes": "Complete publisher streaming encode with original interviews, soundtrack, English subtitles and credits. No synthetic narration or dub. Thumbnail is a resized film frame."
+  },
+  {
+    "id": "sideways4",
+    "title": "SideWays \u2014 Let Us Build Together",
+    "description": "Neighbors in Belgium build a wind turbine together and share what they learn along the way.",
+    "genre": "Documentary",
+    "kind": "TV",
+    "year": 2018,
+    "duration": 333.76,
+    "sources": [
+      {
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/5150622b-2281-4366-8d90-3634b336f048/e6787835-5f35-4d79-8108-9f70f01428e8-480-fragmented.mp4",
+        "format": "mp4",
+        "label": "480p"
+      },
+      {
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/5150622b-2281-4366-8d90-3634b336f048/9a7244c3-1908-4f5a-9e02-6c4e58a5be80-360-fragmented.mp4",
+        "format": "mp4",
+        "label": "360p"
+      },
+      {
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/5150622b-2281-4366-8d90-3634b336f048/3ae5ca35-1885-4c7e-8f87-5a38f3329d8c-720-fragmented.mp4",
+        "format": "mp4",
+        "label": "720p"
+      }
+    ],
+    "image": "/media/library/sideways4.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "rights": "https://side-ways.net/en/webseries/",
+    "source": "https://side-ways.net/en/episode4",
+    "credit": "Sideways, Roving WebSeries \u2014 H\u00e9l\u00e8ne Bressoles & Beno\u00eet Cassegrain",
+    "changes": "Complete publisher streaming encode with original interviews, soundtrack and credits. No synthetic narration or dub. Thumbnail is a resized film frame. Publisher English subtitle file copied unchanged where available."
+  }
+]

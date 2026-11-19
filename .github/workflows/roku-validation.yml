@@ -1,0 +1,31 @@
+name: Roku validation
+on:
+  push:
+    paths: ['roku/**', 'catalog.js', 'compliance/rights-register.json', '.github/workflows/roku-validation.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: roku
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: roku/package-lock.json
+      - run: npm ci --ignore-scripts
+      - run: npm run build
+      - run: npm test
+      - name: Check generated catalog is current
+        run: git diff --exit-code -- data
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Shuttlebug-Roku-Developer
+          path: |
+            roku/packages/Shuttlebug_Roku_Developer.zip
+            roku/packages/SHA256SUMS

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="AdTask" extends="Task">
+ <interface>
+  <field id="view" type="node" />
+  <field id="sequence" type="string" value="preroll" />
+  <field id="outcome" type="string" alwaysNotify="true" />
+ </interface>
+ <script type="text/brightscript" uri="pkg:/source/Logic.brs" />
+ <script type="text/brightscript" uri="pkg:/components/AdTask.brs" />
+</component>
