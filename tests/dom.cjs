@@ -5,7 +5,7 @@ const vm=require('node:vm');const context=dom.getInternalVMContext();const w=dom
 w.HTMLDialogElement.prototype.showModal=function(){this.open=true};w.HTMLDialogElement.prototype.close=function(){this.open=false;this.dispatchEvent(new w.Event('close'))};
 w.HTMLMediaElement.prototype.load=function(){};w.HTMLMediaElement.prototype.pause=function(){};
 w.HTMLMediaElement.prototype.play=function(){return Promise.resolve()};
-for(const file of ['catalog.js','config.js','app.js'])vm.runInContext(fs.readFileSync(file,'utf8'),context);
+for(const file of ['catalog.js','config.js','app.js']){vm.runInContext(fs.readFileSync(file,'utf8'),context);if(file==='catalog.js')w.SHUTTLEBUG_CATALOG.forEach(m=>m.rightsStatus='reviewed');}
 const $=s=>w.document.querySelector(s),all=s=>[...w.document.querySelectorAll(s)];
 function click(s){assert($(s),'Missing '+s);$(s).click()}
 function run(s){return vm.runInContext(s,context)}
@@ -36,7 +36,7 @@ run("openTitle('block-scene-1')");assert.equal($('#player'),null);assert.equal($
 run("openTitle('valkaama')");assert($('#player'));assert.equal($('#player').hasAttribute('crossorigin'),false);assert.equal($('#player track').default,true);assert.match($('#details').textContent,/English subtitles/);click('[data-action="close"]');
 route('TV');assert.equal(all('#content h2').length,5);assert.match($('#content').textContent,/Pepper & Carrot/);
 // Homepage curation and natural-audio provenance for the new release.
-route('Home');assert.equal($('.hero h1').textContent,'Pendatang');assert.equal($('.hero [data-title]').dataset.title,'pendatang');assert.match($('#content').textContent,/Start Here/);assert.match($('#content').textContent,/Longer Episodes/);assert.match($('#content').textContent,/Short Films/);assert.match($('#content').textContent,/Documentary Films/);
+route('Home');assert.equal($('.hero h1').textContent,'Big Buck Bunny');assert.equal($('.hero [data-title]').dataset.title,'bbb');assert.match($('#content').textContent,/Start Here/);assert.match($('#content').textContent,/Longer Episodes/);assert.match($('#content').textContent,/Short Films/);assert.match($('#content').textContent,/Documentary Films/);
 const newTitles=w.SHUTTLEBUG_CATALOG.filter(m=>m.collection==='new-2026-11-16');assert.equal(newTitles.length,10);assert(newTitles.every(m=>['recorded-human','no-dialogue'].includes(m.audioType)&&m.audioEvidence));
 assert.equal(w.SHUTTLEBUG_CATALOG.filter(m=>m.series==='BBS: The Documentary').length,8);assert(w.SHUTTLEBUG_CATALOG.filter(m=>m.series==='BBS: The Documentary').every(m=>m.duration>1200));
 run("openTitle('bbs1')");assert.equal($('#player').hasAttribute('crossorigin'),false);assert.equal(all('#quality option').length,2);assert.match($('#details').textContent,/Archival standard-definition/);click('[data-action="close"]');

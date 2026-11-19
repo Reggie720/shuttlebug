@@ -4,7 +4,7 @@
   "private": true,
   "description": "Shuttlebug static streaming web app",
   "scripts": {
-    "test": "python3 tests/catalog.py && node tests/dom.cjs",
+    "test": "python3 tests/catalog.py && node tests/dom.cjs && node tests/rights.cjs",
     "test:browser": "node tests/smoke.cjs",
     "serve": "python3 -m http.server 8765 --bind 127.0.0.1"
   },

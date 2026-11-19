@@ -27,7 +27,10 @@ window.SHUTTLEBUG_CATALOG = [
     "checked": "2026-11-16",
     "added": "2026-11-16",
     "changes": "Complete original film; no editorial changes.",
-    "format": "feature"
+    "format": "feature",
+    "rightsStatus": "hold",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Temporarily unavailable pending primary-source, soundtrack, attribution and exact streaming-copy verification."
   },
   {
     "id": "sita",
@@ -57,7 +60,10 @@ window.SHUTTLEBUG_CATALOG = [
     "checked": "2026-11-16",
     "added": "2026-11-16",
     "changes": "Complete original film; no editorial changes.",
-    "format": "feature"
+    "format": "feature",
+    "rightsStatus": "hold",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Listed Wikimedia file is categorized without audio; exact copy and music rights require review."
   },
   {
     "id": "creatures",
@@ -87,7 +93,10 @@ window.SHUTTLEBUG_CATALOG = [
     "checked": "2026-11-16",
     "added": "2026-11-16",
     "changes": "Complete original documentary; no editorial changes.",
-    "format": "feature"
+    "format": "feature",
+    "rightsStatus": "hold",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Temporarily unavailable pending primary-source, soundtrack, attribution and exact streaming-copy verification."
   },
   {
     "id": "paywall",
@@ -117,7 +126,10 @@ window.SHUTTLEBUG_CATALOG = [
     "checked": "2026-11-16",
     "added": "2026-11-16",
     "changes": "Complete original documentary; no editorial changes.",
-    "format": "feature"
+    "format": "feature",
+    "rightsStatus": "hold",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Temporarily unavailable pending primary-source, soundtrack, attribution and exact streaming-copy verification."
   },
   {
     "id": "dominion",
@@ -148,7 +160,10 @@ window.SHUTTLEBUG_CATALOG = [
     "added": "2026-11-16",
     "changes": "Complete original documentary; no editorial changes.",
     "advisory": "Graphic animal cruelty",
-    "format": "feature"
+    "format": "feature",
+    "rightsStatus": "hold",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Temporarily unavailable pending primary-source, soundtrack, attribution and exact streaming-copy verification."
   },
   {
     "id": "nasa-neowise",
@@ -179,7 +194,10 @@ window.SHUTTLEBUG_CATALOG = [
     "added": "2026-11-16",
     "language": "English",
     "changes": "Original broadcast; no editorial changes. No NASA endorsement implied.",
-    "format": "episode"
+    "format": "episode",
+    "rightsStatus": "hold",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Temporarily unavailable pending primary-source, soundtrack, attribution and exact streaming-copy verification."
   },
   {
     "id": "nasa-ezie",
@@ -210,7 +228,10 @@ window.SHUTTLEBUG_CATALOG = [
     "added": "2026-11-16",
     "language": "English",
     "changes": "Original broadcast; no editorial changes. No NASA endorsement implied.",
-    "format": "episode"
+    "format": "episode",
+    "rightsStatus": "hold",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Temporarily unavailable pending primary-source, soundtrack, attribution and exact streaming-copy verification."
   },
   {
     "id": "coffeerun",
@@ -240,7 +261,10 @@ window.SHUTTLEBUG_CATALOG = [
     "checked": "2026-11-16",
     "added": "2026-11-16",
     "changes": "Complete original short film with credits; no editorial changes.",
-    "format": "short"
+    "format": "short",
+    "rightsStatus": "hold",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Temporarily unavailable pending primary-source, soundtrack, attribution and exact streaming-copy verification."
   },
   {
     "id": "wingit",
@@ -270,7 +294,10 @@ window.SHUTTLEBUG_CATALOG = [
     "checked": "2026-11-16",
     "added": "2026-11-16",
     "changes": "Complete original short film with credits; no editorial changes.",
-    "format": "short"
+    "format": "short",
+    "rightsStatus": "hold",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Temporarily unavailable pending primary-source, soundtrack, attribution and exact streaming-copy verification."
   },
   {
     "id": "charge",
@@ -300,7 +327,10 @@ window.SHUTTLEBUG_CATALOG = [
     "checked": "2026-11-16",
     "added": "2026-11-16",
     "changes": "Complete original short film with credits; no editorial changes.",
-    "format": "short"
+    "format": "short",
+    "rightsStatus": "hold",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Temporarily unavailable pending primary-source, soundtrack, attribution and exact streaming-copy verification."
   },
   {
     "id": "sprite",
@@ -331,7 +361,10 @@ window.SHUTTLEBUG_CATALOG = [
     "added": "2026-11-16",
     "language": "English",
     "changes": "Complete original short film with credits, no editorial changes.",
-    "format": "short"
+    "format": "short",
+    "rightsStatus": "hold",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Temporarily unavailable pending primary-source, soundtrack, attribution and exact streaming-copy verification."
   },
   {
     "id": "tears",
@@ -362,7 +395,10 @@ window.SHUTTLEBUG_CATALOG = [
     "added": "2026-11-16",
     "language": "English",
     "changes": "Complete original short film with credits, no editorial changes.",
-    "format": "short"
+    "format": "short",
+    "rightsStatus": "hold",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Temporarily unavailable pending primary-source, soundtrack, attribution and exact streaming-copy verification."
   },
   {
     "id": "pendatang",
@@ -420,7 +456,10 @@ window.SHUTTLEBUG_CATALOG = [
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
       "changes": "Converted from SRT to WebVTT without changing cue wording or timings."
     },
-    "format": "feature"
+    "format": "feature",
+    "rightsStatus": "hold",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Temporarily unavailable pending primary-source, soundtrack, attribution and exact streaming-copy verification."
   },
   {
     "id": "bbb",
@@ -456,7 +495,10 @@ window.SHUTTLEBUG_CATALOG = [
     "checked": "2026-11-15",
     "changes": "Complete film with original credits; no editorial changes. Publisher streaming encode.",
     "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
-    "format": "short"
+    "format": "short",
+    "rightsStatus": "reviewed",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Publisher license page reviewed; original credits and linked license retained. No endorsement implied."
   },
   {
     "id": "ed",
@@ -492,7 +534,10 @@ window.SHUTTLEBUG_CATALOG = [
     "checked": "2026-11-15",
     "changes": "Complete film with original credits; no editorial changes. Publisher streaming encode.",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.5/",
-    "format": "short"
+    "format": "short",
+    "rightsStatus": "reviewed",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Publisher license page reviewed; original credits and linked license retained. No endorsement implied."
   },
   {
     "id": "sintel",
@@ -528,7 +573,10 @@ window.SHUTTLEBUG_CATALOG = [
     "checked": "2026-11-15",
     "changes": "Complete film with original credits; no editorial changes. Publisher streaming encode.",
     "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
-    "format": "short"
+    "format": "short",
+    "rightsStatus": "reviewed",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Publisher license page reviewed; original credits and linked license retained. No endorsement implied."
   },
   {
     "id": "caminandes2",
@@ -564,7 +612,10 @@ window.SHUTTLEBUG_CATALOG = [
     "checked": "2026-11-15",
     "changes": "Complete film with original credits; no editorial changes. Publisher streaming encode.",
     "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
-    "format": "episode"
+    "format": "episode",
+    "rightsStatus": "hold",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Temporarily unavailable pending primary-source, soundtrack, attribution and exact streaming-copy verification."
   },
   {
     "id": "caminandes3",
@@ -600,7 +651,10 @@ window.SHUTTLEBUG_CATALOG = [
     "checked": "2026-11-15",
     "changes": "Complete film with original credits; no editorial changes. Publisher streaming encode.",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-    "format": "episode"
+    "format": "episode",
+    "rightsStatus": "hold",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Temporarily unavailable pending primary-source, soundtrack, attribution and exact streaming-copy verification."
   },
   {
     "id": "valkaama",
@@ -638,7 +692,10 @@ window.SHUTTLEBUG_CATALOG = [
     ],
     "image": "/media/library/valkaama.jpg",
     "defaultCaptions": "en",
-    "format": "feature"
+    "format": "feature",
+    "rightsStatus": "reviewed",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Publisher license page reviewed; original credits and linked license retained. No endorsement implied."
   },
   {
     "id": "pepper3",
@@ -668,7 +725,10 @@ window.SHUTTLEBUG_CATALOG = [
     "cors": false,
     "captions": [],
     "image": "/media/library/pepper3.jpg",
-    "format": "episode"
+    "format": "episode",
+    "rightsStatus": "hold",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Temporarily unavailable pending primary-source, soundtrack, attribution and exact streaming-copy verification."
   },
   {
     "id": "pepper4",
@@ -698,7 +758,10 @@ window.SHUTTLEBUG_CATALOG = [
     "cors": false,
     "captions": [],
     "image": "/media/library/pepper4.jpg",
-    "format": "episode"
+    "format": "episode",
+    "rightsStatus": "hold",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Temporarily unavailable pending primary-source, soundtrack, attribution and exact streaming-copy verification."
   },
   {
     "id": "pepper6",
@@ -728,7 +791,10 @@ window.SHUTTLEBUG_CATALOG = [
     "cors": false,
     "captions": [],
     "image": "/media/library/pepper6.jpg",
-    "format": "episode"
+    "format": "episode",
+    "rightsStatus": "hold",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Temporarily unavailable pending primary-source, soundtrack, attribution and exact streaming-copy verification."
   },
   {
     "id": "spring",
@@ -769,7 +835,10 @@ window.SHUTTLEBUG_CATALOG = [
     "audioType": "no-dialogue",
     "audioEvidence": "https://studio.blender.org/projects/spring/pages/about/",
     "changes": "Complete original film and recorded soundtrack with closing credits. Streaming encode; thumbnail is a cropped film frame. No new narration or dub.",
-    "format": "short"
+    "format": "short",
+    "rightsStatus": "reviewed",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Publisher license page reviewed; original credits and linked license retained. No endorsement implied."
   },
   {
     "id": "cosmos",
@@ -797,9 +866,9 @@ window.SHUTTLEBUG_CATALOG = [
       }
     ],
     "captions": [],
-    "credit": "\u00a9 Blender Foundation | gooseberry.blender.org",
-    "license": "CC BY 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "credit": "(CC) Blender Foundation | gooseberry.blender.org",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
     "rights": "https://gooseberry.blender.org/license/",
     "source": "https://video.blender.org/videos/watch/f507dfdc-e73e-45a4-9778-d758cbe1ce96",
     "rightsRecord": "https://video.blender.org/api/v1/videos/f507dfdc-e73e-45a4-9778-d758cbe1ce96",
@@ -811,7 +880,10 @@ window.SHUTTLEBUG_CATALOG = [
     "audioEvidence": "https://gooseberry.blender.org/about/",
     "changes": "Complete original film and recorded soundtrack with closing credits. Streaming encode; thumbnail is a cropped film frame. No new narration or dub.",
     "advisory": "Unrated \u00b7 Mature themes, including a suicide attempt",
-    "format": "short"
+    "format": "short",
+    "rightsStatus": "reviewed",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Publisher license page reviewed; original credits and linked license retained. No endorsement implied."
   },
   {
     "id": "bbs1",
@@ -850,7 +922,10 @@ window.SHUTTLEBUG_CATALOG = [
     "audioEvidence": "https://ascii.textfiles.com/archives/865",
     "qualityNote": "Archival standard-definition footage",
     "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub.",
-    "format": "episode"
+    "format": "episode",
+    "rightsStatus": "reviewed",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Publisher license page reviewed; original credits and linked license retained. No endorsement implied."
   },
   {
     "id": "bbs2",
@@ -889,7 +964,10 @@ window.SHUTTLEBUG_CATALOG = [
     "audioEvidence": "https://ascii.textfiles.com/archives/865",
     "qualityNote": "Archival standard-definition footage",
     "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub.",
-    "format": "episode"
+    "format": "episode",
+    "rightsStatus": "reviewed",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Publisher license page reviewed; original credits and linked license retained. No endorsement implied."
   },
   {
     "id": "bbs3",
@@ -928,7 +1006,10 @@ window.SHUTTLEBUG_CATALOG = [
     "audioEvidence": "https://ascii.textfiles.com/archives/865",
     "qualityNote": "Archival standard-definition footage",
     "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub.",
-    "format": "episode"
+    "format": "episode",
+    "rightsStatus": "reviewed",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Publisher license page reviewed; original credits and linked license retained. No endorsement implied."
   },
   {
     "id": "bbs4",
@@ -967,7 +1048,10 @@ window.SHUTTLEBUG_CATALOG = [
     "audioEvidence": "https://ascii.textfiles.com/archives/865",
     "qualityNote": "Archival standard-definition footage",
     "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub.",
-    "format": "episode"
+    "format": "episode",
+    "rightsStatus": "reviewed",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Publisher license page reviewed; original credits and linked license retained. No endorsement implied."
   },
   {
     "id": "bbs5",
@@ -1006,7 +1090,10 @@ window.SHUTTLEBUG_CATALOG = [
     "audioEvidence": "https://ascii.textfiles.com/archives/865",
     "qualityNote": "Archival standard-definition footage",
     "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub.",
-    "format": "episode"
+    "format": "episode",
+    "rightsStatus": "reviewed",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Publisher license page reviewed; original credits and linked license retained. No endorsement implied."
   },
   {
     "id": "bbs6",
@@ -1045,7 +1132,10 @@ window.SHUTTLEBUG_CATALOG = [
     "audioEvidence": "https://ascii.textfiles.com/archives/865",
     "qualityNote": "Archival standard-definition footage",
     "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub.",
-    "format": "episode"
+    "format": "episode",
+    "rightsStatus": "reviewed",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Publisher license page reviewed; original credits and linked license retained. No endorsement implied."
   },
   {
     "id": "bbs7",
@@ -1084,7 +1174,10 @@ window.SHUTTLEBUG_CATALOG = [
     "audioEvidence": "https://ascii.textfiles.com/archives/865",
     "qualityNote": "Archival standard-definition footage",
     "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub.",
-    "format": "episode"
+    "format": "episode",
+    "rightsStatus": "reviewed",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Publisher license page reviewed; original credits and linked license retained. No endorsement implied."
   },
   {
     "id": "bbs8",
@@ -1123,7 +1216,10 @@ window.SHUTTLEBUG_CATALOG = [
     "audioEvidence": "https://ascii.textfiles.com/archives/865",
     "qualityNote": "Archival standard-definition footage",
     "changes": "Complete documentary episode with original interviews, soundtrack and credits. Internet Archive streaming encode; thumbnail is a cropped film frame. No new narration or dub.",
-    "format": "episode"
+    "format": "episode",
+    "rightsStatus": "reviewed",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Publisher license page reviewed; original credits and linked license retained. No endorsement implied."
   },
   {
     "id": "sideways1",
@@ -1154,7 +1250,7 @@ window.SHUTTLEBUG_CATALOG = [
     "defaultCaptions": null,
     "language": "English",
     "qualityNote": "Publisher upload: 2018 \u00b7 Short documentary episode",
-    "credit": "Sideways, Roving WebSeries \u00b7 H\u00e9l\u00e8ne Legay and Beno\u00eet Cassegrain \u00b7 Original participants and music credited in each episode",
+    "credit": "Sideways, Roving WebSeries \u2014 H\u00e9l\u00e8ne Bressoles & Beno\u00eet Cassegrain",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
     "rights": "https://side-ways.net/en/webseries/",
@@ -1166,7 +1262,10 @@ window.SHUTTLEBUG_CATALOG = [
     "audioType": "recorded-human",
     "audioEvidence": "https://side-ways.net/en/webseries/",
     "changes": "Complete publisher streaming encode with original interviews, soundtrack and credits. No synthetic narration or dub. Thumbnail is a resized film frame. Publisher English subtitle file copied unchanged where available.",
-    "format": "episode"
+    "format": "episode",
+    "rightsStatus": "reviewed",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Publisher license page reviewed; original credits and linked license retained. No endorsement implied."
   },
   {
     "id": "sideways2",
@@ -1197,7 +1296,7 @@ window.SHUTTLEBUG_CATALOG = [
     "defaultCaptions": null,
     "language": "French with English subtitles",
     "qualityNote": "Publisher upload: 2018 \u00b7 Short documentary episode",
-    "credit": "Sideways, Roving WebSeries \u00b7 H\u00e9l\u00e8ne Legay and Beno\u00eet Cassegrain \u00b7 Original participants and music credited in each episode",
+    "credit": "Sideways, Roving WebSeries \u2014 H\u00e9l\u00e8ne Bressoles & Beno\u00eet Cassegrain",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
     "rights": "https://side-ways.net/en/webseries/",
@@ -1210,7 +1309,10 @@ window.SHUTTLEBUG_CATALOG = [
     "audioEvidence": "https://side-ways.net/en/webseries/",
     "changes": "Complete publisher streaming encode with original interviews, soundtrack, English subtitles and credits. No synthetic narration or dub. Thumbnail is a resized film frame.",
     "embeddedCaptions": "English subtitles are included in the video.",
-    "format": "episode"
+    "format": "episode",
+    "rightsStatus": "reviewed",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Publisher license page reviewed; original credits and linked license retained. No endorsement implied."
   },
   {
     "id": "sideways4",
@@ -1247,7 +1349,7 @@ window.SHUTTLEBUG_CATALOG = [
     "defaultCaptions": "en",
     "language": "French with English subtitles",
     "qualityNote": "Publisher upload: 2018 \u00b7 Short documentary episode",
-    "credit": "Sideways, Roving WebSeries \u00b7 H\u00e9l\u00e8ne Legay and Beno\u00eet Cassegrain \u00b7 Original participants and music credited in each episode",
+    "credit": "Sideways, Roving WebSeries \u2014 H\u00e9l\u00e8ne Bressoles & Beno\u00eet Cassegrain",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
     "rights": "https://side-ways.net/en/webseries/",
@@ -1259,6 +1361,9 @@ window.SHUTTLEBUG_CATALOG = [
     "audioType": "recorded-human",
     "audioEvidence": "https://side-ways.net/en/webseries/",
     "changes": "Complete publisher streaming encode with original interviews, soundtrack and credits. No synthetic narration or dub. Thumbnail is a resized film frame. Publisher English subtitle file copied unchanged where available.",
-    "format": "episode"
+    "format": "episode",
+    "rightsStatus": "reviewed",
+    "rightsReviewDate": "2026-11-19",
+    "rightsReviewNote": "Publisher license page reviewed; original credits and linked license retained. No endorsement implied."
   }
 ];
