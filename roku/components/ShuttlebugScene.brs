@@ -37,6 +37,8 @@ sub init()
     m.video.ObserveField("state", "onVideoState")
     m.video.ObserveField("position", "onPosition")
     m.adWatchdog.ObserveField("fire", "onAdTimeout")
+    m.adVideo = m.top.FindNode("adVideo")
+    m.adVideo.ObserveField("state", "onLocalAdState")
     m.catalogTask = CreateObject("roSGNode", "CatalogTask")
     m.catalogTask.ObserveField("result", "onCatalog")
     m.adTask = CreateObject("roSGNode", "AdTask")
@@ -301,26 +303,30 @@ sub requestTestAd(sequence as string)
 end sub
 
 sub showTestAd()
+    ' Local developer preview: use the native Video node rather than RAF.
+    ' Roku RAF does not reliably play pkg:/ media as an ad stream.
     m.mode = "ad"
     m.video.visible = false
     m.adView.visible = true
     m.adLabel.visible = true
-    m.adTask.view = m.adView
-    m.adTask.sequence = m.adPending
-    m.adTask.control = "RUN"
+    m.adVideo.visible = true
+    clip = CreateObject("roSGNode", "ContentNode")
+    clip.url = "pkg:/media/test-commercial.mp4"
+    clip.streamFormat = "mp4"
+    m.adVideo.content = clip
+    m.adVideo.SetFocus(true)
     m.adWatchdog.control = "start"
+    m.adVideo.control = "play"
 end sub
 
-sub onAdOutcome()
+sub finishLocalAd()
     if m.mode <> "ad" then return
     m.adWatchdog.control = "stop"
+    m.adVideo.control = "stop"
+    m.adVideo.visible = false
     m.adView.visible = false
     m.adLabel.visible = false
-    if m.adTask.outcome <> "complete"
-        m.queuedLaunch = ""
-        endPlayback(false)
-        return
-    end if
+    m.mode = "video"
     if m.queuedLaunch <> ""
         id = m.queuedLaunch
         m.queuedLaunch = ""
@@ -328,25 +334,31 @@ sub onAdOutcome()
         m.pendingPlay = id
         m.resumeAt = 0
         checkRights()
-        return
-    end if
-    if m.adTask.outcome = "complete"
-        startFilm()
     else
-        endPlayback(false)
+        startFilm()
     end if
 end sub
 
+sub onLocalAdState()
+    if m.mode <> "ad" then return
+    state = m.adVideo.state
+    if state = "finished" or state = "error" or state = "stopped"
+        finishLocalAd()
+    end if
+end sub
+
+sub onAdOutcome()
+    ' Legacy task callback; native local ad playback is used instead.
+end sub
+
 sub onAdTimeout()
-    if m.mode <> "ad" and m.mode <> "stoppingForAd" then return
-    m.adTask.control = "STOP"
-    m.adWatchdog.control = "stop"
-    m.adView.RemoveChildrenIndex(m.adView.GetChildCount(), 0)
-    m.adView.visible = false
-    m.adLabel.visible = false
-    m.queuedLaunch = ""
-    endPlayback(false)
-    m.detailDescription.text = "The unpaid test ad did not finish. Your film position is saved. Try Play again, or turn test ads OFF in the menu."
+    if m.mode = "ad"
+        ' Never leave the viewer trapped behind an unavailable test ad.
+        finishLocalAd()
+    else if m.mode = "stoppingForAd"
+        m.mode = "ad"
+        finishLocalAd()
+    end if
 end sub
 
 sub onVideoState()
@@ -394,7 +406,13 @@ end sub
 
 function onKeyEvent(key as string, press as boolean) as boolean
     if not press then return false
-    if m.mode = "ad" then return false
+    if m.mode = "ad"
+        if key = "back"
+            finishLocalAd()
+            return true
+        end if
+        return true
+    end if
     if m.mode = "video"
         if key = "back"
             endPlayback(false)
