@@ -3,7 +3,6 @@ sub init()
     for each id in ["navigation", "movies", "preview", "poster", "movieTitle", "description", "status", "details", "detailTitle", "detailDescription", "detailButtons", "detailCredit", "searchPanel", "keyboard", "searchButtons", "video", "adView", "adLabel", "adWatchdog", "metadata", "detailPoster", "detailMetadata", "breadcrumb"]
         m[id] = m.top.FindNode(id)
     end for
-    m.top.FindNode("brand").font = "font:LargeBoldSystemFont"
     m.items = []
     m.filtered = []
     m.favorites = {}

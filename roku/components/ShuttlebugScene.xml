@@ -8,8 +8,8 @@
   <Rectangle width="1920" height="10" color="0xED1821FF" />
   <Rectangle translation="[0,0]" width="335" height="1080" color="0x15161AFF" />
   <Poster id="logo" translation="[45,35]" width="70" height="70" uri="pkg:/images/ladybug.png" loadDisplayMode="scaleToFit" />
-  <Label id="brand" translation="[125,48]" width="410" height="55" text="SHUTTLEBUG" color="0xF32129FF" font="font:MediumBoldSystemFont" />
-  <Label translation="[45,120]" width="270" height="30" text="A HOG ENTERTAINMENT" font="font:SmallSystemFont" color="0xAEB2BDFF" />
+  <Label id="brand" translation="[40,115]" width="275" height="40" text="SHUTTLEBUG" color="0xF32129FF" font="font:SmallBoldSystemFont" />
+  <Label translation="[40,165]" width="275" height="55" numLines="2" text="A HOG ENTERTAINMENT" font="font:SmallSystemFont" color="0xAEB2BDFF" />
   <LabelList id="navigation" translation="[35,240]" itemSize="[270,76]" itemSpacing="[0,16]" numRows="5" color="0xD9DCE2FF" focusedColor="0xFFFFFFFF" focusBitmapBlendColor="0xED1821FF" />
   <Label id="status" translation="[40,800]" width="255" height="140" numLines="4" font="font:SmallSystemFont" color="0xAEB2BDFF" text="Checking cleared content rights..." />
   <Label id="breadcrumb" translation="[390,45]" width="1440" height="40" font="font:SmallSystemFont" color="0xC2C5CEFF" />

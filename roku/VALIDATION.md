@@ -7,3 +7,5 @@ The application preserves the existing 17 cleared catalog entries, playback sour
 Physical Roku testing remains required for layout/overscan, poster downloads, directional focus, keyboard, series/season/episode Back behavior, player decoding/seeking/subtitles, pre-roll and mid-roll transitions, failed-ad timeout/Back, saved favorites/progress/history across launch and Home/suspend. This new build has not been physically tested by the developer. Earlier builds were reported working by the owner.
 
 Public store publishing, screenshots, signed packaging, certification and paid advertising are not claimed.
+
+0.3.1: The owner confirmed 0.3.0 movie playback on a physical Roku. The photo showed the brand overlapping Home. This patch confines the wordmark to the sidebar below the ladybug, removes the old runtime font override, and wraps the company name. Updated visual spacing still requires device confirmation.
