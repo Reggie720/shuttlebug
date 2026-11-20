@@ -5,6 +5,9 @@
     "description": "A gentle giant rabbit takes on three mischievous woodland creatures.",
     "genre": "Animation",
     "kind": "Movies",
+    "series": "",
+    "season": null,
+    "episode": null,
     "year": 2008,
     "duration": 596,
     "sources": [
@@ -40,6 +43,9 @@
     "description": "Two travelers explore a strange mechanical world and clash over what they see.",
     "genre": "Sci-fi",
     "kind": "Movies",
+    "series": "",
+    "season": null,
+    "episode": null,
     "year": 2006,
     "duration": 654,
     "sources": [
@@ -75,6 +81,9 @@
     "description": "A young warrior searches for the dragon she once rescued.",
     "genre": "Fantasy",
     "kind": "Movies",
+    "series": "",
+    "season": null,
+    "episode": null,
     "year": 2010,
     "duration": 888,
     "sources": [
@@ -110,6 +119,9 @@
     "description": "A restless poet and an unlikely traveling companion journey toward northern Finland, where their hidden pasts begin to surface.",
     "genre": "Drama",
     "kind": "Movies",
+    "series": "",
+    "season": null,
+    "episode": null,
     "year": 2010,
     "duration": 5585.96,
     "sources": [
@@ -141,6 +153,9 @@
     "description": "A shepherd girl and her dog awaken ancient spirits and bring a frozen valley back to life.",
     "genre": "Adventure",
     "kind": "Movies",
+    "series": "",
+    "season": null,
+    "episode": null,
     "year": 2019,
     "duration": 464.168005,
     "sources": [
@@ -176,6 +191,9 @@
     "description": "A mysterious visitor offers a lonely sheep a chance to experience a completely different life.",
     "genre": "Fantasy",
     "kind": "Movies",
+    "series": "",
+    "season": null,
+    "episode": null,
     "year": 2015,
     "duration": 730.617007,
     "sources": [
@@ -211,6 +229,9 @@
     "description": "Meet the pioneers who connected computers over telephone lines and started the earliest online communities.",
     "genre": "Documentary",
     "kind": "TV",
+    "series": "BBS: The Documentary",
+    "season": null,
+    "episode": 1,
     "year": 2005,
     "duration": 2362.018005,
     "sources": [
@@ -241,6 +262,9 @@
     "description": "Operators and callers share their memories of building friendships, handling problems, and running a bulletin board.",
     "genre": "Documentary",
     "kind": "TV",
+    "series": "BBS: The Documentary",
+    "season": null,
+    "episode": 2,
     "year": 2005,
     "duration": 2690.325011,
     "sources": [
@@ -271,6 +295,9 @@
     "description": "The rise of commercial bulletin boards, told by the people who tried to turn online communities into businesses.",
     "genre": "Documentary",
     "kind": "TV",
+    "series": "BBS: The Documentary",
+    "season": null,
+    "episode": 3,
     "year": 2005,
     "duration": 2817.150484,
     "sources": [
@@ -301,6 +328,9 @@
     "description": "A look at the volunteer network that carried messages between bulletin boards around the world.",
     "genre": "Documentary",
     "kind": "TV",
+    "series": "BBS: The Documentary",
+    "season": null,
+    "episode": 4,
     "year": 2005,
     "duration": 2642.416009,
     "sources": [
@@ -331,6 +361,9 @@
     "description": "Meet the artists who used text characters and color to create a distinctive online art movement.",
     "genre": "Documentary",
     "kind": "TV",
+    "series": "BBS: The Documentary",
+    "season": null,
+    "episode": 5,
     "year": 2005,
     "duration": 2568.541995,
     "sources": [
@@ -361,6 +394,9 @@
     "description": "People from the hacking, phreaking, anarchist and cracking communities recall the dial-up underground.",
     "genre": "Documentary",
     "kind": "TV",
+    "series": "BBS: The Documentary",
+    "season": null,
+    "episode": 6,
     "year": 2005,
     "duration": 2309.25,
     "sources": [
@@ -391,6 +427,9 @@
     "description": "Participants reflect on the changing role of dial-up communities as the Internet grew.",
     "genre": "Documentary",
     "kind": "TV",
+    "series": "BBS: The Documentary",
+    "season": null,
+    "episode": 7,
     "year": 2005,
     "duration": 1296.64,
     "sources": [
@@ -421,6 +460,9 @@
     "description": "The people behind early file-compression tools revisit a dispute that changed the software industry.",
     "genre": "Documentary",
     "kind": "TV",
+    "series": "BBS: The Documentary",
+    "season": null,
+    "episode": 8,
     "year": 2005,
     "duration": 1247.948005,
     "sources": [
@@ -451,6 +493,9 @@
     "description": "Meet Elf Pavlik, a traveler who has chosen to live without money and help the communities he visits.",
     "genre": "Documentary",
     "kind": "TV",
+    "series": "SideWays",
+    "season": null,
+    "episode": 1,
     "year": 2018,
     "duration": 324.703991,
     "sources": [
@@ -476,6 +521,9 @@
     "description": "In Nantes, a group pools small monthly contributions to buy homes for people experiencing homelessness.",
     "genre": "Documentary",
     "kind": "TV",
+    "series": "SideWays",
+    "season": null,
+    "episode": 2,
     "year": 2018,
     "duration": 361.622,
     "sources": [
@@ -501,6 +549,9 @@
     "description": "Neighbors in Belgium build a wind turbine together and share what they learn along the way.",
     "genre": "Documentary",
     "kind": "TV",
+    "series": "SideWays",
+    "season": null,
+    "episode": 4,
     "year": 2018,
     "duration": 333.76,
     "sources": [

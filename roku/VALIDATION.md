@@ -1,6 +1,6 @@
 # Validation record — November 19, 2026
 
-Build: 0.2.2. This record distinguishes off-device checks from unrun device tests.
+Build: 0.2.3. This record distinguishes off-device checks from unrun device tests.
 
 ## Completed off-device
 - BrighterScript 0.73.8 parsed and validated all shipped BrightScript and SceneGraph XML without errors.
@@ -19,4 +19,6 @@ Actual SceneGraph rendering/focus on Roku; native player decoding/seeking on eac
 
 The BRS interpreter is not a Roku emulator. Mock controller checks do not establish native widget or RAF behavior. No Roku account, developer key, device or paid advertising partner was accessed. No money was spent. No public or beta publication is claimed.
 
-Build 0.2.2: Native unpaid test previews keep focus on the scene so Back skips the commercial. Completion/error/12-second timeout stops and hides the ad before resuming content. A film decoder handoff timeout returns to details. A re-entry guard prevents stop events from recursively completing the ad. The retained RAF adapter is inactive for these previews; paid advertising remains unconfigured.
+Build 0.2.3: Native unpaid test previews keep focus on the scene so Back skips the commercial. Completion/error/12-second timeout stops and hides the ad before resuming content. A film decoder handoff timeout returns to details. A re-entry guard prevents stop events from recursively completing the ad. The retained RAF adapter is inactive for these previews; paid advertising remains unconfigured.
+
+Build 0.2.3 adds Browse > Movies / TV Shows > Show > Season > Episode navigation. Season metadata is retained when supplied; missing season data is labeled Episodes (season unspecified), never invented. Search and Favorites continue to list individual playable titles. Back returns through the folder hierarchy. Off-device compiler, package and grouping tests passed; physical remote navigation and playback remain pending.

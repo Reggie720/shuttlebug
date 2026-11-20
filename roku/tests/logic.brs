@@ -1,4 +1,10 @@
 sub Main()
+    episodes = [{id:"e1",kind:"TV",title:"First",series:"Show",season:invalid,episode:1},{id:"e2",kind:"TV",title:"Second",series:"Show",season:invalid,episode:2},{id:"film",kind:"Movies",title:"Film"}]
+    require(BrowseEntries(episodes,"","","").Count() = 2,"Movies and TV sections")
+    require(BrowseEntries(episodes,"TV","","").Count() = 1,"episodes grouped by show")
+    require(BrowseEntries(episodes,"TV","Show","")[0].title = "Episodes (season unspecified)","no invented season")
+    require(BrowseEntries(episodes,"TV","Show","Episodes (season unspecified)").Count() = 2,"all cleared episodes preserved")
+    require(BrowseEntries(episodes,"Movies","","").Count() = 1,"movies separate")
     item = {id:"one", title:"Big Buck Bunny",genre:"Animation",description:"A gentle rabbit",license:"CC BY 3.0",licenseUrl:"https://license",rights:"https://rights",source:"https://source",credit:"Creator",changes:"Unchanged"}
     rights = [{id:"one",rightsStatus:"reviewed",license:item.license,licenseUrl:item.licenseUrl,rights:item.rights,source:item.source,credit:item.credit,changes:item.changes}]
     require(ClearedItems([item],rights).Count() = 1,"cleared title")

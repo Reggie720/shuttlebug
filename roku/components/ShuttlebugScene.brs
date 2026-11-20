@@ -9,6 +9,9 @@ sub init()
     m.favorites = {}
     m.progress = {}
     m.query = ""
+    m.category = ""
+    m.series = ""
+    m.season = ""
     m.section = "Browse"
     m.mode = "browse"
     m.testAds = false
@@ -89,10 +92,13 @@ end sub
 
 sub renderMovies()
     m.filtered = FilterTitles(m.items, m.query, m.favorites, m.section = "Favorites")
+    if m.section = "Browse" then m.filtered = BrowseEntries(m.items, m.category, m.series, m.season)
     content = CreateObject("roSGNode", "ContentNode")
     for each item in m.filtered
         child = content.CreateChild("ContentNode")
         child.title = item.title
+        if item.folder = true then child.title = item.title + "  >"
+        if item.episode <> invalid then child.title = "Episode " + item.episode.ToStr() + " - " + item.title
     end for
     m.movies.content = content
     if m.filtered.Count() = 0
@@ -107,7 +113,10 @@ end sub
 sub onNavigation()
     selected = m.navigation.itemSelected
     if selected = 0
-        m.section = "Browse"
+        m.category = ""
+    m.series = ""
+    m.season = ""
+    m.section = "Browse"
         m.query = ""
         renderMovies()
         checkRights()
@@ -140,6 +149,11 @@ sub showPreview(index as integer)
     if index < 0 or index >= m.filtered.Count() then return
     item = m.filtered[index]
     m.movieTitle.text = item.title
+    if item.folder = true
+        m.description.text = "Press OK to open. Back returns to the previous section. Only available, rights-cleared episodes appear."
+        m.poster.uri = "pkg:/images/splash.jpg"
+        return
+    end if
     m.description.text = item.year.ToStr() + " | " + item.genre + Chr(10) + item.description
     m.poster.uri = item.image
 end sub
@@ -147,7 +161,16 @@ end sub
 sub onMovieSelected()
     index = m.movies.itemSelected
     if index < 0 or index >= m.filtered.Count() then return
-    m.current = m.filtered[index]
+    item = m.filtered[index]
+    if item.folder = true
+        m.category = item.category
+        m.series = item.series
+        m.season = item.season
+        renderMovies()
+        m.movies.SetFocus(true)
+        return
+    end if
+    m.current = item
     showDetails()
 end sub
 
@@ -478,12 +501,25 @@ function onKeyEvent(key as string, press as boolean) as boolean
         else if key = "options" and m.movies.IsInFocusChain() and m.filtered.Count() > 0
             index = m.movies.itemFocused
             if index >= 0 and index < m.filtered.Count()
+                if m.filtered[index].folder = true then return true
                 m.favorites = ToggleFavorite(m.favorites, m.filtered[index].id)
                 savePreferences()
                 renderMovies()
             end if
             return true
         else if key = "back"
+            if m.section = "Browse" and m.category <> "" and m.category <> invalid
+                if m.season <> ""
+                    m.season = ""
+                else if m.series <> ""
+                    m.series = ""
+                else
+                    m.category = ""
+                end if
+                renderMovies()
+                m.movies.SetFocus(true)
+                return true
+            end if
             if not m.navigation.IsInFocusChain()
                 m.navigation.SetFocus(true)
                 return true

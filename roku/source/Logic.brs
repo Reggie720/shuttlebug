@@ -73,3 +73,40 @@ function CleanPositions(raw as dynamic, items as object) as object
     end for
     return clean
 end function
+
+' Folder records never enter the playback or rights catalog.
+function BrowseEntries(items as object, category as string, series as string, season as string) as object
+    result = []
+    seen = {}
+    if category = ""
+        return [{folder:true,title:"Movies",category:"Movies",series:"",season:""}, {folder:true,title:"TV Shows",category:"TV",series:"",season:""}]
+    end if
+    for each item in items
+        if item.kind = category
+            if category = "Movies"
+                result.Push(item)
+            else
+                show = item.series
+                if show = invalid or show = "" then show = item.title
+                group = "Episodes (season unspecified)"
+                if item.season <> invalid then group = "Season " + item.season.ToStr()
+                if series = ""
+                    if not seen.DoesExist(show)
+                        seen[show] = true
+                        result.Push({folder:true,title:show,category:"TV",series:show,season:""})
+                    end if
+                else if show = series
+                    if season = ""
+                        if not seen.DoesExist(group)
+                            seen[group] = true
+                            result.Push({folder:true,title:group,category:"TV",series:show,season:group})
+                        end if
+                    else if season = group
+                        result.Push(item)
+                    end if
+                end if
+            end if
+        end if
+    end for
+    return result
+end function

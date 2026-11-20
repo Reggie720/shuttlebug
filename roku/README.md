@@ -1,6 +1,6 @@
 # Shuttlebug for Roku
 
-A Hog Entertainment · Developer build 0.2.2 · Not published or monetized.
+A Hog Entertainment · Developer build 0.2.3 · Not published or monetized.
 
 Continues the supplied Shuttlebug_Roku_Developer_Starter.zip. The original launcher assets and app identity are retained, with the existing Shuttlebug ladybug added to the SceneGraph header. No website files were changed.
 
@@ -47,4 +47,6 @@ Sources:
 - https://developer.roku.com/dev/docs/channel-publishing-guide
 - https://developer.roku.com/dev/docs/rce
 
-Build 0.2.2: Native unpaid test previews keep focus on the scene so Back skips the commercial. Completion/error/12-second timeout stops and hides the ad before resuming content. A film decoder handoff timeout returns to details. A re-entry guard prevents stop events from recursively completing the ad. The retained RAF adapter is inactive for these previews; paid advertising remains unconfigured.
+Build 0.2.3: Native unpaid test previews keep focus on the scene so Back skips the commercial. Completion/error/12-second timeout stops and hides the ad before resuming content. A film decoder handoff timeout returns to details. A re-entry guard prevents stop events from recursively completing the ad. The retained RAF adapter is inactive for these previews; paid advertising remains unconfigured.
+
+Build 0.2.3 adds Browse > Movies / TV Shows > Show > Season > Episode navigation. Season metadata is retained when supplied; missing season data is labeled Episodes (season unspecified), never invented. Search and Favorites continue to list individual playable titles. Back returns through the folder hierarchy. Off-device compiler, package and grouping tests passed; physical remote navigation and playback remain pending.
