@@ -37,3 +37,17 @@ assert 'm.mode = "resumingAfterAd"' in scene
 assert 'm.top.SetFocus(true)' in scene
 assert 'duration="12"' in (root/'components/ShuttlebugScene.xml').read_text()
 assert 'onLocalAdState' in scene and 'm.adVideo.control = "stop"' in scene
+
+source_catalog=json.loads((repo/'catalog.js').read_text().split('=',1)[1].rstrip(';\n'))
+source_byid={x['id']:x for x in source_catalog}
+for item in items:
+ original=source_byid[item['id']]
+ assert item['added']==(original.get('added') or '')
+ assert item['series']==(original.get('series') or '')
+ assert item['season']==original.get('season') and item['episode']==original.get('episode')
+ assert not item['contentRating'] or original.get('ratingVerified') is True
+ui=E.parse(root/'components/ShuttlebugScene.xml')
+rows=ui.find('.//RowList')
+assert rows is not None and rows.attrib['itemComponentName']=='PosterCard'
+assert 'rowItemSelected' in scene and 'rowItemFocused' in scene
+assert (root/'components/PosterCard.xml').is_file()

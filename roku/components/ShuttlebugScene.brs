@@ -1,6 +1,6 @@
 sub init()
     m.top.backgroundColor = "0x101010FF"
-    for each id in ["navigation", "movies", "preview", "poster", "movieTitle", "description", "status", "details", "detailTitle", "detailDescription", "detailButtons", "detailCredit", "searchPanel", "keyboard", "searchButtons", "video", "adView", "adLabel", "adWatchdog"]
+    for each id in ["navigation", "movies", "preview", "poster", "movieTitle", "description", "status", "details", "detailTitle", "detailDescription", "detailButtons", "detailCredit", "searchPanel", "keyboard", "searchButtons", "video", "adView", "adLabel", "adWatchdog", "metadata", "detailPoster", "detailMetadata", "breadcrumb"]
         m[id] = m.top.FindNode(id)
     end for
     m.top.FindNode("brand").font = "font:LargeBoldSystemFont"
@@ -8,6 +8,8 @@ sub init()
     m.filtered = []
     m.favorites = {}
     m.progress = {}
+    m.history = []
+    m.rows = []
     m.query = ""
     m.category = ""
     m.series = ""
@@ -30,11 +32,13 @@ sub init()
     if Type(stored) = "roAssociativeArray" then m.favorites = stored
     stored = ParseJson(m.registry.Read("progress"))
     if Type(stored) = "roAssociativeArray" then m.progress = CleanPositions(stored, ParseJson(ReadAsciiFile("pkg:/data/catalog.json")))
+    stored = ParseJson(m.registry.Read("history"))
+    m.history = CleanHistory(stored)
     m.top.ObserveField("launchId", "onLaunchId")
     updateNavigation()
     m.navigation.ObserveField("itemSelected", "onNavigation")
-    m.movies.ObserveField("itemFocused", "onMovieFocus")
-    m.movies.ObserveField("itemSelected", "onMovieSelected")
+    m.movies.ObserveField("rowItemFocused", "onMovieFocus")
+    m.movies.ObserveField("rowItemSelected", "onMovieSelected")
     m.detailButtons.ObserveField("buttonSelected", "onDetailButton")
     m.searchButtons.ObserveField("buttonSelected", "onSearchButton")
     m.video.ObserveField("state", "onVideoState")
@@ -54,7 +58,7 @@ sub updateNavigation()
     root = CreateObject("roSGNode", "ContentNode")
     label = "Test ads: OFF"
     if m.testAds then label = "Test ads: ON (unpaid)"
-    for each title in ["Browse", "Search", "Favorites", label, "About & privacy"]
+    for each title in ["Home", "Search", "Favorites", label, "About & privacy"]
         node = root.CreateChild("ContentNode")
         node.title = title
     end for
@@ -91,32 +95,78 @@ sub onCatalog()
 end sub
 
 sub renderMovies()
-    m.filtered = FilterTitles(m.items, m.query, m.favorites, m.section = "Favorites")
-    if m.section = "Browse" then m.filtered = BrowseEntries(m.items, m.category, m.series, m.season)
+    m.filtered = []
+    if m.section = "Browse" and m.category = ""
+        m.rows = HomeShelves(m.items, m.favorites, m.progress, m.history)
+        m.breadcrumb.text = "HOME  /  Discover something worth watching"
+    else
+        entries = FilterTitles(m.items, m.query, m.favorites, m.section = "Favorites")
+        label = m.section
+        if m.section = "Browse"
+            entries = BrowseEntries(m.items, m.category, m.series, m.season)
+            label = m.category
+            if m.series <> "" then label = m.series
+            if m.season <> "" then label = label + " / " + m.season
+        end if
+        m.rows = []
+        AddShelf(m.rows,label,entries)
+        m.breadcrumb.text = "HOME  /  " + label
+    end if
     content = CreateObject("roSGNode", "ContentNode")
-    for each item in m.filtered
-        child = content.CreateChild("ContentNode")
-        child.title = item.title
-        if item.folder = true then child.title = item.title + "  >"
-        if item.episode <> invalid then child.title = "Episode " + item.episode.ToStr() + " - " + item.title
+    for each row in m.rows
+        rowNode = content.CreateChild("ContentNode")
+        rowNode.title = row.title
+        for each item in row.items
+            m.filtered.Push(item)
+            child = rowNode.CreateChild("ContentNode")
+            child.title = item.title
+            child.description = TitleMetadata(item)
+            child.hdPosterUrl = "pkg:/images/splash.jpg"
+            if item.image <> invalid and item.image <> "" then child.hdPosterUrl = item.image
+            if item.folder = true
+                for each episode in m.items
+                    if episode.kind = "TV" and episode.series = item.series
+                        item.image = episode.image
+                        child.hdPosterUrl = episode.image
+                        exit for
+                    end if
+                end for
+            end if
+            if item.episode <> invalid then child.title = "E" + item.episode.ToStr() + " - " + item.title
+        end for
     end for
     m.movies.content = content
     if m.filtered.Count() = 0
-        m.movieTitle.text = "No titles available"
-        m.description.text = "Try Browse, another search, or save a title to Favorites. A live rights check must succeed before viewing."
+        m.movieTitle.text = "Your next discovery is coming"
+        m.metadata.text = ""
+        m.description.text = "No cleared titles in this section. Choose Home, search again or check your connection."
         m.poster.uri = "pkg:/images/splash.jpg"
     else
+        m.movies.jumpToRowItem = [0,0]
         showPreview(0)
     end if
 end sub
+
+function focusedIndex(selected as boolean) as integer
+    pair = m.movies.rowItemFocused
+    if selected then pair = m.movies.rowItemSelected
+    if pair = invalid or pair.Count() <> 2 then return -1
+    if pair[0] < 0 or pair[0] >= m.rows.Count() then return -1
+    if pair[1] < 0 or pair[1] >= m.rows[pair[0]].items.Count() then return -1
+    index = pair[1]
+    for i = 0 to pair[0] - 1
+        index = index + m.rows[i].items.Count()
+    end for
+    return index
+end function
 
 sub onNavigation()
     selected = m.navigation.itemSelected
     if selected = 0
         m.category = ""
-    m.series = ""
-    m.season = ""
-    m.section = "Browse"
+        m.series = ""
+        m.season = ""
+        m.section = "Browse"
         m.query = ""
         renderMovies()
         checkRights()
@@ -142,24 +192,25 @@ sub onNavigation()
 end sub
 
 sub onMovieFocus()
-    showPreview(m.movies.itemFocused)
+    showPreview(focusedIndex(false))
 end sub
 
 sub showPreview(index as integer)
     if index < 0 or index >= m.filtered.Count() then return
     item = m.filtered[index]
     m.movieTitle.text = item.title
+    m.metadata.text = TitleMetadata(item)
     if item.folder = true
         m.description.text = "Press OK to open. Back returns to the previous section. Only available, rights-cleared episodes appear."
         m.poster.uri = "pkg:/images/splash.jpg"
         return
     end if
-    m.description.text = item.year.ToStr() + " | " + item.genre + Chr(10) + item.description
+    m.description.text = item.description
     m.poster.uri = item.image
 end sub
 
 sub onMovieSelected()
-    index = m.movies.itemSelected
+    index = focusedIndex(true)
     if index < 0 or index >= m.filtered.Count() then return
     item = m.filtered[index]
     if item.folder = true
@@ -179,6 +230,8 @@ sub showDetails()
     m.mode = "details"
     m.details.visible = true
     m.detailTitle.text = m.current.title
+    m.detailMetadata.text = TitleMetadata(m.current)
+    m.detailPoster.uri = m.current.image
     m.detailDescription.text = m.current.description
     saved = 0
     if m.progress.DoesExist(m.current.id) then saved = m.progress[m.current.id]
@@ -219,6 +272,7 @@ end sub
 sub savePreferences()
     m.registry.Write("favorites", FormatJson(m.favorites))
     m.registry.Write("progress", FormatJson(m.progress))
+    m.registry.Write("history", FormatJson(m.history))
     m.registry.Flush()
 end sub
 
@@ -398,7 +452,9 @@ sub onVideoState()
         return
     end if
     if m.mode <> "video" then return
-    if state = "paused"
+    if state = "playing"
+        recordViewing()
+    else if state = "paused"
         m.lastPosition = m.video.position
         m.progress[m.current.id] = m.lastPosition
         m.lastSaved = m.lastPosition
@@ -484,6 +540,7 @@ function onKeyEvent(key as string, press as boolean) as boolean
             m.pendingPlay = ""
             m.details.visible = false
             m.mode = "browse"
+            if m.items <> invalid then renderMovies()
             if m.filtered.Count() > 0
                 m.movies.SetFocus(true)
             else
@@ -499,7 +556,7 @@ function onKeyEvent(key as string, press as boolean) as boolean
             m.navigation.SetFocus(true)
             return true
         else if key = "options" and m.movies.IsInFocusChain() and m.filtered.Count() > 0
-            index = m.movies.itemFocused
+            index = focusedIndex(false)
             if index >= 0 and index < m.filtered.Count()
                 if m.filtered[index].folder = true then return true
                 m.favorites = ToggleFavorite(m.favorites, m.filtered[index].id)
@@ -543,4 +600,18 @@ sub onLaunchId()
     m.pendingPlay = id
     m.resumeAt = 0
     if not m.checking then checkRights()
+end sub
+
+sub recordViewing()
+    if m.current = invalid then return
+    if m.history = invalid then m.history = []
+    if m.history.Count() > 0
+        if m.history[0] = m.current.id then return
+    end if
+    nextHistory = [m.current.id]
+    for each id in m.history
+        if id <> m.current.id and nextHistory.Count() < 50 then nextHistory.Push(id)
+    end for
+    m.history = nextHistory
+    savePreferences()
 end sub

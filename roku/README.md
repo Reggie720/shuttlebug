@@ -1,52 +1,45 @@
-# Shuttlebug for Roku
+# Shuttlebug Roku
 
-A Hog Entertainment · Developer build 0.2.3 · Not published or monetized.
+A Hog Entertainment · Developer build 0.3.0 · Public store approval pending.
 
-Continues the supplied Shuttlebug_Roku_Developer_Starter.zip. The original launcher assets and app identity are retained, with the existing Shuttlebug ladybug added to the SceneGraph header. No website files were changed.
+The existing SceneGraph application now uses a featured artwork banner and horizontal poster shelves. It retains the same live rights gate, native film playback, optional unpaid test ads, search, favorites and device registry bookmarks. Website code is unchanged.
 
-## Included
-- Native SceneGraph catalog browsing and title details.
-- D-pad navigation, OK selection, Play/Pause, native fullscreen Video and Back.
-- Onscreen search by title, genre and synopsis.
-- Device-local favorites and progress in the Roku registry; resume/start-over controls.
-- Source fallbacks and unavailable-stream messages. The three SideWays episodes use the publisher's full HLS VOD playlists; other titles use progressive MP4. Existing English subtitle tracks are passed to the native player.
-- Original creator credits, change notices and license/source links on each title.
-- Startup and pre-playback live rights checks. Missing, held, changed or unverified records cannot play. The packaged feed contains only the 17 records marked reviewed in the existing register. No new films were added or rights upgraded.
-- Optional unpaid pre-roll/mid-roll test via a native Roku Video node. Tests start OFF and are not persisted. Turn ON in the left menu. The local five-second Shuttlebug house creative has no impression/tracking URLs, uses no ad-server calls and does not request default or paid demand. The 30-second mid-roll is accelerated developer testing only, not a production ad policy.
-- Cold/warm contentId input handling for developer deep-link testing, subject to the same rights check.
+## Home and catalog
 
-## Package
-`packages/Shuttlebug_Roku_Developer.zip` is a sideloadable development ZIP with `manifest` at its root. It is not a signed store package or a public app. `packages/SHA256SUMS` identifies the exact build. Sources, dependencies, tests and documentation remain outside the install ZIP.
+Only the live-cleared intersection of `catalog.js` and `compliance/rights-register.json` is displayed. Populated shelves include Featured Movies, Newly Added Movies, genre rows, TV Shows, Documentary Episodes, Continue Watching, My Favorites and Recently Watched. Empty shelves are omitted. There is no Popular ranking because aggregate viewing data is not available. Featured currently means the available movie selection, not a claim of popularity. Newly Added sorts by existing catalog `added` dates; missing dates are excluded from that shelf. New licensed catalog entries are included at the next package build, not downloaded silently at runtime.
 
-Build locally or in GitHub Actions:
+TV Shows opens Series > Season > Episodes. Missing season metadata is honestly labeled “Episodes (season unspecified).” Episode numbers, artwork, descriptions and runtimes come from the existing catalog. Search includes series names. Poster cards, featured previews and title details show available release year, genre and runtime. Ratings are displayed only when explicitly marked verified; missing ratings are omitted. Missing artwork uses a branded fallback.
+
+Continue Watching uses saved resume positions. Recently Watched uses a bounded local history recorded only when the native player reports playing. These rows and favorites are filtered against currently cleared titles. Existing favorites and progress registry keys are preserved. New history stays on the Roku; it is not advertising analytics.
+
+## Remote
+
+Arrows navigate the sidebar and horizontal rows; OK opens details or series folders. Back returns through episode/season/series levels, then navigation, then exits from the root. Star toggles favorites for playable cards. Search uses the Roku keyboard. Native Video retains Play/Pause, seeking, subtitles and Back handling. Test ads remain OFF by default, explicitly unpaid and separate from paid demand. Back skips test previews; completion, error and a 12-second watchdog clear the ad. Decoder handoff timeout returns to details rather than leaving an ad overlay.
+
+## Build
+
+From the repository root:
+
+```sh
+npm ci --ignore-scripts --prefix roku
+npm run build --prefix roku
+npm test --prefix roku
 ```
-cd roku
-npm ci --ignore-scripts
-npm run build
-npm test
-```
-Tools: Node.js 22, Python 3, pinned BrighterScript compiler and off-device BRS interpreter. Dependency versions are locked. All are free development tools. No paid service or purchase was used.
 
-The build generator reads the existing repository catalog and rights register; disagreements in required license/attribution fields fail the build. It writes Roku-only JSON, validates BrightScript/SceneGraph syntax and creates the ZIP. The workflow repeats this on relevant commits and uploads the package as a build artifact.
+Output: `roku/packages/Shuttlebug_Roku_Developer.zip`, with SHA-256 in `roku/packages/SHA256SUMS`. Install this ZIP as-is; do not unzip or upload the whole repository.
 
-## Developer device testing
-A Roku device with Developer Mode enabled and an authorized tester on its network is required for local sideloading. An eligible Roku Cloud Emulator account may be an alternative; account availability must be checked. The remote development workspace cannot access your home's private Roku IP.
+## Install on your existing developer-mode Roku
 
-From your Android phone on the same Wi-Fi as the Roku, the device's Development Application Installer can accept this ZIP after Developer Mode setup. The owner must complete Roku account terms, developer-key creation and any password entry. See DEVICE_TESTS.md for the exact checklist. Keep developer credentials and signing keys out of GitHub.
+1. Connect your Chromebook and Roku to the same Wi-Fi or phone hotspot.
+2. Download the developer ZIP to the Chromebook.
+3. Open `http://ROKU_IP` in Chrome, using the Roku IP in Settings > Network > About.
+4. Sign into the developer installer as `rokudev` with your existing developer password.
+5. Choose Upload, select the ZIP, then Install or Replace. Launch Shuttlebug if it does not open automatically.
 
-## Honest validation limits
-Compiler and unit/controller tests do not run Roku OS or SceneGraph graphics, and do not decode video through Roku hardware or execute its downloaded RAF library. HTTP/MP4 header checks establish source availability at check time only. This updated build has not been tested on a physical Roku, signed, certified or published. The complete device test matrix remains pending. This build also preserves bookmarks when rights verification is temporarily unavailable, cancels pending playback on Back, saves the latest paused position, rejects duplicate rights records and bounds ad handoff timeouts.
+The installer must be on the same local network. This is a developer installation, not a public Roku Store release. A developer channel slot holds one app. Avoid deleting the channel or resetting your device if you want to preserve local settings.
 
-Production monetization requires partner acceptance, approved demand configuration, current Roku ad policy review and hardware validation. The developer app deliberately contains no production ad URL, paid ad credentials or default-demand fallback.
+## Artwork and submission
 
-Sources:
-- https://developer.roku.com/dev/docs/playing-videos
-- https://developer.roku.com/dev/docs/integrating-roku-advertising-framework
-- https://developer.roku.com/dev/docs/raf-api
-- https://developer.roku.com/dev/docs/implementing-deep-linking
-- https://developer.roku.com/dev/docs/channel-publishing-guide
-- https://developer.roku.com/dev/docs/rce
+`images/` contains the branded app tile, splash and ladybug; `store/` contains FHD/HD/SD poster exports and a 1920×1080 brand image. These are original Shuttlebug artwork prepared for submission, not certification approval. Actual app screenshots must be captured from the installed Roku build; a brand image is not a screenshot. Store listing requirements, signing, device validation and Roku approval remain separate steps.
 
-Build 0.2.3: Native unpaid test previews keep focus on the scene so Back skips the commercial. Completion/error/12-second timeout stops and hides the ad before resuming content. A film decoder handoff timeout returns to details. A re-entry guard prevents stop events from recursively completing the ad. The retained RAF adapter is inactive for these previews; paid advertising remains unconfigured.
-
-Build 0.2.3 adds Browse > Movies / TV Shows > Show > Season > Episode navigation. Season metadata is retained when supplied; missing season data is labeled Episodes (season unspecified), never invented. Search and Favorites continue to list individual playable titles. Back returns through the folder hierarchy. Off-device compiler, package and grouping tests passed; physical remote navigation and playback remain pending.
+See VALIDATION.md and DEVICE_TESTS.md for the test limits.

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="PosterCard" extends="Group">
+ <interface>
+  <field id="itemContent" type="node" onChange="onContent" />
+  <field id="focusPercent" type="float" onChange="onFocus" />
+ </interface>
+ <script type="text/brightscript" uri="pkg:/components/PosterCard.brs" />
+ <children>
+  <Rectangle id="border" width="302" height="238" color="0xED1821FF" opacity="0" />
+  <Rectangle translation="[5,5]" width="292" height="228" color="0x22252AFF" />
+  <Poster translation="[5,5]" width="292" height="164" uri="pkg:/images/splash.jpg" loadDisplayMode="scaleToFit" />
+  <Poster id="art" translation="[5,5]" width="292" height="164" loadDisplayMode="scaleToFit" />
+  <Label id="title" translation="[14,174]" width="274" height="30" font="font:SmallBoldSystemFont" />
+  <Label id="meta" translation="[14,206]" width="274" height="22" font="font:SmallSystemFont" color="0xBDC0C7FF" />
+ </children>
+</component>

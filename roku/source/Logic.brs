@@ -4,6 +4,7 @@ function FilterTitles(items as object, query as string, favorites as object, onl
         allowed = true
         if onlyFavorites then allowed = favorites.DoesExist(item.id)
         text = LCase(item.title + " " + item.genre + " " + item.description)
+        if item.series <> invalid then text = text + " " + LCase(item.series)
         if query <> "" and Instr(1, text, LCase(query)) = 0 then allowed = false
         if allowed then result.Push(item)
     end for
@@ -109,4 +110,99 @@ function BrowseEntries(items as object, category as string, series as string, se
         end if
     end for
     return result
+end function
+
+function TitleMetadata(item as object) as string
+    result = ""
+    if item.year <> invalid then result = item.year.ToStr()
+    if item.genre <> invalid and item.genre <> "" then result = result + "  |  " + item.genre
+    if item.duration <> invalid then result = result + "  |  " + Int(item.duration / 60).ToStr() + " min"
+    if item.contentRating <> invalid and item.contentRating <> "" then result = result + "  |  " + item.contentRating
+    if item.episode <> invalid then result = result + "  |  Episode " + item.episode.ToStr()
+    return result
+end function
+
+sub AddShelf(rows as object, title as string, items as object)
+    if items.Count() > 0 then rows.Push({title:title,items:items})
+end sub
+
+function HomeShelves(items as object, favorites as object, progress as object, history as object) as object
+    rows = []
+    continuing = []
+    saved = []
+    movies = []
+    recent = []
+    for each item in items
+        if progress.DoesExist(item.id)
+            if progress[item.id] > 0 and progress[item.id] < item.duration then continuing.Push(item)
+        end if
+        if favorites.DoesExist(item.id) then saved.Push(item)
+        if item.kind = "Movies" then movies.Push(item)
+    end for
+    for each id in history
+        for each item in items
+            if item.id = id then recent.Push(item)
+        end for
+    end for
+    AddShelf(rows,"Continue Watching",continuing)
+    AddShelf(rows,"Featured Movies",movies)
+    newly = []
+    ' ISO catalog-added dates sort lexically; unknown dates do not imply newness.
+    for each item in movies
+        if item.added <> invalid and item.added <> ""
+            newly.Push(item)
+            position = newly.Count() - 1
+            while position > 0
+                if newly[position].added <= newly[position-1].added then exit while
+                previous = newly[position-1]
+                newly[position-1] = newly[position]
+                newly[position] = previous
+                position--
+            end while
+        end if
+    end for
+    AddShelf(rows,"Newly Added Movies",newly)
+    for each genre in ["Action","Comedy","Drama","Documentary","Family","Animation","Adventure","Fantasy","Sci-fi"]
+        titles = []
+        for each item in movies
+            if LCase(item.genre) = LCase(genre) then titles.Push(item)
+        end for
+        label = genre + " Movies"
+        if genre = "Documentary" then label = "Documentaries"
+        AddShelf(rows,label,titles)
+    end for
+    shows = BrowseEntries(items,"TV","","")
+    for each show in shows
+        for each item in items
+            if item.kind = "TV" and item.series = show.series
+                show.image = item.image
+                show.description = item.description
+                exit for
+            end if
+        end for
+    end for
+    AddShelf(rows,"TV Shows",shows)
+    docs = []
+    for each item in items
+        if item.kind = "TV" and item.genre = "Documentary" then docs.Push(item)
+    end for
+    AddShelf(rows,"Documentary Episodes",docs)
+    AddShelf(rows,"My Favorites",saved)
+    AddShelf(rows,"Recently Watched",recent)
+    return rows
+end function
+
+function CleanHistory(raw as dynamic) as object
+    clean = []
+    if Type(raw) <> "roArray" then return clean
+    seen = {}
+    for each id in raw
+        if Type(id) = "String" or Type(id) = "roString"
+            if not seen.DoesExist(id) and clean.Count() < 50
+                clean.Push(id)
+                seen[id] = true
+            end if
+        end if
+    end for
+    return clean
 end function

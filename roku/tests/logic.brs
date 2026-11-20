@@ -39,6 +39,17 @@ sub Main()
     require(CleanPositions({one:9999},[item]).Count() = 0,"out of range bookmark")
     require(CleanPositions({one:-1},[item]).Count() = 0,"negative bookmark")
     require(CleanPositions({unknown:42},[item]).Count() = 0,"removed title bookmark")
+    shows = [{id:"episode",kind:"TV",series:"Show",title:"Episode",description:"A documentary episode",genre:"Documentary",duration:90,image:"https://example.com/art",episode:1,season:invalid}]
+    films = [{id:"movie",kind:"Movies",title:"Film",genre:"Drama",duration:120,year:2000,added:"2026-11-20"}]
+    require(CleanHistory(["movie","movie",42,invalid]).Count() = 1,"history is bounded and sanitized")
+    require(FilterTitles(shows,"show",{},false).Count() = 1,"series search")
+    shelves = HomeShelves(films, {movie:true}, {movie:30}, ["movie","held"])
+    require(shelves[0].title = "Continue Watching","resume shelf first")
+    require(shelves[2].title = "Newly Added Movies","dated new movies")
+    require(shelves[shelves.Count()-1].items.Count() = 1,"history excludes unavailable titles")
+    require(HomeShelves([],{}, {}, []).Count() = 0,"no empty or fabricated shelves")
+    require(HomeShelves(shows,{}, {}, [])[0].items[0].folder,"TV series cards group episodes")
+    require(Instr(1,TitleMetadata(films[0]),"2000") > 0,"verified year displayed")
     print "PASS BrightScript rights gate, revocation, search, favorites and unpaid ad pod logic"
 end sub
 

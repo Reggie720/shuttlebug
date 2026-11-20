@@ -6,22 +6,33 @@
  <children>
   <Rectangle width="1920" height="1080" color="0x101010FF" />
   <Rectangle width="1920" height="10" color="0xED1821FF" />
-  <Poster id="logo" translation="[70,40]" width="95" height="95" uri="pkg:/images/ladybug.png" loadDisplayMode="scaleToFit" />
-  <Label id="brand" translation="[185,60]" width="1300" height="70" text="SHUTTLEBUG" color="0xF32129FF" />
-  <Label id="status" translation="[70,155]" width="1770" height="65" text="Checking cleared content rights..." />
-  <LabelList id="navigation" translation="[70,255]" itemSize="[340,80]" itemSpacing="[0,12]" numRows="6" color="0xFFFFFFFF" focusedColor="0xFFFFFFFF" focusBitmapBlendColor="0xED1821FF" />
-  <LabelList id="movies" translation="[455,255]" itemSize="[715,72]" itemSpacing="[0,8]" numRows="8" color="0xFFFFFFFF" focusedColor="0xFFFFFFFF" focusBitmapBlendColor="0xED1821FF" />
-  <Group id="preview" translation="[1220,255]">
-   <Poster id="poster" width="600" height="330" loadDisplayMode="scaleToFit" />
-   <Label id="movieTitle" translation="[0,350]" width="600" height="90" numLines="2" />
-   <Label id="description" translation="[0,450]" width="600" height="230" numLines="6" />
+  <Rectangle translation="[0,0]" width="335" height="1080" color="0x15161AFF" />
+  <Poster id="logo" translation="[45,35]" width="70" height="70" uri="pkg:/images/ladybug.png" loadDisplayMode="scaleToFit" />
+  <Label id="brand" translation="[125,48]" width="410" height="55" text="SHUTTLEBUG" color="0xF32129FF" font="font:MediumBoldSystemFont" />
+  <Label translation="[45,120]" width="270" height="30" text="A HOG ENTERTAINMENT" font="font:SmallSystemFont" color="0xAEB2BDFF" />
+  <LabelList id="navigation" translation="[35,240]" itemSize="[270,76]" itemSpacing="[0,16]" numRows="5" color="0xD9DCE2FF" focusedColor="0xFFFFFFFF" focusBitmapBlendColor="0xED1821FF" />
+  <Label id="status" translation="[40,800]" width="255" height="140" numLines="4" font="font:SmallSystemFont" color="0xAEB2BDFF" text="Checking cleared content rights..." />
+  <Label id="breadcrumb" translation="[390,45]" width="1440" height="40" font="font:SmallSystemFont" color="0xC2C5CEFF" />
+  <Group id="preview" translation="[390,110]">
+   <Rectangle width="1440" height="330" color="0x1B1E24FF" />
+   <Poster id="poster" translation="[810,0]" width="630" height="330" loadDisplayMode="scaleToFit" />
+   <Rectangle width="800" height="330" color="0x1B1E24FF" />
+   <Label translation="[28,18]" width="730" height="32" text="FEATURED ON SHUTTLEBUG" color="0xFF4B52FF" font="font:SmallBoldSystemFont" />
+   <Label id="movieTitle" translation="[28,56]" width="730" height="80" numLines="2" font="font:LargeBoldSystemFont" />
+   <Label id="metadata" translation="[28,140]" width="730" height="40" font="font:SmallSystemFont" color="0xCDD0D7FF" />
+   <Label id="description" translation="[28,184]" width="730" height="78" numLines="2" font="font:SmallSystemFont" />
+   <Label translation="[28,283]" width="730" height="34" text="OK  View details     *  Save to favorites" color="0xFF7076FF" font="font:SmallSystemFont" />
   </Group>
+  <RowList id="movies" translation="[390,460]" itemComponentName="PosterCard" itemSize="[1440,260]" rowItemSize="[[302,238]]" rowItemSpacing="[[20,0]]" itemSpacing="[0,12]" numRows="2" showRowLabel="[true]" rowLabelOffset="[0,6]" rowLabelColor="0xFFFFFFFF" rowFocusAnimationStyle="floatingFocus" vertFocusAnimationStyle="fixedFocus" drawFocusFeedback="false" />
   <Group id="details" visible="false">
-   <Rectangle width="1920" height="1080" color="0x101010FF" />
-   <Label id="detailTitle" translation="[90,80]" width="1740" height="120" numLines="2" />
-   <Label id="detailDescription" translation="[90,230]" width="1650" height="180" numLines="5" />
-   <ButtonGroup id="detailButtons" translation="[90,460]" buttonHeight="75" minWidth="650" maxWidth="1000" />
-   <Label id="detailCredit" translation="[90,850]" width="1700" height="150" numLines="4" />
+   <Rectangle width="1920" height="1080" color="0x101115FF" />
+   <Rectangle width="1920" height="10" color="0xED1821FF" />
+   <Poster id="detailPoster" translation="[1120,90]" width="690" height="430" loadDisplayMode="scaleToFit" />
+   <Label id="detailTitle" translation="[90,85]" width="970" height="130" numLines="2" font="font:LargeBoldSystemFont" />
+   <Label id="detailMetadata" translation="[90,230]" width="970" height="60" font="font:SmallSystemFont" color="0xCDD0D7FF" />
+   <Label id="detailDescription" translation="[90,315]" width="970" height="180" numLines="5" font="font:SmallSystemFont" />
+   <ButtonGroup id="detailButtons" translation="[90,535]" buttonHeight="65" minWidth="650" maxWidth="970" />
+   <Label id="detailCredit" translation="[90,875]" width="1700" height="120" numLines="4" font="font:SmallSystemFont" color="0xAEB2BDFF" />
   </Group>
   <Group id="searchPanel" visible="false">
    <Rectangle width="1920" height="1080" color="0x101010FF" />
@@ -29,7 +40,7 @@
    <Keyboard id="keyboard" translation="[100,180]" />
    <ButtonGroup id="searchButtons" translation="[100,760]" buttons="[Search,Cancel]" buttonHeight="75" minWidth="650" />
   </Group>
-  <Label id="footer" translation="[70,1000]" width="1780" height="55" text="A Hog Entertainment | Developer preview | * Favorites | Back: return" />
+  <Label id="footer" translation="[390,1035]" width="1440" height="35" font="font:SmallSystemFont" text="SHUTTLEBUG  |  Arrows: browse    OK: details    *: favorite    Back: return" />
   <Video id="video" width="1920" height="1080" visible="false" notificationInterval="1" />
   <Rectangle id="adView" width="1920" height="1080" color="0x101010FF" visible="false" />
   <Video id="adVideo" width="1920" height="1080" visible="false" />

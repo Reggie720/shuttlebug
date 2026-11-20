@@ -1,4 +1,5 @@
 sub Main()
+    m.history = []
     m.adVideo = {visible:false,control:"",state:"none"}
     m.adView = {visible:false}
     m.adLabel = {visible:false}
@@ -17,7 +18,7 @@ sub Main()
     require(onKeyEvent("back",true),"video Back")
     require(m.video.control = "stop" and not m.video.visible,"Back stops and hides video")
     m.mode = "browse"
-    m.navigation = {active:true,IsInFocusChain:function():return m.active:end function}
+    m.navigation = {SetFocus:sub(value):end sub,active:true,IsInFocusChain:function():return m.active:end function}
     m.movies = {focused:false,SetFocus:sub(value):m.focused=value:end sub}
     m.filtered = [{id:"one"}]
     require(onKeyEvent("right",true),"nav to movies")
@@ -77,6 +78,24 @@ sub Main()
     finishLocalAd()
     require(m.video.control = "play" and m.video.visible,"film restarts after ad")
     require(m.video.content.playStart = 43,"film resumes at saved bookmark")
+    m.rows = [{items:[{id:"a"},{id:"b"}]},{items:[{id:"c"}]}]
+    m.movies.rowItemFocused = [1,0]
+    m.movies.rowItemSelected = [0,1]
+    require(focusedIndex(false) = 2,"row focus maps to correct title")
+    require(focusedIndex(true) = 1,"row selection maps to correct title")
+    m.movies.rowItemSelected = [4,0]
+    require(focusedIndex(true) = -1,"stale row selection rejected")
+    m.items = []
+    m.query = ""
+    m.section = "Browse"
+    m.category = ""
+    m.series = ""
+    m.season = ""
+    m.metadata = {text:""}
+    m.breadcrumb = {text:""}
+    m.movieTitle = {text:""}
+    m.description = {text:""}
+    m.poster = {uri:""}
     m.pendingPlay = "one"
     m.mode = "details"
     m.details = {visible:true}

@@ -57,3 +57,15 @@ Existing splash and app icon are included. Portal-specific artwork and authentic
 The app's current content is the reviewed open-content subset. There is no Echelon commercial license or 30-title commercial slate in this package.
 
 Build 0.2.2: Native unpaid test previews keep focus on the scene so Back skips the commercial. Completion/error/12-second timeout stops and hides the ad before resuming content. A film decoder handoff timeout returns to details. A re-entry guard prevents stop events from recursively completing the ad. The retained RAF adapter is inactive for these previews; paid advertising remains unconfigured.
+
+## 0.3.0 poster interface device checks (pending)
+
+- Verify featured artwork, title, year, runtime, synopsis and red focus border on the TV; check overscan and two shelf labels.
+- Move horizontally through rows and vertically between shelves; OK must open the highlighted title. Left at the first card returns to sidebar.
+- TV Shows > series > season group > episode; Back reverses each level. Missing seasons must remain labeled unspecified.
+- Search by series and title; star/button favorites must agree and persist.
+- Start content, leave with Back, check Continue Watching and Recently Watched; resume and verify position. Completed playback must clear Continue Watching but retain history.
+- Recheck native pause/resume, forward/rewind, captions, alternate sources and error dialogs.
+- Enable unpaid tests, check pre-roll, mid-roll at 30 seconds, Back skip, failed ad and 12-second recovery. Disable tests afterward.
+- Relaunch/Home/suspend; verify favorites/bookmarks from the previous developer build remain present.
+- Capture actual device screenshots for eventual store submission. Branding assets do not replace screenshots.
