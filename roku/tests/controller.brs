@@ -1,4 +1,9 @@
 sub Main()
+    m.adVideo = {visible:false,control:"",state:"none"}
+    m.adView = {visible:false}
+    m.adLabel = {visible:false}
+    m.queuedLaunch = ""
+    m.top = {exitRequested:false,SetFocus:sub(value):end sub}
     m.video = {state:"playing",control:"",visible:true,position:30}
     m.adWatchdog = {control:""}
     m.mode = "video"
@@ -17,7 +22,7 @@ sub Main()
     m.filtered = [{id:"one"}]
     require(onKeyEvent("right",true),"nav to movies")
     require(m.movies.focused,"movie list focus")
-    m.top = {exitRequested:false}
+    m.top = {exitRequested:false,SetFocus:sub(value):end sub}
     require(onKeyEvent("back",true),"root Back handled")
     require(m.top.exitRequested,"root exit signal")
     m.mode = "video"
@@ -38,9 +43,40 @@ sub Main()
     m.adWatchdog = {control:""}
     m.video.state = "stopped"
     onVideoState()
-    require(m.mode = "ad" and m.adTask.control = "RUN","RAF task launched after stop")
-    require(m.adTask.sequence = "midroll" and m.adLabel.visible,"test midroll label")
-    require(not onKeyEvent("back",true),"RAF receives Back")
+    require(m.mode = "ad" and m.adVideo.control = "play","native test ad launched after stop")
+    require(m.adPending = "midroll" and m.adLabel.visible,"test midroll label")
+    m.current = invalid
+    require(onKeyEvent("back",true),"scene handles ad Back")
+    require(m.mode = "video" and not m.adVideo.visible and not m.adLabel.visible,"Back clears ad overlay")
+    for outcome = 0 to 2
+        m.mode = "ad"
+        m.adVideo.visible = true
+        m.adLabel.visible = true
+        m.localAdStarted = false
+        m.adVideo.state = "stopped"
+        onLocalAdState()
+        require(m.mode = "ad","initial stopped event ignored")
+        if outcome = 0
+            m.adVideo.state = "error"
+            onLocalAdState()
+        else if outcome = 1
+            m.adVideo.state = "finished"
+            onLocalAdState()
+        else
+            onAdTimeout()
+        end if
+        require(m.mode = "video" and not m.adVideo.visible and not m.adLabel.visible,"ad failure/completion/timeout clears player")
+        onLocalAdState()
+        require(m.mode = "video","late ad event cannot restart recovery")
+    end for
+    m.current = {id:"one",title:"Cleared test",sources:[{url:"https://example.com/movie.mp4",format:"mp4"}],duration:120,subtitleTracks:[]}
+    m.sourceIndex = 0
+    m.resumeAt = 43
+    m.video.SetFocus = sub(value):end sub
+    m.mode = "ad"
+    finishLocalAd()
+    require(m.video.control = "play" and m.video.visible,"film restarts after ad")
+    require(m.video.content.playStart = 43,"film resumes at saved bookmark")
     m.pendingPlay = "one"
     m.mode = "details"
     m.details = {visible:true}
@@ -53,12 +89,7 @@ sub Main()
     m.queuedLaunch = "one"
     onAdTimeout()
     require(m.mode = "details" and m.video.control = "stop","ad handoff timeout returns safely")
-    require(m.queuedLaunch = "" and m.adTask.control = "STOP","timeout cancels pending ad and queued launch")
-    m.mode = "ad"
-    m.adTask.outcome = "back"
-    m.queuedLaunch = "one"
-    onAdOutcome()
-    require(m.mode = "details" and m.queuedLaunch = "","Back during ad wins over queued deep link")
+    require(m.queuedLaunch = "" and m.adVideo.control = "stop","timeout cancels pending ad and queued launch")
     m.mode = "video"
     m.current = {id:"one"}
     m.video.state = "paused"

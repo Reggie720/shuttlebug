@@ -20,8 +20,8 @@ Status: NOT YET RUN ON ROKU. Populate model, Roku OS version, date, tester and a
 | Film playback | Correct full film decodes, native fullscreen, audio, aspect ratio | Pending per title/model |
 | Pause/resume / seek | Play toggles; native transport works; Back stops video | Pending device |
 | Continue watching | Position restored; start-over resets; completed film restarts from zero | Pending device |
-| Pre-roll test | Enable unpaid tests; local five-second creative; RAF labeling plus unpaid label; film starts | Pending device |
-| Mid-roll test | After 30 seconds, content decoder stops; RAF plays one unpaid pod; film resumes saved position | Pending device |
+| Pre-roll test | Enable unpaid tests; local five-second creative; persistent unpaid label; film starts | Pending device |
+| Mid-roll test | After 30 seconds, content decoder stops; native ad player plays one unpaid clip; film resumes saved position | Pending device |
 | Ad Back / timeout | Back returns to details; watchdog stops a stalled test and returns to details with the film position saved | Pending device |
 | Credits | Original attribution, source, license and change notices readable | Pending device |
 | Rights revocation | A held/changed record is removed at next verification and cannot start | Pending controlled device test |
@@ -29,7 +29,7 @@ Status: NOT YET RUN ON ROKU. Populate model, Roku OS version, date, tester and a
 | Back/Home | Back moves up then exits at root; Home exits; later launch recovers preferences | Pending device |
 | Cold/warm deep link | Known cleared contentId plays after rights check; unknown/held ID refused | Pending device |
 | Warm link during test ad | Queued until ad completes, then permission rechecked | Pending device |
-| Low-memory / resume | No orphan Video/RAF nodes or unwanted audio after leaving playback | Pending device |
+| Low-memory / resume | No orphan Video nodes or unwanted audio after leaving playback | Pending device |
 
 The shipped source checks cover URL reachability, not Roku hardware decoding. Test all 17 titles; fragmented MP4 streams and provider availability deserve particular attention. Where source subtitles are needed, native external subtitle tracks are configured where supplied; subtitle display and accessibility remain device-test prerequisites.
 
@@ -55,3 +55,5 @@ Existing splash and app icon are included. Portal-specific artwork and authentic
 - Public app submission, Roku review and approval. A sideload or beta code does not constitute a public Streaming Store launch.
 
 The app's current content is the reviewed open-content subset. There is no Echelon commercial license or 30-title commercial slate in this package.
+
+Build 0.2.2: Native unpaid test previews keep focus on the scene so Back skips the commercial. Completion/error/12-second timeout stops and hides the ad before resuming content. A film decoder handoff timeout returns to details. A re-entry guard prevents stop events from recursively completing the ad. The retained RAF adapter is inactive for these previews; paid advertising remains unconfigured.

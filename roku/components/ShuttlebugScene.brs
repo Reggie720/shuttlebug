@@ -304,8 +304,9 @@ end sub
 
 sub showTestAd()
     ' Local developer preview: use the native Video node rather than RAF.
-    ' Roku RAF does not reliably play pkg:/ media as an ad stream.
+    ' Unpaid preview only. Production RAF integration is not invoked here.
     m.mode = "ad"
+    m.localAdStarted = false
     m.video.visible = false
     m.adView.visible = true
     m.adLabel.visible = true
@@ -314,13 +315,14 @@ sub showTestAd()
     clip.url = "pkg:/media/test-commercial.mp4"
     clip.streamFormat = "mp4"
     m.adVideo.content = clip
-    m.adVideo.SetFocus(true)
+    m.top.SetFocus(true)
     m.adWatchdog.control = "start"
     m.adVideo.control = "play"
 end sub
 
 sub finishLocalAd()
     if m.mode <> "ad" then return
+    m.mode = "resumingAfterAd"
     m.adWatchdog.control = "stop"
     m.adVideo.control = "stop"
     m.adVideo.visible = false
@@ -342,7 +344,11 @@ end sub
 sub onLocalAdState()
     if m.mode <> "ad" then return
     state = m.adVideo.state
-    if state = "finished" or state = "error" or state = "stopped"
+    if state = "playing"
+        m.localAdStarted = true
+    else if state = "finished" or state = "error"
+        finishLocalAd()
+    else if state = "stopped" and m.localAdStarted
         finishLocalAd()
     end if
 end sub
@@ -356,8 +362,9 @@ sub onAdTimeout()
         ' Never leave the viewer trapped behind an unavailable test ad.
         finishLocalAd()
     else if m.mode = "stoppingForAd"
-        m.mode = "ad"
-        finishLocalAd()
+        m.queuedLaunch = ""
+        endPlayback(false)
+        m.detailDescription.text = "Test commercial skipped because the film player did not stop in time. Your position is saved. Turn test ads OFF and try Play again."
     end if
 end sub
 
@@ -392,6 +399,11 @@ end sub
 sub endPlayback(completed as boolean)
     m.mode = "details"
     m.adWatchdog.control = "stop"
+    m.adVideo.control = "stop"
+    m.adVideo.visible = false
+    m.adView.visible = false
+    m.adLabel.visible = false
+    m.queuedLaunch = ""
     m.adPending = ""
     m.video.control = "stop"
     m.video.visible = false

@@ -28,5 +28,12 @@ with zipfile.ZipFile(root/'packages/Shuttlebug_Roku_Developer.zip') as z:
  assert z.testzip() is None
  assert 'manifest' in z.namelist() and 'source/main.brs' in z.namelist()
  assert z.read('data/catalog.json')==(root/'data/catalog.json').read_bytes()
+ for name in z.namelist():
+  if not name.endswith('/'):assert z.read(name)==(root/name).read_bytes()
  for name in z.namelist():assert not name.startswith(('node_modules/','roku/')) and '..' not in name
-print(f'PASS package structure, SceneGraph script links, {len(items)} cleared titles, held-title exclusion, rights snapshot and local RAF-only test creative')
+print(f'PASS package structure, SceneGraph script links, {len(items)} cleared titles, held-title exclusion, rights snapshot and unpaid local test creative')
+
+assert 'm.mode = "resumingAfterAd"' in scene
+assert 'm.top.SetFocus(true)' in scene
+assert 'duration="12"' in (root/'components/ShuttlebugScene.xml').read_text()
+assert 'onLocalAdState' in scene and 'm.adVideo.control = "stop"' in scene
