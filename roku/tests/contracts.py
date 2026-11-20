@@ -6,7 +6,11 @@ assert items and len({m['id'] for m in items})==len(items)
 for m in items:
  assert byid[m['id']]['rightsStatus']=='reviewed'
  for key in ['license','licenseUrl','rights','source','credit','changes']:assert m[key]==byid[m['id']][key]
- assert m['sources'] and all(s['url'].startswith('https://') and s['format']=='mp4' for s in m['sources'])
+ assert m['sources'] and all(s['url'].startswith('https://') and s['format'] in ['mp4','hls'] for s in m['sources'])
+ assert m['image'].startswith(('https://','pkg:/'))
+ for c in m['subtitleTracks']:assert c['TrackName'].startswith('https://')
+assert all(m['sources'][0]['format']=='hls' for m in items if m['id'].startswith('sideways'))
+assert {m['id'] for m in items if m['subtitleTracks']}=={'valkaama','sideways4'}
 assert not {r['id'] for r in rights if r['rightsStatus']!='reviewed'}.intersection(m['id'] for m in items)
 assert json.loads((root/'data/build-info.json').read_text())['rightsRegisterSHA256']==hashlib.sha256((repo/'compliance/rights-register.json').read_bytes()).hexdigest()
 for p in (root/'components').glob('*.xml'):

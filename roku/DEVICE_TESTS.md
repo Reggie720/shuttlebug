@@ -22,7 +22,7 @@ Status: NOT YET RUN ON ROKU. Populate model, Roku OS version, date, tester and a
 | Continue watching | Position restored; start-over resets; completed film restarts from zero | Pending device |
 | Pre-roll test | Enable unpaid tests; local five-second creative; RAF labeling plus unpaid label; film starts | Pending device |
 | Mid-roll test | After 30 seconds, content decoder stops; RAF plays one unpaid pod; film resumes saved position | Pending device |
-| Ad Back / timeout | Back returns to details; watchdog avoids indefinite test-ad blockage | Pending device |
+| Ad Back / timeout | Back returns to details; watchdog stops a stalled test and returns to details with the film position saved | Pending device |
 | Credits | Original attribution, source, license and change notices readable | Pending device |
 | Rights revocation | A held/changed record is removed at next verification and cannot start | Pending controlled device test |
 | Decode/network failure | Try another packaged source, then display an understandable error | Pending device |
@@ -31,7 +31,7 @@ Status: NOT YET RUN ON ROKU. Populate model, Roku OS version, date, tester and a
 | Warm link during test ad | Queued until ad completes, then permission rechecked | Pending device |
 | Low-memory / resume | No orphan Video/RAF nodes or unwanted audio after leaving playback | Pending device |
 
-The shipped source checks cover URL reachability, not Roku hardware decoding. Test all 17 titles; fragmented MP4 streams and provider availability deserve particular attention. Where source subtitles are needed, external-subtitle integration/accessibility review remains a release prerequisite; this build preserves embedded media but does not configure external subtitle tracks.
+The shipped source checks cover URL reachability, not Roku hardware decoding. Test all 17 titles; fragmented MP4 streams and provider availability deserve particular attention. Where source subtitles are needed, native external subtitle tracks are configured where supplied; subtitle display and accessibility remain device-test prerequisites.
 
 ## Listing draft
 Name: Shuttlebug

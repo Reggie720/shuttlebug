@@ -14,17 +14,21 @@ function ClearedItems(items as object, rights as object) as object
     result = []
     if Type(rights) <> "roArray" then return result
     for each item in items
+        count = 0
+        approved = false
         for each record in rights
             if Type(record) = "roAssociativeArray"
-                if record.id = item.id and record.rightsStatus = "reviewed"
-                    matches = true
+                if record.id = item.id
+                    count++
+                    matches = record.rightsStatus = "reviewed"
                     for each field in ["license", "licenseUrl", "rights", "source", "credit", "changes"]
                         if record[field] <> item[field] then matches = false
                     end for
-                    if matches then result.Push(item)
+                    approved = matches
                 end if
             end if
         end for
+        if count = 1 and approved then result.Push(item)
     end for
     return result
 end function

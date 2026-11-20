@@ -1,0 +1,47 @@
+[
+  {
+    "id": "sideways1",
+    "publisher": "sideways",
+    "channel": "episodes",
+    "account": "sideways",
+    "duration": 324,
+    "sources": [
+      {
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/e49d8227-8565-4f54-86c7-78e40e1cc451/9171ba48-6d4b-4599-9e33-b51334bdd58e-master.m3u8",
+        "format": "hls",
+        "label": "Adaptive HLS"
+      }
+    ],
+    "metadataSource": "https://videos.side-ways.net/api/v1/videos/e49d8227-8565-4f54-86c7-78e40e1cc451"
+  },
+  {
+    "id": "sideways2",
+    "publisher": "sideways",
+    "channel": "episodes",
+    "account": "sideways",
+    "duration": 361,
+    "sources": [
+      {
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/76212048-1204-48ef-924d-f3cabeec15b1/4eb789e8-4ead-45ed-a0d7-a9877568c04e-master.m3u8",
+        "format": "hls",
+        "label": "Adaptive HLS"
+      }
+    ],
+    "metadataSource": "https://videos.side-ways.net/api/v1/videos/76212048-1204-48ef-924d-f3cabeec15b1"
+  },
+  {
+    "id": "sideways4",
+    "publisher": "sideways",
+    "channel": "episodes",
+    "account": "sideways",
+    "duration": 339,
+    "sources": [
+      {
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/5150622b-2281-4366-8d90-3634b336f048/e9a6cf46-81fc-497e-9c5a-09f970cef2d3-master.m3u8",
+        "format": "hls",
+        "label": "Adaptive HLS"
+      }
+    ],
+    "metadataSource": "https://videos.side-ways.net/api/v1/videos/5150622b-2281-4366-8d90-3634b336f048"
+  }
+]

@@ -2,6 +2,9 @@ sub Main()
     item = {id:"one", title:"Big Buck Bunny",genre:"Animation",description:"A gentle rabbit",license:"CC BY 3.0",licenseUrl:"https://license",rights:"https://rights",source:"https://source",credit:"Creator",changes:"Unchanged"}
     rights = [{id:"one",rightsStatus:"reviewed",license:item.license,licenseUrl:item.licenseUrl,rights:item.rights,source:item.source,credit:item.credit,changes:item.changes}]
     require(ClearedItems([item],rights).Count() = 1,"cleared title")
+    duplicate = [rights[0], rights[0]]
+    require(ClearedItems([item],duplicate).Count() = 0,"duplicate rights rejected")
+    require(ClearedItems([item],[invalid,"bad",42]).Count() = 0,"malformed records rejected")
     rights[0].rightsStatus = "hold"
     require(ClearedItems([item],rights).Count() = 0,"revoked title")
     rights[0].rightsStatus = "reviewed"

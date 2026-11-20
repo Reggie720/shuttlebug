@@ -25,6 +25,8 @@
       }
     ],
     "image": "https://video.blender.org/lazy-static/thumbnails/bf1f3fb5-b119-4f9f-9930-8e20e892b898.jpg",
+    "subtitleTracks": [],
+    "captionCredit": "",
     "license": "CC BY 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
     "rights": "https://peach.blender.org/about/",
@@ -58,6 +60,8 @@
       }
     ],
     "image": "https://video.blender.org/lazy-static/thumbnails/cccc3e60-0291-4ecc-aa56-39b2e2c7d0d5.jpg",
+    "subtitleTracks": [],
+    "captionCredit": "",
     "license": "CC BY 2.5",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.5/",
     "rights": "https://orange.blender.org/press/",
@@ -91,6 +95,8 @@
       }
     ],
     "image": "https://video.blender.org/lazy-static/thumbnails/0eb052d0-fd51-43e6-aa33-ecdbf77a5d40.jpg",
+    "subtitleTracks": [],
+    "captionCredit": "",
     "license": "CC BY 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
     "rights": "https://durian.blender.org/sharing/",
@@ -113,7 +119,15 @@
         "label": "480p"
       }
     ],
-    "image": "/media/library/valkaama.jpg",
+    "image": "https://shuttlebug.onrender.com/media/library/valkaama.jpg",
+    "subtitleTracks": [
+      {
+        "Language": "eng",
+        "Description": "English",
+        "TrackName": "https://shuttlebug.onrender.com/media/library/valkaama.en.vtt"
+      }
+    ],
+    "captionCredit": "",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
     "rights": "https://www.valkaama.com/index.php?page=movie",
@@ -146,7 +160,9 @@
         "label": "720p"
       }
     ],
-    "image": "/media/library/spring.jpg",
+    "image": "https://shuttlebug.onrender.com/media/library/spring.jpg",
+    "subtitleTracks": [],
+    "captionCredit": "",
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
     "rights": "https://studio.blender.org/projects/spring/pages/about/",
@@ -179,7 +195,9 @@
         "label": "720p"
       }
     ],
-    "image": "/media/library/cosmos.jpg",
+    "image": "https://shuttlebug.onrender.com/media/library/cosmos.jpg",
+    "subtitleTracks": [],
+    "captionCredit": "",
     "license": "CC BY 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
     "rights": "https://gooseberry.blender.org/license/",
@@ -207,7 +225,9 @@
         "label": "240p"
       }
     ],
-    "image": "/media/library/bbs1.jpg",
+    "image": "https://shuttlebug.onrender.com/media/library/bbs1.jpg",
+    "subtitleTracks": [],
+    "captionCredit": "",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
     "rights": "https://ascii.textfiles.com/archives/865",
@@ -235,7 +255,9 @@
         "label": "240p"
       }
     ],
-    "image": "/media/library/bbs2.jpg",
+    "image": "https://shuttlebug.onrender.com/media/library/bbs2.jpg",
+    "subtitleTracks": [],
+    "captionCredit": "",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
     "rights": "https://ascii.textfiles.com/archives/865",
@@ -263,7 +285,9 @@
         "label": "240p"
       }
     ],
-    "image": "/media/library/bbs3.jpg",
+    "image": "https://shuttlebug.onrender.com/media/library/bbs3.jpg",
+    "subtitleTracks": [],
+    "captionCredit": "",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
     "rights": "https://ascii.textfiles.com/archives/865",
@@ -291,7 +315,9 @@
         "label": "240p"
       }
     ],
-    "image": "/media/library/bbs4.jpg",
+    "image": "https://shuttlebug.onrender.com/media/library/bbs4.jpg",
+    "subtitleTracks": [],
+    "captionCredit": "",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
     "rights": "https://ascii.textfiles.com/archives/865",
@@ -319,7 +345,9 @@
         "label": "240p"
       }
     ],
-    "image": "/media/library/bbs5.jpg",
+    "image": "https://shuttlebug.onrender.com/media/library/bbs5.jpg",
+    "subtitleTracks": [],
+    "captionCredit": "",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
     "rights": "https://ascii.textfiles.com/archives/865",
@@ -347,7 +375,9 @@
         "label": "240p"
       }
     ],
-    "image": "/media/library/bbs6.jpg",
+    "image": "https://shuttlebug.onrender.com/media/library/bbs6.jpg",
+    "subtitleTracks": [],
+    "captionCredit": "",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
     "rights": "https://ascii.textfiles.com/archives/865",
@@ -375,7 +405,9 @@
         "label": "240p"
       }
     ],
-    "image": "/media/library/bbs7.jpg",
+    "image": "https://shuttlebug.onrender.com/media/library/bbs7.jpg",
+    "subtitleTracks": [],
+    "captionCredit": "",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
     "rights": "https://ascii.textfiles.com/archives/865",
@@ -403,7 +435,9 @@
         "label": "240p"
       }
     ],
-    "image": "/media/library/bbs8.jpg",
+    "image": "https://shuttlebug.onrender.com/media/library/bbs8.jpg",
+    "subtitleTracks": [],
+    "captionCredit": "",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
     "rights": "https://ascii.textfiles.com/archives/865",
@@ -421,22 +455,14 @@
     "duration": 324.703991,
     "sources": [
       {
-        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/e49d8227-8565-4f54-86c7-78e40e1cc451/1952aab3-5890-45ef-ba0c-ace988269be5-480-fragmented.mp4",
-        "format": "mp4",
-        "label": "480p"
-      },
-      {
-        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/e49d8227-8565-4f54-86c7-78e40e1cc451/9fb833ad-782c-4e78-a4db-1e3343565ef7-360-fragmented.mp4",
-        "format": "mp4",
-        "label": "360p"
-      },
-      {
-        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/e49d8227-8565-4f54-86c7-78e40e1cc451/c4c7314c-96fe-48e3-8c71-535e7db7d71c-720-fragmented.mp4",
-        "format": "mp4",
-        "label": "720p"
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/e49d8227-8565-4f54-86c7-78e40e1cc451/9171ba48-6d4b-4599-9e33-b51334bdd58e-master.m3u8",
+        "format": "hls",
+        "label": "Adaptive HLS"
       }
     ],
-    "image": "/media/library/sideways1.jpg",
+    "image": "https://shuttlebug.onrender.com/media/library/sideways1.jpg",
+    "subtitleTracks": [],
+    "captionCredit": "",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
     "rights": "https://side-ways.net/en/webseries/",
@@ -454,22 +480,14 @@
     "duration": 361.622,
     "sources": [
       {
-        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/76212048-1204-48ef-924d-f3cabeec15b1/a5353ce0-24d2-4cc4-9deb-b68266633dc6-480-fragmented.mp4",
-        "format": "mp4",
-        "label": "480p"
-      },
-      {
-        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/76212048-1204-48ef-924d-f3cabeec15b1/20ec194b-f379-47b9-8671-7b6207cd9226-360-fragmented.mp4",
-        "format": "mp4",
-        "label": "360p"
-      },
-      {
-        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/76212048-1204-48ef-924d-f3cabeec15b1/8ededd63-a5ef-4b59-85c2-1f3ae14f7cc7-720-fragmented.mp4",
-        "format": "mp4",
-        "label": "720p"
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/76212048-1204-48ef-924d-f3cabeec15b1/4eb789e8-4ead-45ed-a0d7-a9877568c04e-master.m3u8",
+        "format": "hls",
+        "label": "Adaptive HLS"
       }
     ],
-    "image": "/media/library/sideways2.jpg",
+    "image": "https://shuttlebug.onrender.com/media/library/sideways2.jpg",
+    "subtitleTracks": [],
+    "captionCredit": "",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
     "rights": "https://side-ways.net/en/webseries/",
@@ -487,22 +505,20 @@
     "duration": 333.76,
     "sources": [
       {
-        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/5150622b-2281-4366-8d90-3634b336f048/e6787835-5f35-4d79-8108-9f70f01428e8-480-fragmented.mp4",
-        "format": "mp4",
-        "label": "480p"
-      },
-      {
-        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/5150622b-2281-4366-8d90-3634b336f048/9a7244c3-1908-4f5a-9e02-6c4e58a5be80-360-fragmented.mp4",
-        "format": "mp4",
-        "label": "360p"
-      },
-      {
-        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/5150622b-2281-4366-8d90-3634b336f048/3ae5ca35-1885-4c7e-8f87-5a38f3329d8c-720-fragmented.mp4",
-        "format": "mp4",
-        "label": "720p"
+        "url": "https://videos.side-ways.net/static/streaming-playlists/hls/5150622b-2281-4366-8d90-3634b336f048/e9a6cf46-81fc-497e-9c5a-09f970cef2d3-master.m3u8",
+        "format": "hls",
+        "label": "Adaptive HLS"
       }
     ],
-    "image": "/media/library/sideways4.jpg",
+    "image": "https://shuttlebug.onrender.com/media/library/sideways4.jpg",
+    "subtitleTracks": [
+      {
+        "Language": "eng",
+        "Description": "English",
+        "TrackName": "https://shuttlebug.onrender.com/captions/sideways4-en.vtt"
+      }
+    ],
+    "captionCredit": "",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
     "rights": "https://side-ways.net/en/webseries/",

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "sideways1",
+    "master": "https://videos.side-ways.net/static/streaming-playlists/hls/e49d8227-8565-4f54-86c7-78e40e1cc451/9171ba48-6d4b-4599-9e33-b51334bdd58e-master.m3u8",
+    "variant": "https://videos.side-ways.net/static/streaming-playlists/hls/e49d8227-8565-4f54-86c7-78e40e1cc451/1952aab3-5890-45ef-ba0c-ace988269be5-480.m3u8",
+    "completeVod": true,
+    "playlistSeconds": 324.68,
+    "publisherSeconds": 324
+  },
+  {
+    "id": "sideways2",
+    "master": "https://videos.side-ways.net/static/streaming-playlists/hls/76212048-1204-48ef-924d-f3cabeec15b1/4eb789e8-4ead-45ed-a0d7-a9877568c04e-master.m3u8",
+    "variant": "https://videos.side-ways.net/static/streaming-playlists/hls/76212048-1204-48ef-924d-f3cabeec15b1/a5353ce0-24d2-4cc4-9deb-b68266633dc6-480.m3u8",
+    "completeVod": true,
+    "playlistSeconds": 361.6,
+    "publisherSeconds": 361
+  },
+  {
+    "id": "sideways4",
+    "master": "https://videos.side-ways.net/static/streaming-playlists/hls/5150622b-2281-4366-8d90-3634b336f048/e9a6cf46-81fc-497e-9c5a-09f970cef2d3-master.m3u8",
+    "variant": "https://videos.side-ways.net/static/streaming-playlists/hls/5150622b-2281-4366-8d90-3634b336f048/e6787835-5f35-4d79-8108-9f70f01428e8-480.m3u8",
+    "completeVod": true,
+    "playlistSeconds": 333.76,
+    "publisherSeconds": 339
+  }
+]

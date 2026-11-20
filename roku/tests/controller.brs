@@ -1,5 +1,6 @@
 sub Main()
     m.video = {state:"playing",control:"",visible:true,position:30}
+    m.adWatchdog = {control:""}
     m.mode = "video"
     require(onKeyEvent("play",true),"media key handled")
     require(m.video.control = "pause","pause command")
@@ -40,6 +41,30 @@ sub Main()
     require(m.mode = "ad" and m.adTask.control = "RUN","RAF task launched after stop")
     require(m.adTask.sequence = "midroll" and m.adLabel.visible,"test midroll label")
     require(not onKeyEvent("back",true),"RAF receives Back")
+    m.pendingPlay = "one"
+    m.mode = "details"
+    m.details = {visible:true}
+    require(onKeyEvent("back",true),"Back cancels pending play")
+    require(m.pendingPlay = "" and m.mode = "browse","no delayed autoplay after Back")
+    m.mode = "stoppingForAd"
+    m.current = invalid
+    m.adView = {visible:true,GetChildCount:function():return 0:end function,RemoveChildrenIndex:sub(n,i):end sub}
+    m.detailDescription = {text:""}
+    m.queuedLaunch = "one"
+    onAdTimeout()
+    require(m.mode = "details" and m.video.control = "stop","ad handoff timeout returns safely")
+    require(m.queuedLaunch = "" and m.adTask.control = "STOP","timeout cancels pending ad and queued launch")
+    m.mode = "ad"
+    m.adTask.outcome = "back"
+    m.queuedLaunch = "one"
+    onAdOutcome()
+    require(m.mode = "details" and m.queuedLaunch = "","Back during ad wins over queued deep link")
+    m.mode = "video"
+    m.current = {id:"one"}
+    m.video.state = "paused"
+    m.video.position = 43
+    onVideoState()
+    require(m.progress.one = 43,"pause saves latest position")
     print "PASS controller media keys, Back, remote focus, midroll latch, resume bookmark and decoder-release sequencing"
 end sub
 

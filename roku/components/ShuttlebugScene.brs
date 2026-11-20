@@ -26,7 +26,7 @@ sub init()
     stored = ParseJson(m.registry.Read("favorites"))
     if Type(stored) = "roAssociativeArray" then m.favorites = stored
     stored = ParseJson(m.registry.Read("progress"))
-    if Type(stored) = "roAssociativeArray" then m.progress = stored
+    if Type(stored) = "roAssociativeArray" then m.progress = CleanPositions(stored, ParseJson(ReadAsciiFile("pkg:/data/catalog.json")))
     m.top.ObserveField("launchId", "onLaunchId")
     updateNavigation()
     m.navigation.ObserveField("itemSelected", "onNavigation")
@@ -67,7 +67,6 @@ sub onCatalog()
     result = m.catalogTask.result
     m.checking = false
     m.items = result.items
-    m.progress = CleanPositions(m.progress, m.items)
     m.status.text = result.message
     renderMovies()
     if m.pendingPlay <> ""
@@ -186,7 +185,9 @@ sub onDetailButton()
         showDetails()
     else
         item = m.current
-        showMessage("Credits - " + item.title, item.credit + Chr(10) + item.license + Chr(10) + item.licenseUrl + Chr(10) + "Permission: " + item.rights + Chr(10) + "Source: " + item.source + Chr(10) + item.changes + Chr(10) + "Creators do not endorse Shuttlebug.")
+        attribution = item.credit
+        if item.captionCredit <> "" then attribution = attribution + Chr(10) + item.captionCredit
+        showMessage("Credits - " + item.title, attribution + Chr(10) + item.license + Chr(10) + item.licenseUrl + Chr(10) + "Permission: " + item.rights + Chr(10) + "Source: " + item.source + Chr(10) + item.changes + Chr(10) + "Creators do not endorse Shuttlebug.")
     end if
 end sub
 
@@ -264,6 +265,7 @@ sub startFilm()
     content.streamFormat = stream.format
     content.length = m.current.duration
     content.playStart = m.resumeAt
+    content.subtitleTracks = m.current.subtitleTracks
     m.video.content = content
     m.video.visible = true
     m.video.SetFocus(true)
@@ -288,6 +290,7 @@ end sub
 
 sub requestTestAd(sequence as string)
     m.adPending = sequence
+    m.adWatchdog.control = "start"
     if m.video.state = "playing" or m.video.state = "paused" or m.video.state = "buffering"
         m.mode = "stoppingForAd"
         m.video.control = "stop"
@@ -312,6 +315,11 @@ sub onAdOutcome()
     m.adWatchdog.control = "stop"
     m.adView.visible = false
     m.adLabel.visible = false
+    if m.adTask.outcome <> "complete"
+        m.queuedLaunch = ""
+        endPlayback(false)
+        return
+    end if
     if m.queuedLaunch <> ""
         id = m.queuedLaunch
         m.queuedLaunch = ""
@@ -329,13 +337,15 @@ sub onAdOutcome()
 end sub
 
 sub onAdTimeout()
-    if m.mode <> "ad" then return
+    if m.mode <> "ad" and m.mode <> "stoppingForAd" then return
     m.adTask.control = "STOP"
+    m.adWatchdog.control = "stop"
     m.adView.RemoveChildrenIndex(m.adView.GetChildCount(), 0)
     m.adView.visible = false
     m.adLabel.visible = false
-    m.status.text = "Test ad timed out. Film playback resumed."
-    startFilm()
+    m.queuedLaunch = ""
+    endPlayback(false)
+    m.detailDescription.text = "The unpaid test ad did not finish. Your film position is saved. Try Play again, or turn test ads OFF in the menu."
 end sub
 
 sub onVideoState()
@@ -345,7 +355,12 @@ sub onVideoState()
         return
     end if
     if m.mode <> "video" then return
-    if state = "finished"
+    if state = "paused"
+        m.lastPosition = m.video.position
+        m.progress[m.current.id] = m.lastPosition
+        m.lastSaved = m.lastPosition
+        savePreferences()
+    else if state = "finished"
         endPlayback(true)
     else if state = "error"
         m.sourceIndex++
@@ -361,6 +376,8 @@ end sub
 
 sub endPlayback(completed as boolean)
     m.mode = "details"
+    m.adWatchdog.control = "stop"
+    m.adPending = ""
     m.video.control = "stop"
     m.video.visible = false
     if m.current <> invalid
@@ -408,6 +425,7 @@ function onKeyEvent(key as string, press as boolean) as boolean
         end if
     else if m.mode = "details"
         if key = "back"
+            m.pendingPlay = ""
             m.details.visible = false
             m.mode = "browse"
             if m.filtered.Count() > 0
