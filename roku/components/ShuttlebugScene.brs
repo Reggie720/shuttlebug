@@ -274,6 +274,7 @@ end sub
 
 sub onPosition()
     if m.mode <> "video" or m.current = invalid then return
+    if m.video.state <> "playing" and m.video.state <> "paused" then return
     m.lastPosition = m.video.position
     if Abs(m.lastPosition - m.lastSaved) >= 15
         m.progress[m.current.id] = m.lastPosition
@@ -360,6 +361,8 @@ sub onVideoState()
         m.progress[m.current.id] = m.lastPosition
         m.lastSaved = m.lastPosition
         savePreferences()
+    else if state = "stopped"
+        endPlayback(false)
     else if state = "finished"
         endPlayback(true)
     else if state = "error"

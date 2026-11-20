@@ -65,6 +65,14 @@ sub Main()
     m.video.position = 43
     onVideoState()
     require(m.progress.one = 43,"pause saves latest position")
+    m.video.state = "buffering"
+    m.video.position = 0
+    onPosition()
+    require(m.progress.one = 43,"buffering does not reset resume bookmark")
+    m.video.state = "stopped"
+    m.current = invalid
+    onVideoState()
+    require(m.mode = "details" and not m.video.visible,"native stop returns from player")
     print "PASS controller media keys, Back, remote focus, midroll latch, resume bookmark and decoder-release sequencing"
 end sub
 
