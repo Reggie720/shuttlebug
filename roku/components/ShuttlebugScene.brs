@@ -1,4 +1,7 @@
 sub init()
+    m.launchComplete = false
+    m.startupDialog = false
+    m.top.ObserveField("memoryPressure", "onMemoryPressure")
     m.top.backgroundColor = "0x101010FF"
     for each id in ["navigation", "movies", "preview", "poster", "movieTitle", "description", "status", "details", "detailTitle", "detailDescription", "detailButtons", "detailCredit", "searchPanel", "keyboard", "searchButtons", "video", "adView", "adLabel", "adWatchdog", "metadata", "detailPoster", "detailMetadata", "breadcrumb"]
         m[id] = m.top.FindNode(id)
@@ -77,6 +80,7 @@ sub onCatalog()
     m.items = result.items
     m.status.text = result.message
     renderMovies()
+    if m.pendingPlay = "" then markLaunchComplete()
     if m.pendingPlay <> ""
         id = m.pendingPlay
         m.pendingPlay = ""
@@ -302,6 +306,10 @@ sub closeSearch()
 end sub
 
 sub showMessage(title as string, message as string)
+    if not m.launchComplete
+        m.top.signalBeacon("AppDialogInitiate")
+        m.startupDialog = true
+    end if
     dialog = CreateObject("roSGNode", "Dialog")
     dialog.title = title
     dialog.message = message
@@ -311,6 +319,11 @@ sub showMessage(title as string, message as string)
 end sub
 
 sub closeMessage()
+    if m.startupDialog
+        m.top.signalBeacon("AppDialogComplete")
+        m.startupDialog = false
+        markLaunchComplete()
+    end if
     m.top.dialog.close = true
     if m.mode = "details"
         m.detailButtons.SetFocus(true)
@@ -320,6 +333,7 @@ sub closeMessage()
 end sub
 
 sub beginSession()
+    m.top.playbackMetadata = {id:m.current.id, genre:m.current.genre, duration:m.current.duration}
     m.details.visible = false
     m.mode = "video"
     m.sourceIndex = 0
@@ -452,6 +466,7 @@ sub onVideoState()
     end if
     if m.mode <> "video" then return
     if state = "playing"
+        markLaunchComplete()
         recordViewing()
     else if state = "paused"
         m.lastPosition = m.video.position
@@ -613,4 +628,20 @@ sub recordViewing()
     end for
     m.history = nextHistory
     savePreferences()
+end sub
+
+' Fire only when the catalog/error home is navigable, or deep-link playback starts.
+sub markLaunchComplete()
+    if m.launchComplete = true then return
+    m.launchComplete = true
+    m.top.signalBeacon("AppLaunchComplete")
+end sub
+
+sub onMemoryPressure()
+    ' Release hidden decoded artwork and inactive players without losing bookmarks.
+    if m.mode = "video" or m.mode = "ad" or m.mode = "stoppingForAd" then return
+    if not m.video.visible then m.video.content = invalid
+    if not m.adVideo.visible then m.adVideo.content = invalid
+    if not m.details.visible then m.detailPoster.uri = ""
+    if not m.preview.visible then m.poster.uri = ""
 end sub

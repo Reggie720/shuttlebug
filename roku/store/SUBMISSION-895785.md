@@ -54,3 +54,10 @@ Existing poster/screenshots must be preserved. Actual 1920×1080 app screenshots
 - Approve any binding distribution/advertising agreement and final public-release submission. No public-release action is authorized yet.
 
 Official reference reviewed: https://developer.roku.com/dev/docs/channel-publishing-guide
+
+
+## Static-analysis update — 0.3.2 (November 22, 2026)
+
+Prepared after the owner's first signed 0.3.1 upload. Adds RSG 1.3, launch/dialog lifecycle beacons, RAF measurement metadata configuration (with limit-ad-tracking requested; no paid demand requests), memory-monitor subscription/fallback and hidden-resource cleanup. Removes deprecated manifest subtitle/side-icon entries. Keeps supports_input_launch=1 and moves the live roInputEvent branch to the front of the main loop, using the documented event pattern; the prior build already contained this support, so the scanner finding remains unverified until Roku rescans.
+
+This is a sideload ZIP, not a signed store package. Install on the same keyed Roku, test home/playback/Back/resume and cold/warm deep links, then package using the EXISTING genkey password (do not generate a new key). Re-upload the new .pkg and inspect Roku's actual results. Local compilation/tests are not a Roku static-analysis pass. Remaining HD asset warnings and any new scanner results must be resolved before claiming certification readiness. No pre-home user dialog is normally shown, so dialog beacons are conditional on an actual startup error dialog.

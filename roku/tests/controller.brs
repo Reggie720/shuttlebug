@@ -1,4 +1,6 @@
 sub Main()
+    m.launchComplete = true
+    m.startupDialog = false
     m.history = []
     m.adVideo = {visible:false,control:"",state:"none"}
     m.adView = {visible:false}
@@ -123,6 +125,30 @@ sub Main()
     m.current = invalid
     onVideoState()
     require(m.mode = "details" and not m.video.visible,"native stop returns from player")
+    m.launchComplete = false
+    m.top = {beacons:[], signalBeacon:sub(name):m.beacons.Push(name):end sub}
+    markLaunchComplete()
+    markLaunchComplete()
+    require(m.top.beacons.Count() = 1 and m.top.beacons[0] = "AppLaunchComplete", "launch beacon fires once")
+    m.top.launchId = "new-title"
+    m.mode = "ad"
+    onLaunchId()
+    require(m.queuedLaunch = "new-title", "warm deep link queues safely during ad")
+    m.mode = "browse"
+    m.checking = true
+    m.searchPanel = {visible:true}
+    onLaunchId()
+    require(m.pendingPlay = "new-title" and m.resumeAt = 0, "warm deep link reaches rights-gated playback")
+    require(not m.searchPanel.visible, "deep link closes search overlay")
+    m.video = {visible:false,content:{title:"old"}}
+    m.adVideo = {visible:false,content:{title:"test"}}
+    m.details = {visible:false}
+    m.preview = {visible:false}
+    m.detailPoster = {uri:"old"}
+    m.poster = {uri:"old"}
+    onMemoryPressure()
+    require(m.video.content = invalid and m.adVideo.content = invalid, "low memory releases inactive players")
+    require(m.poster.uri = "" and m.detailPoster.uri = "", "low memory releases hidden artwork")
     print "PASS controller media keys, Back, remote focus, midroll latch, resume bookmark and decoder-release sequencing"
 end sub
 
