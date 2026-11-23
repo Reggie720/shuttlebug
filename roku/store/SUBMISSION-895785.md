@@ -1,26 +1,58 @@
-# Shuttlebug — Roku app 895785
+# Shuttlebug — app 895785 release handoff
 
-Prepared November 20, 2026 from the implementation. This file does not indicate dashboard changes or public submission. Developer Dashboard access returned a CloudFront 403 in the agent browser, including one reload. Uploaded artwork and existing settings were not changed.
+Updated November 23, 2026. Next source build: **0.3.3**. Public release is not approved or scheduled.
 
-## Verified profile values
+## Verified progress
+
+- Owner created the developer signing key on their Roku and retained its generated password privately. Never run genkey again merely to package an update. No signing secret is stored here.
+- Owner signed, downloaded and uploaded 0.3.2. Current portal package begins P6ca3; do not mistake the older Pe15 package or source ZIP for this build.
+- Owner's 0.3.2 rescan cleared RSG 1.3, AppLaunchComplete and General Audience Measurement errors. The visible remaining error is roInput support, requirement 5.2. Some warnings remain in the captured results; this is not a certification pass.
+- Owner confirmed 0.3.2 launches, plays a film and returns to details with Back.
+- Owner tested a live /input?contentId=bbb&mediaType=movie POST. Roku returned HTTP 200; after dismissing the Digital Clock screensaver, the owner confirmed Big Buck Bunny played. This is owner-reported hardware evidence for warm input, not independent cold-launch or full certification verification.
+- Email verification and linked-device prerequisites were completed. Listing setup, assets, app profile and monetization were saved by the owner. Portal may still require payout enrollment. Actual current account state must be reviewed in the authenticated portal; do not assume final completion.
+
+## Prepared 0.3.3 changes
+
+- Route input-event argument maps directly to an always-notifying SceneGraph field, following Roku's published SGDEX event-forwarding example. Cold-launch arguments have their own field and share string validation with warm input. Both feed the existing rights-gated playback path. This is a scanner-compatibility adjustment, NOT proof the remaining scanner error is resolved.
+- Keep supports_input_launch=1, RSG 1.3, launch/dialog beacons, limit-ad-tracking request, required RAF measurement metadata and memory monitoring.
+- Export existing branding as a 290x218 manifest HD icon, 1280x720 HD splash and 720x480 SD splash. The Streaming Store's separate 336x210 artwork is preserved under store assets.
+- Remove InitClientCertificates from the public HTTPS rights-register request. This endpoint does not use mutual TLS or require a device-attestation token. Retain Roku's CA trust bundle and HTTPS validation; do not disable server-certificate checks.
+- Tests cover package/image integrity, input argument validation, cold/warm callback routing, queued links during an ad, held-content rejection, controls, bookmarks, launch-beacon one-shot behavior and memory cleanup.
+
+## What can be completed without the stick
+
+Source fixes, local compilation/tests, CI, publication of the source update, accurate policy pages and release/review notes. This source ZIP cannot replace the signed .pkg already in Roku's dashboard. Roku's scanner cannot validate unsubmitted local changes.
+
+## When the stick reconnects
+
+1. Connect the laptop and the SAME keyed Roku to the same private Wi-Fi/hotspot. Use the Roku's then-current IP, not a stale address.
+2. Install the 0.3.3 source ZIP using the device's Development Application Installer. Verify launch, film/episode playback, Back, resume and cold/warm links. Keep optional test ads OFF for normal use.
+3. In Packager, enter Shuttlebug 0.3.3 and the existing genkey signing password. Generate/download the NEW .pkg. The rokudev login password is different from the signing password.
+4. Upload that .pkg to https://developer.roku.com/apps/public/895785/package and run Static Analysis. Review actual results. The minimum firmware setting for RSG 1.3 is 15.1 or later; the owner previously selected v15.1.0 b1.
+5. If requirement 5.2 persists despite device verification, use the review-request draft below. Do not continue arbitrary code rewrites to guess what the scanner recognizes.
+6. Complete Deep Linking and App Behavior Analysis using the actual package/device. Review content rating, authentic screenshots, payout requirements and final owner approval before any public submission.
+
+Deep-link IDs: bbb / movie, bbs1 / episode. Cold launch uses /launch/dev; warm input uses /input. Held and unknown IDs must not play. A screensaver can obscure the test; dismiss it before observing the outcome.
+
+## Saved app information
 
 | Field | Value |
 |---|---|
-| App name | Shuttlebug |
-| Operator | A Hog Entertainment |
+| Name / operator | Shuttlebug / A Hog Entertainment |
 | App type | Video |
-| Customer sign-in | No; app has no account/authentication flow |
+| Sign-in / customer payments | None |
 | Website / Learn more | https://shuttlebug.onrender.com/ |
-| Privacy policy | https://shuttlebug.onrender.com/privacy.html |
+| Privacy | https://shuttlebug.onrender.com/privacy.html |
 | Terms | https://shuttlebug.onrender.com/terms.html |
-| Support URL | https://shuttlebug.onrender.com/support.html |
-| Support/admin/technical email | ahogentertainment@gmail.com |
-| Admin/technical contact name | Reginald Dwayne Lawson |
-| Phone | Owner must confirm a contact number for this business; do not borrow another business's number |
-| Default language | English UI; some catalog sources have other spoken languages/captions |
-| Store territory | Initial US scope requested by owner; do not expand without rights review |
+| Support | https://shuttlebug.onrender.com/support.html |
+| Business email | ahogentertainment@gmail.com |
+| Administrative / technical contact | Reginald Dwayne Lawson |
+| Owner instructions/files email | readysetgoo720@gmail.com |
+| Phone | Owner entered a number in the private portal; verify there rather than publishing it in this repository |
+| Territory | Initial US scope; do not expand without rights review |
+| Audience | General audience including family material; not automatically an all-ages rating |
 
-## Store text prepared (do not overwrite existing saved copy without review)
+The monetization Developer URL field accepts the ROOT: https://shuttlebug.onrender.com . Its app-ads.txt is served at /app-ads.txt and currently authorizes no programmatic sellers. Paid demand, subscriptions, purchases and sponsorships are not active. Optional house commercials are unpaid tests. Production ad partners/tags/consent remain separate work before paid ads launch.
 
 Short description (under 300 characters):
 Watch free independent films, animation and documentary series on Shuttlebug. Browse titles, search, save favorites and resume watching. No subscription or account required. Available programming may change.
@@ -28,36 +60,28 @@ Watch free independent films, animation and documentary series on Shuttlebug. Br
 Long description (under 1,500 characters):
 Shuttlebug, operated by A Hog Entertainment, brings together a curated selection of authorized independent films, animated shorts and documentary episodes. Discover programming in poster rows, browse television series and available episodes, search by title or series, save favorites and pick up from a saved viewing position. Favorites, progress and recently watched titles stay on your Roku device. No Shuttlebug account or subscription is required. Internet access is required for streaming. Programming, captions and availability vary by title. Current developer test commercials are unpaid demonstrations; paid advertising is not yet active. Commercial catalog expansion and public availability depend on licensing and platform approval.
 
-## Monetization
+Preserve saved listing artwork. Use authentic captures for screenshot requirements; branding/concept images are not evidence of the running app. Do not add unlicensed programming.
 
-Planned business model: free to the viewer, advertising supported. No subscriptions, rentals, purchases or cable login exist. Native local test ads are not a live paid-ad integration. The current public app-ads.txt intentionally authorizes no programmatic sellers; do not invent Google, Roku or other seller IDs. Actual partner onboarding, production RAF/VAST integration, consent/identifier handling and certification remain required before paid video ads. The legacy RAF adapter is not used by the native preview path. Do not enroll in paid services or accept monetization agreements without owner approval. Do not mislabel intended AVOD as no planned monetization just to complete a field.
+## Review-request draft — NOT SENT
 
-Developer URL resource prepared: https://shuttlebug.onrender.com/app-ads.txt
+Subject: Shuttlebug 895785 — requirement 5.2 roInput static-analysis finding
 
-## Package and testing
+Hello Roku Developer Support,
 
-Current installable source ZIP: roku/packages/Shuttlebug_Roku_Developer.zip (0.3.1). It is a developer package, not proof of a signed store package. No .pkg was found in this repository. Dashboard/package status could not be inspected. If store packaging requires the device-generated signed .pkg, generating/exporting that file requires the owner's Roku developer signing setup/hardware. Do not disclose signing passwords or private keys in this repository.
+Shuttlebug (app 895785) has a remaining static-analysis finding for roInput support, requirement 5.2. The submitted 0.3.2 package includes supports_input_launch=1, creates roInput, attaches it to the app message port, handles roInputEvent and forwards contentId into the rights-checked playback flow. During a test on the owner's Roku Streaming Stick running Roku OS 16.0.4, an ECP POST to /input?contentId=bbb&mediaType=movie returned HTTP 200 and the owner confirmed Big Buck Bunny played after dismissing the screensaver.
 
-Deep-link test examples from the current cleared catalog:
-- contentId=bbb, mediaType=movie
-- contentId=bbs1, mediaType=episode
+A 0.3.3 source update aligns event forwarding with the SGDEX reference sample and validates launch/input argument maps consistently. It has not yet been signed, submitted or verified on hardware. Please identify the specific missing pattern or behavior behind the finding, or advise how to submit runtime evidence for review if the finding persists after the next signed upload.
 
-Run Roku Dashboard Static Analysis and App Behavior Analysis on the actual submission package once accessible. Current off-device tests cover source/package integrity, rights gates, browsing, search, favorites, bookmarks and test-ad recovery; these do not substitute for Roku certification. Owner reported installation, playback, layout fix, feature tests and a test commercial working; the individual certification matrix is not independently verified.
+Thank you,
+Reginald Lawson — A Hog Entertainment
+ahogentertainment@gmail.com
 
-Existing poster/screenshots must be preserved. Actual 1920×1080 app screenshots must accurately represent the running app; generated brand or concept artwork must not be represented as device screenshots. Current uploads could not be inspected.
+Do not send automatically. Update this draft with the actual latest package/version and results before the owner approves contacting support. Never attach a signing password.
 
-## Owner decisions/approvals still needed
+## Official references consulted
 
-- Confirm intended primary audience / Made for Kids setting and appropriate age rating after reviewing the catalog. Merely having animation does not settle these answers. Do not claim child-directed-service compliance from the current implementation.
-- Confirm this business's contact phone if required.
-- Complete signing/device-only packaging if a signed submission file is not already available in the dashboard.
-- Approve any binding distribution/advertising agreement and final public-release submission. No public-release action is authorized yet.
-
-Official reference reviewed: https://developer.roku.com/dev/docs/channel-publishing-guide
-
-
-## Static-analysis update — 0.3.2 (November 22, 2026)
-
-Prepared after the owner's first signed 0.3.1 upload. Adds RSG 1.3, launch/dialog lifecycle beacons, RAF measurement metadata configuration (with limit-ad-tracking requested; no paid demand requests), memory-monitor subscription/fallback and hidden-resource cleanup. Removes deprecated manifest subtitle/side-icon entries. Keeps supports_input_launch=1 and moves the live roInputEvent branch to the front of the main loop, using the documented event pattern; the prior build already contained this support, so the scanner finding remains unverified until Roku rescans.
-
-This is a sideload ZIP, not a signed store package. Install on the same keyed Roku, test home/playback/Back/resume and cold/warm deep links, then package using the EXISTING genkey password (do not generate a new key). Re-upload the new .pkg and inspect Roku's actual results. Local compilation/tests are not a Roku static-analysis pass. Remaining HD asset warnings and any new scanner results must be resolved before claiming certification readiness. No pre-home user dialog is normally shown, so dialog beacons are conditional on an actual startup error dialog.
+- https://developer.roku.com/dev/docs/roinput
+- https://partnersuccess.roku.com/hc/en-us/articles/360049122434-I-have-added-supports-input-launch-1-in-my-manifest-but-still-am-getting-a-Static-Analysis-error (attached SGDEX sample)
+- https://developer.roku.com/dev/docs/channel-manifest
+- https://developer.roku.com/dev/docs/measuring-channel-performance
+- https://developer.roku.com/dev/docs/raf-api

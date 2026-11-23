@@ -149,7 +149,19 @@ sub Main()
     onMemoryPressure()
     require(m.video.content = invalid and m.adVideo.content = invalid, "low memory releases inactive players")
     require(m.poster.uri = "" and m.detailPoster.uri = "", "low memory releases hidden artwork")
-    print "PASS controller media keys, Back, remote focus, midroll latch, resume bookmark and decoder-release sequencing"
+    require(DeepLinkContentId(invalid) = "", "absent launch arguments ignored")
+    require(DeepLinkContentId({contentId:42}) = "", "non-string content ID ignored")
+    require(DeepLinkContentId({contentId:"   "}) = "", "blank content ID ignored")
+    require(DeepLinkContentId({command:"pause"}) = "", "unrelated input does not select a film")
+    m.top = {launch_args:{contentId:" bbb ",mediaType:"movie"},input_args:{contentId:"bbs1",mediaType:"episode"},launchId:""}
+    onLaunchArguments()
+    require(m.top.launchId = "bbb", "cold movie launch enters common playback path")
+    onInputArguments()
+    require(m.top.launchId = "bbs1", "warm episode input enters common playback path")
+    m.top.input_args = {contentId:123}
+    onInputArguments()
+    require(m.top.launchId = "bbs1", "malformed input preserves current selection")
+    print "PASS controller media keys, Back, focus, resume, ad recovery, launch beacon, memory cleanup and cold/warm deep-link argument validation"
 end sub
 
 sub require(condition as boolean, label as string)

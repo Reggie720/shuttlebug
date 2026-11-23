@@ -37,6 +37,8 @@ sub init()
     stored = ParseJson(m.registry.Read("history"))
     m.history = CleanHistory(stored)
     m.top.ObserveField("launchId", "onLaunchId")
+    m.top.ObserveField("launch_args", "onLaunchArguments")
+    m.top.ObserveField("input_args", "onInputArguments")
     updateNavigation()
     m.navigation.ObserveField("itemSelected", "onNavigation")
     m.movies.ObserveField("rowItemFocused", "onMovieFocus")
@@ -644,4 +646,14 @@ sub onMemoryPressure()
     if not m.adVideo.visible then m.adVideo.content = invalid
     if not m.details.visible then m.detailPoster.uri = ""
     if not m.preview.visible then m.poster.uri = ""
+end sub
+
+sub onLaunchArguments()
+    id = DeepLinkContentId(m.top.launch_args)
+    if id <> "" then m.top.launchId = id
+end sub
+
+sub onInputArguments()
+    id = DeepLinkContentId(m.top.input_args)
+    if id <> "" then m.top.launchId = id
 end sub

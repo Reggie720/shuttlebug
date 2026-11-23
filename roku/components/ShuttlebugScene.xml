@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component name="ShuttlebugScene" extends="Scene">
- <interface><field id="playbackMetadata" type="assocarray" alwaysNotify="true" /><field id="memoryPressure" type="boolean" alwaysNotify="true" /><field id="exitRequested" type="boolean" value="false" /><field id="launchId" type="string" alwaysNotify="true" /></interface>
+ <interface><field id="launch_args" type="assocarray" alwaysNotify="true" /><field id="input_args" type="assocarray" alwaysNotify="true" /><field id="playbackMetadata" type="assocarray" alwaysNotify="true" /><field id="memoryPressure" type="boolean" alwaysNotify="true" /><field id="exitRequested" type="boolean" value="false" /><field id="launchId" type="string" alwaysNotify="true" /></interface>
  <script type="text/brightscript" uri="pkg:/source/Logic.brs" />
  <script type="text/brightscript" uri="pkg:/components/ShuttlebugScene.brs" />
  <children>

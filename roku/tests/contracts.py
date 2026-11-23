@@ -51,3 +51,16 @@ rows=ui.find('.//RowList')
 assert rows is not None and rows.attrib['itemComponentName']=='PosterCard'
 assert 'rowItemSelected' in scene and 'rowItemFocused' in scene
 assert (root/'components/PosterCard.xml').is_file()
+
+# Cert-facing package resources must have the exact dimensions, not store sizes.
+import struct
+entries=dict(line.split('=',1) for line in manifest.splitlines() if line and not line.startswith('#'))
+assert len(entries)==len([line for line in manifest.splitlines() if line and not line.startswith('#')])
+assert entries['supports_input_launch']=='1' and entries['rsg_version']=='1.3'
+for key,size in [('mm_icon_focus_fhd',(540,405)),('mm_icon_focus_hd',(290,218)),('splash_screen_hd',(1280,720)),('splash_screen_sd',(720,480))]:
+ image=(root/entries[key].removeprefix('pkg:/')).read_bytes()
+ assert image[:8]==b'\x89PNG\r\n\x1a\n'
+ assert struct.unpack('>II',image[16:24])==size,(key,size)
+assert 'InitClientCertificates' not in (root/'components/CatalogTask.brs').read_text()
+assert 'SetCertificatesFile("common:/certs/ca-bundle.crt")' in (root/'components/CatalogTask.brs').read_text()
+print('PASS manifest image sizes, required flags, verified TLS trust store and package resources')

@@ -1,6 +1,6 @@
 # Roku developer testing and store preparation
 
-Status: NOT YET RUN ON ROKU. Populate model, Roku OS version, date, tester and actual results before submission. No item below is marked passed based on a compiler check.
+Status: 0.3.2 has owner-reported device results: launch, movie playback, Back and warm bbb/movie input worked on the Roku Streaming Stick (OS 16.0.4). The 0.3.3 update is NOT YET DEVICE-TESTED OR SIGNED. The unfilled matrix below is the broader certification checklist, not a claim that previously reported checks were never performed. Populate model, OS, date, tester, build and actual outcomes before submission. Compiler/unit checks do not establish device passes.
 
 ## Install from an Android phone
 1. Use a Roku device and Android phone on the same private Wi-Fi.

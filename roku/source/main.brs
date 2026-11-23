@@ -1,6 +1,6 @@
 Library "Roku_Ads.brs"
 
-sub Main(args as dynamic)
+sub Main(args = invalid as dynamic)
     screen = CreateObject("roSGScreen")
     port = CreateObject("roMessagePort")
     screen.SetMessagePort(port)
@@ -25,23 +25,17 @@ sub Main(args as dynamic)
     scene = screen.CreateScene("ShuttlebugScene")
     scene.ObserveField("exitRequested", port)
     scene.ObserveField("playbackMetadata", port)
-    if Type(args) = "roAssociativeArray"
-        if args.contentId <> invalid then scene.launchId = args.contentId
-    end if
+    scene.launch_args = args
     screen.Show()
     while true
         msg = wait(0, port)
-        ' Keep the roInput branch explicit for certification analysis.
-        if type(msg) = "roInputEvent"
-            if msg.IsInput()
-                info = msg.GetInfo()
-                if Type(info) = "roAssociativeArray"
-                    if info.contentId <> invalid then scene.launchId = info.contentId
-                end if
-            end if
-        else if type(msg) = "roSGScreenEvent"
+        msgType = Type(msg)
+        ' Direct event forwarding follows Roku's SGDEX deep-link reference sample.
+        if msgType = "roInputEvent"
+            scene.input_args = msg.GetInfo()
+        else if msgType = "roSGScreenEvent"
             if msg.IsScreenClosed() then exit while
-        else if type(msg) = "roSGNodeEvent"
+        else if msgType = "roSGNodeEvent"
             if msg.GetField() = "exitRequested"
                 if msg.GetData()
                     screen.Close()
@@ -53,10 +47,10 @@ sub Main(args as dynamic)
                 raf.setContentId(metadata.id)
                 raf.setContentLength(metadata.duration)
             end if
-        else if type(msg) = "roAppMemoryNotificationEvent"
+        else if msgType = "roAppMemoryNotificationEvent"
             info = msg.GetInfo()
             if info.memoryUsagePercent >= 80 then scene.memoryPressure = true
-        else if type(msg) = "roDeviceInfoEvent"
+        else if msgType = "roDeviceInfoEvent"
             info = msg.GetInfo()
             if info.generalMemoryLevel <> invalid then scene.memoryPressure = true
         end if

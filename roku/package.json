@@ -1,6 +1,6 @@
 {
   "name": "shuttlebug-roku",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "private": true,
   "scripts": {
     "build": "python3 tools/build.py && bsc --project bsconfig.json && python3 tools/package.py",

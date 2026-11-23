@@ -206,3 +206,11 @@ function CleanHistory(raw as dynamic) as object
     end for
     return clean
 end function
+
+' Cold launch and running-app input share the same argument validation.
+function DeepLinkContentId(args as dynamic) as string
+    if Type(args) <> "roAssociativeArray" then return ""
+    if args.contentId = invalid then return ""
+    if GetInterface(args.contentId, "ifString") = invalid then return ""
+    return args.contentId.Trim()
+end function
