@@ -47,3 +47,12 @@ Only Pendatang is completed/promoted in this change. The other pre-existing publ
 Every catalog entry must have an explicitly reviewed `format`: `feature`, `short` or `episode`. For Shuttlebug, standalone films under 40 minutes are shorts; those 40 minutes or longer are features. Documentary is a genre, independent of format. Documentary films get their own Movies section; other shorts appear only in Short Films; other features appear only in Full-length Movies. TV entries always need a series name and `format: episode`, including unnumbered broadcasts such as NASA Science Live. An absent episode number means “Series episode”, never “Open film”. Genre filters apply within these sections. Curated Home rows and search may show titles from several categories.
 
 Run `python3 tools/prepare-release.py` for every release. It now runs `tools/validate-catalog.py` first and stops publication preparation when type, format, runtime, genre, year, series or rights metadata is missing or inconsistent. New imports must be reviewed and supplied with format metadata before release; a source refresh must preserve that metadata. This metadata check does not replace viewing content or checking its license.
+
+
+## Owner direction — November 26, 2026
+
+New acquisitions must exclude science fiction. Prioritize recognizable, professionally produced live-action comedy, drama, family programming and complete television episodes from 1995 onward. An open license alone is not enough: do not add obscure shorts, technical documentaries, synthetic performances or unwanted cartoons merely to increase the count. Do not delete previously accepted titles without a separate owner instruction.
+
+November 26 research did not establish any new commercially reusable film or episode meeting all these requirements. No movie or episode was added. Filmzie's viewing service explicitly prohibits users from copying/providing its content to third parties; do not treat a free stream as a syndication license.
+
+Specific follow-ups were sent to existing Multicom and Vision Films threads. Titles are private acquisition candidates, not public coming-soon promises or licensed assets. See CONTENT_ACQUISITION.md for source links and status.

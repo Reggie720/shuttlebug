@@ -81,3 +81,22 @@ This is an information inquiry, not acceptance of a contract or payment obligati
 Before publication, obtain owner approval for the actual deal, retain the granted rights and exact permitted media, and meet the licensor's territory, time-window, security, reporting and advertising requirements. Test delivery, audio, captions, playback, mobile layout and TV controls against the licensed assets. Do not advertise a title as available or coming soon until permission supports that claim.
 
 The owner authorized distributor inquiries and confirmed the reply address. See the latest submission status above before contacting anyone again. No licenses or paid services have been acquired.
+
+
+## Targeted research and follow-ups — November 26, 2026
+
+No new title cleared or added. No fees, contracts or payment commitments accepted. User requested recognizable programming and no science fiction; retain this filter in future searches.
+
+| Candidate | Evidence | Next step / status |
+| --- | --- | --- |
+| 18 to Life (2010) | Multicom official library lists comedy/drama/family, HD: https://multicom.tv/library/ | U.S. web/Roku AVOD availability inquiry sent to info@multicom.tv in existing November 17 thread; awaiting response |
+| 15/Love (2004) | Same official library lists comedy/drama/family/sports, SD | Same inquiry; request screeners and exact episodes/quality before evaluating |
+| Unlikely Angel (1996), Dolly Parton | Official distributor holiday page: https://multicom.tv/celebrate-the-holidays-with-multicom-entertainment/ ; fantasy/holiday comedy, not sci-fi | Same inquiry; confirm current rights and available master rather than relying on older marketing page |
+| Wish Man (2019), cast includes Danny Trejo and Tom Sizemore | Official title page: https://visionfilms.net/film-detail?id=916b285c-b299-e911-9494-0e563b5fb261 ; producer also lists sales/licensing: https://wishmanmovie.com/ | Specific follow-up sent to prior Vision contact in November 17 thread; awaiting current rights and screener |
+| My Secret Billionaire (2021), Ione Skye and Talia Shire | Official distributor: https://visionfilms.net/film-detail?id=748108e1-c733-eb11-827e-0e415c66ce57 | Same follow-up; not yet quality-screened or licensed |
+
+Requests specify a small pilot (one series or 2–5 films), nonexclusive U.S. website/future approved Roku AVOD, revenue share without upfront fees, minimum guarantees or mandatory paid commitments. Requested screeners, comparable casts if unavailable, ad permissions, captions, artwork, delivery/hosting charges, reporting, audience thresholds and launch prerequisites. Clearly disclosed public Roku release, established audience/revenue and production paid video advertising are still pending.
+
+Rejected shortcut: https://filmzie.com/legal/en explicitly says users may not reproduce/copy/provide its content to third parties. Free viewing does not authorize Shuttlebug carriage.
+
+Open-content searches surfaced Paley animation, technical documentaries and older public-domain material. These did not satisfy this acquisition direction; no additions or speculative licenses were made. Do not repeat previously held titles as new finds.
