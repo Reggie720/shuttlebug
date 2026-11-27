@@ -56,3 +56,10 @@ New acquisitions must exclude science fiction. Prioritize recognizable, professi
 November 26 research did not establish any new commercially reusable film or episode meeting all these requirements. No movie or episode was added. Filmzie's viewing service explicitly prohibits users from copying/providing its content to third parties; do not treat a free stream as a syndication license.
 
 Specific follow-ups were sent to existing Multicom and Vision Films threads. Titles are private acquisition candidates, not public coming-soon promises or licensed assets. See CONTENT_ACQUISITION.md for source links and status.
+
+
+## Classic expansion — November 26, 2026, later instruction
+
+The owner now explicitly welcomes older films and TV with recognizable actors, superseding the 1995 cutoff for new classic acquisitions. Continue to exclude new science-fiction titles and random filler. Verify exact film/episode, soundtrack, source/version and territory before adding to Shuttlebug playback. Do not bulk mark an entire TV series public domain from one episode's status.
+
+/classics.html is a separate external watch guide linking official free Tubi listings. It does not add films to the internal catalog or constitute redistribution. No new theatrical film or TV episode was imported this turn.

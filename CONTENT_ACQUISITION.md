@@ -100,3 +100,14 @@ Requests specify a small pilot (one series or 2–5 films), nonexclusive U.S. we
 Rejected shortcut: https://filmzie.com/legal/en explicitly says users may not reproduce/copy/provide its content to third parties. Free viewing does not authorize Shuttlebug carriage.
 
 Open-content searches surfaced Paley animation, technical documentaries and older public-domain material. These did not satisfy this acquisition direction; no additions or speculative licenses were made. Do not repeat previously held titles as new finds.
+
+
+## Older known-cast programming — November 26, later owner instruction
+
+Old programming is now welcome. Strong U.S. public-domain leads: original Animal Crackers (1930, Marx Brothers) and The Big Trail (1930, John Wayne), documented by Duke's Center for the Study of the Public Domain and the Copyright Office. Source: https://cspd.law.duke.edu/publicdomainday/2026 . This does not establish worldwide rights or approve added material in a later edition.
+
+Archive metadata check: animal-crackers-pnm provides a file explicitly named as a BluRay release; not approved as an archival original. the-big-trail-35-mm-academy-version returns roughly 8.1 GB MP4 copies; no full-copy audiovisual review or publication. No new public-domain feature is cleared for worldwide playback by this work.
+
+TV lead: RetroTV Vault identifies selected Lucy, Hillbillies, Dick Van Dyke, Dragnet and other episodes for professional streaming use but charges for masters/delivery. Official source/contact: https://www.retrotvvault.com/ ; retro@retrotvvault.com . No order or payment authorized. Ask about a no-cost pilot and exact episode/music rights, not a whole-series blanket license.
+
+To provide useful viewing discovery immediately, /classics.html links six official free listings on Tubi with explicit external-service labels. It does not copy media, posters or licensed streams, does not imply Tubi partnership, and does not inflate our internal catalog counts. Provider playback is not independently certified by this change.
