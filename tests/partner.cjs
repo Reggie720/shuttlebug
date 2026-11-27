@@ -18,4 +18,18 @@ for (const width of [390,1440]) {
  await p.getByRole('link',{name:'Start watching',exact:true}).click();
  await p.locator('.hero').waitFor();
 }
+// Real decoding and automatic return for the owned house promos.
+await p.goto('http://127.0.0.1:8765/');await p.locator('.hero [data-title]').click();
+for(const name of ['Deep_Bumper_10s_Quiet.mp4','Deep_Dance_10s.mp4']) {
+ await p.getByRole('button',{name:'Preview commercial break',exact:true}).click();
+ await p.locator('.house-bumper video').waitFor();
+ assert((await p.locator('.house-bumper video').getAttribute('src')).endsWith(name));
+ await p.waitForFunction(()=>document.querySelector('.house-bumper video')?.currentTime>0.2);
+ assert((await p.locator('.house-bumper video').evaluate(v=>v.videoWidth))>0);
+ await p.locator('.house-bumper video').evaluate(v=>{v.currentTime=v.duration-0.3});
+ await p.locator('.house-bumper').waitFor({state:'detached',timeout:10000});
+}
+await p.locator('#player').evaluate(v=>v.dispatchEvent(new Event('ended')));
+await p.locator('.house-bumper').waitFor();await p.getByRole('button',{name:'Finish commercial break',exact:true}).click();
+assert.match(await p.locator('#playStatus').innerText(),/Finished/);
 assert.deepEqual(errors,[]);await browser.close();console.log('PASS rights hold, real film decode, test pre/mid-roll decode, resume, media keys, fullscreen, Back, remote arrows, paid ads disabled',decoded);})().catch(e=>{console.error(e);process.exit(1)});
