@@ -26,8 +26,7 @@ for(const name of ['Deep_Bumper_10s_Quiet.mp4','Deep_Dance_10s.mp4']) {
  assert((await p.locator('.house-bumper video').getAttribute('src')).endsWith(name));
  await p.waitForFunction(()=>document.querySelector('.house-bumper video')?.currentTime>0.2);
  assert((await p.locator('.house-bumper video').evaluate(v=>v.videoWidth))>0);
- await p.locator('.house-bumper video').evaluate(v=>{v.currentTime=v.duration-0.3});
- await p.locator('.house-bumper').waitFor({state:'detached',timeout:10000});
+ await p.locator('.house-bumper').waitFor({state:'detached',timeout:15000}).catch(async e=>{console.log('BUMPER STATE',await p.locator('.house-bumper video').evaluate(v=>({time:v.currentTime,duration:v.duration,paused:v.paused,seeking:v.seeking,ended:v.ended,ready:v.readyState,error:v.error?.message})));throw e;});
 }
 await p.locator('#player').evaluate(v=>v.dispatchEvent(new Event('ended')));
 await p.locator('.house-bumper').waitFor();await p.getByRole('button',{name:'Finish commercial break',exact:true}).click();

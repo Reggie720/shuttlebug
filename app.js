@@ -48,7 +48,7 @@ function settings() { return `<section><h1>Settings</h1><p class="page-intro">Yo
 let houseBreak=null;
 function stopHouseBreak(){
  const b=houseBreak;if(!b)return;houseBreak=null;clearTimeout(b.timer);
- b.clip.onended=b.clip.onerror=null;b.clip.pause();b.clip.removeAttribute('src');b.clip.load();b.box.remove();
+ b.clip.onended=b.clip.onerror=b.clip.ontimeupdate=null;b.clip.pause();b.clip.removeAttribute('src');b.clip.load();b.box.remove();
  b.film.style.display=b.display;if(b.tools)b.tools.hidden=b.toolsHidden;
  if(b.focus?.isConnected)b.focus.focus();
 }
@@ -66,7 +66,7 @@ function showHouseBreak(done=()=>{},preview=false){
  box.append(label,clip,skip,status);film.insertAdjacentElement('afterend',box);
  const tools=document.querySelector('.player-tools');houseBreak={film,clip,box,tools,display:film.style.display,toolsHidden:tools?.hidden,focus:document.activeElement};film.style.display='none';if(tools)tools.hidden=true;
  const b=houseBreak;const finish=()=>{if(houseBreak!==b)return;stopHouseBreak();done();if(preview&&wasPlaying&&$('player')===film)film.play().catch(()=>{});};
- skip.onclick=finish;clip.onended=clip.onerror=finish;b.timer=setTimeout(finish,30000);skip.focus();
+ skip.onclick=finish;clip.onended=clip.onerror=finish;clip.ontimeupdate=()=>{if(!clip.seeking&&Number.isFinite(clip.duration)&&clip.currentTime>=clip.duration-0.08)finish();};b.timer=setTimeout(finish,30000);skip.focus();
  clip.play().catch(()=>{if(houseBreak===b)status.textContent='Press Play in this promo’s video controls, or return to the show.';});return true;
 }
 function showDialog(html) { if($('modal').open) { stopHouseBreak(); captureProgress(); if(window.ShuttleAds)window.ShuttleAds.stop(); const previous=$('player'); if(previous){previous.onwaiting=previous.onplaying=previous.onpause=previous.onerror=previous.onended=previous.onloadedmetadata=previous.ontimeupdate=null;previous.pause();previous.removeAttribute('src');previous.load();} $('modal').close(); } opener=document.activeElement; $('details').innerHTML=html; $('modal').showModal(); }
